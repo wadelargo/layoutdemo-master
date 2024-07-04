@@ -1,0 +1,692 @@
+<!-- Code for add Purchases @anjudewangan -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navForDeskTop">
+        <div class="navbar-first">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/practice-registration/second-stage/html/index.html">
+                <span class="iconify" data-icon="carbon:add" data-width="35" data-height="35"></span>
+                <p>Add Establishment</p>
+            </a>
+            <button class="buttonForSideNav" type="button" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-second">
+            <ul class="ml-auto secondNavUl">
+                <a class="hospital-name" href="#">WellDone</a>
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <div class="searchbox">
+                            <input class="form-control inputForSearch" type="text" placeholder="Search for..." />
+                            <button type="button" class="advnc-search" id="advnc-search" data-bs-toggle="modal"
+                                data-bs-target="#dashboardPopup">Advanced</button>
+                            <div class="modal fade" id="dashboardPopup" data-bs-backdrop="false"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="dashboardPopupLabel"
+                                aria-hidden="true" role="dialog" data-backdrop="false">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="dashboardPopupLabel">Advance Patient Search</h5>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close" onclick="HandleCancel()"></button>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" class="popup-form">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="dvSelect">
+                                                                <select id="ddlInfo">
+                                                                    <option value="patient_name">Patient Name</option>
+                                                                    <option value="has_contact_number">Has Contact
+                                                                        Number</option>
+                                                                    <option value="contact_number">Contact Number
+                                                                    </option>
+                                                                    <option value="age_is">Age is</option>
+                                                                    <option value="age_more_than">Age is More Than
+                                                                    </option>
+                                                                    <option value="age_less_than">Age is Less Than
+                                                                    </option>
+                                                                    <option value="has_date_of_birth">Has Date of Birth
+                                                                    </option>
+                                                                    <option value="date_of_birth">Date of Birth Is
+                                                                    </option>
+                                                                    <option value="date_of_birth_more_than">Date of
+                                                                        Birth is More Than</option>
+                                                                    <option value="date_of_birth_less_than">Date of
+                                                                        Birth is Less Than</option>
+                                                                    <option value="birthday_is_in">Birthday is in
+                                                                    </option>
+                                                                    <option value="has_patient_id">Has Patient ID
+                                                                    </option>
+                                                                    <option value="patient_id">Patient ID</option>
+                                                                    <option value="has_aadhaar_id">Has Aadhaar ID
+                                                                    </option>
+                                                                    <option value="aadhaar_id">Aadhaar ID</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="email">Email</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="has_gender">Has Gender</option>
+                                                                    <option value="gender">Gender is</option>
+                                                                    <option value="has_pincode">Has Pincode</option>
+                                                                    <option value="pincode">Pincode</option>
+                                                                    <option value="has_street_address">Has Street
+                                                                        Address</option>
+                                                                    <option value="street_address">Street Address
+                                                                    </option>
+                                                                    <option value="has_blood_group">Has Blood Group
+                                                                    </option>
+                                                                    <option value="blood_group">Blood Group</option>
+                                                                    <option value="was_referred_by_someone">Was Referred
+                                                                        By Someone</option>
+                                                                    <option value="referred_by_someone">Referred By
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div id="divControl">
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <button type="button" id="btnAddMore">Add another parameter</button>
+                                            <div id="divCategories">
+
+                                            </div>
+                                            <div id="divNoData" style="display: none;">No Data Found</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnSearch"
+                                                onclick="ShowNoDataMessage()">Search</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                id="btnCancel" onclick="HandleCancel()">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="input-group-append">
+                                <button class="btn btn-primary searchbtn1" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="microPhoneChoose" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-microphone"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="addPateintButton" href="../../Addpateints/addpatient.html">
+                        <button type="button" class="addpatient">Add Patient</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="calenderButton" href="../../Calendar/calendar.html">
+                        <i class="fa fa-fw fa-calendar"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="../../chat/index.html">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <!-- <span class="d-lg-none">Call-Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span> -->
+                    </a>
+                </li>
+            </ul>
+
+            <!-- message shortcut
+            <div class="messageAlertDetails" id="messageAlertDetails">
+                <div class="MADHeader">
+                    <h6 class="MADHeader-info">New Messages:</h6>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADBody">
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>David Miller</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>Jane Smith</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>John Doe</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADFooter">
+                    <a class="viewAllMsgs" href="#">View all messages</a>
+                </div>
+
+            </div> -->
+            <!-- admin setting box -->
+            <div class="adminSettingBox" id="adminSettingBox">
+                <div class="adminSettingHeader">
+                    <strong id="nameofAdmin">Rakesh Nandre</strong>
+                    <p id="statusofAdmin">Admin</p>
+                    <p id="emailofAdmin">xyz@gmail.com</p>
+                </div>
+                <hr style="margin: 15px 0;">
+                <ul id="settingOptions">
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><a href="../../admin profile/admin.html" style="text-decoration: none; color: black;"><span
+                                class="iconify" style="color: gray;" data-icon="akar-icons:pencil" data-width="17"
+                                data-height="17"></span> Edit Profile</a></li>
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><span class="iconify" data-icon="ant-design:setting-outlined" style="color: gray;"
+                            data-width="17" data-height="17"></span> Account Setting</li>
+                    <li><span class="iconify" data-icon="ant-design:user-outlined" style="color: gray;" data-width="17"
+                            data-height="17"></span> Add User</li>
+                    <li><span class="iconify" data-icon="bx:log-out" style="color: gray;" data-width="17"
+                            data-height="17"></span> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-third">
+            <div class="dropdown">
+                <button id="dropbtnMyfunction" class="dropbtn">
+                    <img class="user-img" src="../../images/2.png" />Rakesh Nandare
+                    <i class="fa fa-angle-down"></i>
+                </button>
+            </div>
+            <!-- alert details -->
+            <div class="alertDetails" id="alertDetails">
+                <div class="alertHeader">
+                    <p>New Alerts:</p>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="alertBody">
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                </div>
+                <div class="alertFooter">
+                    <a>View All Events</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="../../dashboard.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <a class="nav-link" href="../../doctor1/doctor.html">
+                    <i class="fa fa-fw fa-user-md"></i>
+                    <span class="nav-link-text">Doctors</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables"
+                onclick="showpateintTable()">
+                <a class="nav-link" href="../../pateints/index.html">
+                    <i class="fa fa-fw fa fa-wheelchair"></i>
+                    <span class="nav-link-text">Patient</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../../Calendar/calendar.html">
+                    <i class="fa fa-fw fa fa-calendar"></i>
+                    <span class="nav-link-text">Appointment</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Dr. Schedule @anjudewangan -->
+                <a class="nav-link" href="../../doctorschedule/doctorSchedule.html">
+                    <!-- Code for add Dr. Schedule @anjudewangan -->
+                    <i class="fa fa-fw fa fa-calendar-check-o"></i>
+                    <span class="nav-link-text">Dr. Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Department @anjudewangan -->
+                <a class="nav-link" href="../../department/department.html">
+                    <!-- Code for add Department @anjudewangan -->
+                    <i class="fa fa-fw fa-building-o"></i>
+                    <span class="nav-link-text">Departments</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Insurance @anjudewangan -->
+                <a class="nav-link" href="../../insurance/insurance.html">
+                    <!-- Code for add Insurance @anjudewangan -->
+                    <i class="fa fa-fw fa-umbrella" aria-hidden="true"></i>
+                    <span class="nav-link-text">Insurance Network</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-user"></i>
+                    <span class="nav-link-text">Employee</span>
+                </a>
+                <!-- Code for link Employee Section @anjudewangan -->
+                <ul class="collapse sidenav-second-level" id="collapseComponents">
+                    <li>
+                        <a href="../../employee/employeeList.html">Employee List</a>
+                    </li>
+                    <li>
+                        <a href="../../employee/leave.html">Leaves</a>
+                    </li>
+                    <li>
+                        <a href="../../employee/holiday.html">Holidays</a>
+                    </li>
+                    <li>
+                        <a href="../../employee/attendance.html">Attendance</a>
+                    </li>
+                </ul>
+                <!-- Code for link Employee Section @anjudewangan -->
+            </li>
+            <!-- Code for link item @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../../item/item.html">
+                    <i class="fa fa-fw fa-sitemap" aria-hidden="true"></i>
+                    <span class="nav-link-text">Item</span>
+                </a>
+            </li>
+            <!-- Code for link item @anjudewangan -->
+            <!-- Code for link Sales @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span class="nav-link-text">Sales</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="../../sales/customers/customers.html">Customers</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/estimates/estimates.html">Estimates</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/salesOrders/salesOrders.html">Sales Orders</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/packages-folder/packages.html">Packages</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/shipmets/shipments.html">Shipments</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/delivery-challans/deliveryChallans.html">Delivery Challans</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/invoices/invoices.html">Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/received-payments/receivedPayments.html">Received Payments</a>
+                    </li>
+                    <li>
+                        <a href="">Recurring Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/sales-return/salesReturn.html">Sales Return</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/credit-notes/creditNotes.html">Credit Notes</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Sales @anjudewangan -->
+
+            <!-- Code for link Purchases @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed active-link" data-toggle="collapse"
+                    href="#collapsePurchases" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-shopping-bag"></i>
+                    <span class="nav-link-text">Purchases</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapsePurchases">
+                    <li>
+                        <a href="../vendors/vendors.html">Vendors</a>
+                    </li>
+                    <li>
+                        <a href="./purchaseOrder.html" class="sales-link">Purchase Orders</a>
+                    </li>
+                    <li>
+                        <a href="../purchase-receives/purchaseReceives.html">Purchase Receives</a>
+                    </li>
+                    <li>
+                        <a href="../bills/bills.html">Bills</a>
+                    </li>
+                    <li>
+                        <a href="../payments-made/paymentsMade.html">Payments Made</a>
+                    </li>
+                    <li>
+                        <a href="../vendor-credits/vendorCredits.html">Vendor Credits</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Purchases @anjudewangan -->
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-book"></i>
+                    <span class="nav-link-text">Payroll</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="login.html">Pay slip</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa fa-commenting"></i>
+                    <span class="nav-link-text">Chat</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-video-camera"></i>
+                    <span class="nav-link-text">Call</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti">
+                    <li>
+                        <a href="#">Voice call</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEmail"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-envelope"></i>
+                    <span class="nav-link-text">Email</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseEmail">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBlog"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fas fa-comment"></i>
+                    <span class="nav-link-text">Blog</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseBlog">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fas fa-object-group"></i>
+                    <span class="nav-link-text">Assets</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa-bell-o"></i>
+                    <span class="nav-link-text">Activites</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-flag"></i>
+                    <span class="nav-link-text">Report</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseReport">
+                    <li>
+                        <a href="#">Expenses Report</a>
+                    </li>
+                    <li>
+                        <a href="#">Invoice Report</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="../../Setting Folder/practice-profile.html">
+                    <i class="fa fa-fw fa-cog"></i>
+                    <span class="nav-link-text">Setting</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Send Email -->
+    <main class="main">
+        <div class="container" style="max-width: 1533px !important;">
+            <div class="py-2 border-bottom divSendEmailHead">
+                <h6>Email to Appario Technology</h6>
+            </div>
+            <div class="container mt-5">
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-1 col-form-label">Send To</label>
+                    <div class="col-sm-11">
+                        <input type="text" class="form-control" id="">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-1 col-form-label">Cc</label>
+                    <div class="col-sm-11">
+                        <input type="text" class="form-control position-relative" id="">
+                        <span class="text-primary position-absolute spanBcc">Bcc</span>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="" class="col-sm-1 col-form-label">Subject</label>
+                    <div class="col-sm-11">
+                        <input type="text" class="form-control" id="">
+                    </div>
+                </div>
+                <!-- <div class="dvSubject dvSubject-3">
+                    <iframe name="editor" id="editor" cols="30" rows="10" contenteditable="true">
+                    </iframe>
+                    <div class="text_opt">
+                        <button id="b" onClick="transform('bold', null)">
+                            <i class="fa fa-bold"></i>
+                        </button>
+                        <button id="i" onClick="transform('italic', null)">
+                            <i class="fa fa-italic"></i>
+                        </button>
+
+                        <button id="u" onClick="transform('underline', null)">
+                            <i class="fa fa-underline"></i>
+                        </button>
+                        <button id="ul" onClick="transform('insertUnorderedList', null)">
+                            <i class="fa fa-list-ul"></i>
+                        </button>
+                        <button id="ol" onClick="transform('insertOrderedList', null)">
+                            <i class="fa fa-list-ol"></i>
+                        </button>
+                    </div>
+                </div> -->
+                <div class="mb-3 row">
+                    <!-- <label for="" class="col-sm-1 col-form-label"></label> -->
+                    <div class="col-sm-4 rounded divAttachFile p-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="" checked>
+                            <label class="form-check-label" for="">
+                                Attach Purchase Order PDF
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 divAttachFile"></div>
+                    <div class="col-sm-4 rounded divAttachFile p-4">
+                        <div class="input-group mb-3">
+                            <span class="mr-2"><i class="fa fa-file-pdf-o text-danger fs-5"
+                                    aria-hidden="true"></i></span>
+                            <input type="text" id="textEye" class="form-control" placeholder="PO-00003"
+                                aria-label="PO-00003">
+                            <span class="input-group-text"><i id="basic-addon2"
+                                    class="fa fa-eye text-primary"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-12 border-bottom pb-3">
+                        <label for="formFileMultiple" class="form-label text-primary"> <i class="fa fa-paperclip"
+                                aria-hidden="true"></i> Attach File(s)</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple style="display: none;">
+                        <div class="filName">
+                            <p id="fileName"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <div class="col-sm-11">
+                        <a href="./issued.html"><button class="btn btn-primary">Send</button></a>
+                        <a href="./draft.html">
+                            <button class="btn btn-white border border-secondary">Cancel</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+<script>
+    let basic_addon2 = document.getElementById("basic-addon2");
+    basic_addon2.addEventListener("click", function () {
+        let textEye = document.getElementById("textEye");
+        const type = textEye.getAttribute("type") === "password" ? "text" : "password";
+        textEye.setAttribute("type", type);
+
+    })
+</script>
+
+</html>
+<!-- Code for add Purchases @anjudewangan -->

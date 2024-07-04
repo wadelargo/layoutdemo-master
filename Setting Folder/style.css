@@ -1,0 +1,1046 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.sidenav-2 .navbar-sidenav {
+    background-color: #bcfffc;
+    position: fixed;
+}
+
+.mt-8 {
+    margin-top: 80px;
+    margin-left: 70px;
+}
+
+.navbar-sidenav>.nav-item-2>.nav-link>.fa,
+.navbar-sidenav>.nav-item-2>ul>li>a>.fa {
+    font-size: 22px;
+}
+
+.navbar-sidenav>.nav-item-2>.nav-link>span,
+.navbar-sidenav>.nav-item-2>ul>li>a>span {
+    margin-left: 10px;
+}
+
+.navbar-sidenav>.nav-item-2>ul>li>a {
+    /* border-bottom: 1px solid lightgray; */
+    margin-top: -10.5px;
+}
+
+.navbar-sidenav>.nav-item-2>ul>li>a>img {
+    width: 30px;
+}
+
+.navbar-sidenav>.nav-item-2>ul>li {
+    margin-right: 40px;
+}
+
+.navbar-sidenav>.nav-item-2>.nav-link>.btn-admin-view {
+    margin-left: 140px;
+    border: 1px solid black;
+    padding: 0 6px;
+    font-size: 13px;
+}
+
+.navbar-sidenav>.nav-item-2>ul,
+.dvPracticeStaff ul,
+.dvCalendar ul,
+.dvCommunication ul,
+.dvAddBranch ul {
+    list-style-type: none;
+}
+
+.navbar-sidenav>.nav-item-2>ul>li>a {
+    color: black;
+}
+
+.navbar-sidenav>.nav-item>.active-link {
+    background-color: rgb(236, 236, 11);
+}
+
+.navbar-sidenav>.nav-item>.nav-link-setting:hover {
+    background-color: #bcfffc;
+}
+
+.navbar-sidenav>.nav-item-2>ul>li:hover {
+    background-color: aqua;
+}
+
+.navbar-sidenav>.nav-item-2>ul>li:active,
+.active-li {
+    background-color: aqua;
+}
+
+.buttonForSideNav {
+    padding: 6px;
+}
+
+.divRight {
+    margin-left: 395px;
+    margin-top: 80px;
+    padding: 50px 60px;
+}
+
+.head-link,
+.li-buttons {
+    border-bottom: 1px solid lightgray;
+}
+
+.head-link span {
+    color: #686868;
+    font-size: 16px;
+    margin: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.head-link span:hover,
+.active,
+.li-buttons li:hover {
+    color: #007bff;
+    border-bottom: 5px solid #007bff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dvPageLogo {
+    padding-left: 90px;
+    box-sizing: border-box;
+}
+
+.page-logo {
+    border: 1px solid #D9D9D9;
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.page-logo img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+.banner-image {
+    width: 630px;
+    height: 157px;
+    border-radius: 10px;
+    border: 1px solid #CCCCCC;
+    margin-top: 15px;
+}
+
+.container .row .col {
+    margin: 35px 0;
+    /* padding: 35px 65px; */
+}
+
+/* Code for setting - banner @anjudewangan */
+.banner-image img,
+.dvAbout .dvSubject-4 img {
+    width: 150px;
+    height: 79px;
+}
+
+/* Code for setting - banner @anjudewangan */
+.choose-file {
+    display: none;
+}
+
+.para {
+    font-size: 14px;
+    padding: 0 13px;
+}
+
+#banner-img-icon-1 label,
+#banner-img-icon-2 label {
+    display: none;
+    margin-bottom: 0 !important;
+}
+
+.badge .fa {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Code for setting - banner @anjudewangan */
+
+
+/* Code for setting - branding page logo @anjudewangan */
+#imgInp,
+#inputGroupFile03,
+#inputGroupFile04 {
+    display: none;
+}
+
+.page-logo label {
+    margin-bottom: 0 !important;
+}
+
+/* Code for setting - branding page logo @anjudewangan */
+
+.col-form-label {
+    font-size: 13px;
+}
+
+.mb-3 .form-label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#form-1 .form-control {
+    width: 606px;
+}
+
+.footer-para {
+    font-size: 13px;
+}
+
+.para-link {
+    color: #2D3092;
+}
+
+.para-link a {
+    margin: 0 5px;
+    color: white;
+    border-radius: 50%;
+}
+
+.footer {
+    margin-top: 30px;
+}
+
+.dvAbout {
+    display: none;
+    width: 1000px;
+}
+
+.dvHead {
+    margin-top: 10px;
+}
+
+sub {
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.dvSubject {
+    border: 1px solid #8A8484;
+    border-radius: 3px;
+    height: 145px;
+    width: 1007px;
+}
+
+.spanSubject {
+    display: flex;
+    justify-content: flex-start;
+    align-items: self-start;
+    font-size: 14px;
+    border-bottom: 1px solid #BCBCBC;
+    margin: 5px 10px;
+    margin-bottom: 67px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 98%;
+}
+
+.btn-add {
+    color: black;
+    margin: 0 10px;
+}
+
+.dvSpace {
+    margin: 5px 10px;
+    border-top: 1px solid #BCBCBC;
+}
+
+.dvSubject-2 {
+    height: 89px;
+    padding: 10px;
+    width: 1010px;
+}
+
+.dvSubject-2 h6 {
+    font-size: 15px;
+}
+
+.dvSubject-2 .para-one {
+    font-weight: 400;
+    font-size: 12px;
+    color: #9B9B9B;
+}
+
+.dvSubject-2 .para-second,
+.dvAppoin_Detail .para-second,
+.dvWish_SMS .para-second {
+    font-weight: 400;
+    font-size: 12px;
+    color: black;
+}
+
+.dvSubject-3 {
+    height: 190px;
+    width: 1010px;
+}
+
+.dvSubject-3 textarea {
+    width: 98%;
+    margin: 10px;
+    border: none;
+    height: 100px;
+}
+
+.dvSubject-4 {
+    height: 188px;
+    width: 1010px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Code for setting > about > statement @anjudewangan */
+.text_opt {
+    height: 35px;
+    border-top: 1px solid #8A8484;
+    width: 1008px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+.text_opt button {
+    position: relative;
+    left: 45px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Code for setting > about > statement @anjudewangan */
+
+@media (min-width: 1200px) {
+    #container {
+        max-width: 1000px;
+    }
+}
+
+/* Practice Details  Add Branch*/
+
+.main_left .d-flex {
+    gap: 50px;
+}
+
+.add_branch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 45px;
+    width: 310px;
+    height: 300px;
+    border: 1px dashed #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.add_branch .fa-plus {
+    font-size: 53px;
+    color: #000000;
+}
+
+.add_branch label {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.branch-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 310px;
+    height: 300px;
+    background-color: #EFF4E4;
+    border-radius: 10px;
+}
+
+.branchCard {
+    cursor: pointer;
+}
+
+.hd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    font-size: 20px;
+    width: 297px;
+    border-bottom: 1px solid #000000;
+    position: relative;
+    height: 52px;
+    text-align: center;
+}
+
+.branch_detail {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 15px;
+}
+
+.branch_detail p:nth-child(1) {
+    font-size: 20px;
+}
+
+.branch_detail p:nth-child(2) {
+    font-size: 14px;
+    color: #00A410;
+    position: relative;
+    top: -25px;
+}
+
+.branch_detail p:nth-child(3) {
+    font-size: 15px;
+    position: relative;
+    top: -28px;
+}
+
+.branch_detail a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #0997FF;
+    position: relative;
+    top: -5px;
+}
+
+.branch-card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 310px;
+    height: 300px;
+    border: 1px solid #CFCFCF;
+    border-radius: 10px;
+}
+
+/* Practice Staff */
+
+.li-buttons li,
+.dvDVT-office-appoin .li-dropdown li {
+    margin: 0 30px
+}
+
+.btn-warning {
+    color: black;
+}
+
+.dvPracticeStaff .table tbody tr td,
+.dvPracticeStaff .table thead tr th {
+    font-size: 15px;
+}
+
+.dvPracticeStaff .table tbody tr td:nth-child(2) {
+    position: relative;
+}
+
+.dvPracticeStaff .table tbody tr td span {
+    font-size: 12px;
+    position: absolute;
+    top: 40px;
+    left: 12px;
+}
+
+.dvPracticeStaff .table tbody tr td button {
+    opacity: 0.5;
+}
+
+.dvPracticeStaff .table thead th {
+    vertical-align: top;
+    border-bottom: 0.5px solid black;
+}
+
+.dvPracticeStaff .table th,
+.dvPracticeStaff .table td {
+    padding: 1.5rem 1.2rem;
+    box-sizing: border-box;
+}
+
+/* Staff Notification */
+
+.table-staff-noti tbody tr td:first-child,
+.table-staff-noti thead tr th:first-child {
+    text-align: start;
+}
+
+.table-staff-noti tbody tr td:nth-child(2),
+.table-staff-noti thead tr th:nth-child(2) {
+    text-align: center;
+}
+
+.table-staff-noti tbody tr td:nth-child(3),
+.table-staff-noti thead tr th:nth-child(3) {
+    text-align: center;
+}
+
+.table-staff-noti tbody tr td:nth-child(4),
+.table-staff-noti thead tr th:nth-child(4) {
+    text-align: center;
+}
+
+.table-staff-noti tbody tr td:nth-child(5),
+.table-staff-noti thead tr th:nth-child(5) {
+    text-align: center;
+}
+
+.table-staff-noti tbody tr td:nth-child(6),
+.table-staff-noti thead tr th:nth-child(6) {
+    text-align: center;
+}
+
+.table-staff-noti tbody tr td:nth-child(7),
+.table-staff-noti thead tr th:nth-child(7) {
+    text-align: center;
+}
+
+.table-staff-noti tbody tr td:nth-child(8),
+.table-staff-noti thead tr th:nth-child(8) {
+    text-align: center;
+}
+
+.table-staff-noti tr .td-color {
+    background-color: #FDE0F5;
+    font-size: 12px;
+}
+
+.table1-staff-noti tr td,
+.table1-staff-noti tr th {
+    padding: 15px 32px;
+    box-sizing: border-box;
+}
+
+.table2-staff-noti tr td,
+.table2-staff-noti tr th {
+    padding: 15px 15px;
+    box-sizing: border-box;
+}
+
+/* Doctor's Visit Timings */
+
+.li-dropdown li sub:first-child {
+    font-weight: 300;
+    font-size: 10px;
+    position: absolute;
+    left: 105px;
+    top: 16px;
+}
+
+.li-dropdown li:first-child {
+    position: relative;
+    padding-right: 70px;
+    box-sizing: border-box;
+}
+
+.dvTime-1 {
+    border: 0.5px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    width: 1000px;
+}
+
+.dvTime-1 .col-9 .row {
+    font-size: 14px;
+}
+
+.dvTime-1 .col-9 .row .fa {
+    font-size: 18px;
+}
+
+.dvTime-1 .col-9 .row-2 {
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+
+.dvTime-1 .col-3 span {
+    font-weight: 300;
+    font-size: 10px;
+    position: absolute;
+    left: 103px;
+    top: 18px;
+}
+
+.dvTime-1 .col-3 .btn-time-edit {
+    font-size: 12px;
+    position: absolute;
+    top: 56px;
+    left: 85px;
+}
+
+.footerDVT {
+    margin-top: 200px;
+    color: #8B8B8B;
+    font-size: 16px;
+}
+
+/* Visit Doctor Office Appointments */
+
+.days {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.days li {
+    display: inline;
+    padding: 7px 10px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: #bfeff5;
+}
+
+.table-1 tr td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table-1 {
+    border-top: 1px solid rgb(227, 222, 222);
+}
+
+.time {
+    background-color: #e7f2fa;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.table-1 tr td input,
+.table-2 tr td input {
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+}
+
+.add-break {
+    color: #0997FF;
+    cursor: pointer;
+}
+
+.show-lunch-time {
+    display: none;
+}
+
+.table-2 {
+    display: none;
+}
+
+.table-2 tr td {
+    padding: 20px 5px;
+}
+
+.table-1 th,
+td,
+table-2 th td {
+    text-align: left;
+}
+
+.dvtable {
+    margin-left: -308px;
+    margin-top: 15px;
+    display: none;
+}
+
+.detail_container {
+    height: 280px;
+    width: 520px;
+    border: 0.5px solid #000000;
+    position: relative;
+    top: 35px;
+    left: 190px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 22px;
+    position: relative;
+}
+
+/* Button Add Doctor */
+
+.dvAddDoctorButton .link-active-login,
+.dvAddDoctorButton .form-check-label,
+.dvAddStaffButton .link-active-login,
+.dvAddStaffButton .form-check-label {
+    font-size: 13px;
+}
+
+.dvAddDoctorButton .form-check-label span,
+.dvAddStaffButton .form-check-label span {
+    font-size: 10px;
+}
+
+/* Calendar */
+
+.calendar-form {
+    border: 0.5px solid #000000;
+    border-radius: 5px;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+
+.calendar-form select,
+.dvName .name-description {
+    background-color: #F1F3F4;
+}
+
+.modal-select {
+    background-color: white !important;
+}
+
+.calendar-form label {
+    font-size: 14px;
+}
+
+.dvWorking_Hours .detail_container {
+    position: initial !important;
+}
+
+.calendar-form .small-div {
+    font-size: 10px;
+}
+
+/* Appointment Category */
+
+.dvAdd_new_cate .row {
+    border-bottom: 1px solid #C1C1C1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dvAdd_new_cate .row input {
+    width: 300px;
+}
+
+.dvShare_With_Specific_People .row .small-label,
+.dv_Notification .row .small-label {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.dvShare_With_Specific_People .row img {
+    width: 50px;
+    height: 50px;
+}
+
+.dvShare_With_Specific_People .mb-3,
+.dv_Notification .mb-3,
+.dvImport_Export .border-row {
+    border-bottom: 1px solid #C1C1C1;
+}
+
+.dvShare_With_Specific_People .border-none,
+.dv_Notification .border-none {
+    border-bottom: none;
+}
+
+/* Notification */
+
+.dv_Notification .row .input-number {
+    width: 56px;
+}
+
+/* Subscription */
+
+.dv_Subscription .label-sub {
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.dv_Subscription .border-div {
+    border: 0.5px solid #000000;
+    border-radius: 2px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.dv_Subscription .footer-para {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+/* Trash - Bin */
+
+.dvTrash_Bin .row .col-sm-12 h6 {
+    font-size: 10px;
+}
+
+.dvTrash_Bin .row .heading-trash {
+    font-size: 11px;
+}
+
+.dvTrash_Bin .row .col-sm-12 {
+    background: #E7E9EA;
+    border-radius: 10px;
+    padding: 2px 15px;
+}
+
+.dvTrash_Bin table tbody tr th {
+    font-size: 14px;
+}
+
+/* Communications */
+
+.dvComm_Detail .row .col {
+    font-size: 15px;
+}
+
+.dvComm_Detail h6 .fa {
+    color: #B6B6B6;
+}
+
+/* Practice - profile-1*/
+
+.dvAddBranch {
+    width: 1004px;
+}
+
+.dvAddBranch .li-buttons li {
+    margin: 0 23px;
+}
+
+.dvPractice-Profile-1 p {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.dvPractice-Profile-1 .container .row {
+    font-size: 14px;
+}
+
+.dvPractice-Profile-1 .container .row .span-input {
+    left: -25px;
+}
+
+/* Practice-profile-2 */
+
+#map {
+    width: 500px;
+    height: 371.67px;
+}
+
+/*  Practice - profile-3*/
+
+.dvPractice-Profile-3 .container {
+    border-bottom: 1px solid #C1C1C1;
+}
+
+.dvPractice-Profile-3 .container .small-head {
+    font-size: 14px;
+}
+
+#exampleAccordion .nav-link-text {
+    font-size: 11.5px;
+    margin-left: 36px;
+}
+
+.nav-item-2 .nav-link-text {
+    font-size: 16px;
+}
+
+#exampleAccordion .nav-link i {
+    margin-left: 20px;
+    font-size: 21px;
+}
+
+.sidenav-second-level li a {
+    font-size: 10px;
+}
+
+/* Code for Communication - appointment and followup sms, Wish sms, Emails, Notifications, Pricing Catalog, Clinical Notes Catalog  @anjudewangan*/
+/* Appointment follow and Wish SMS */
+.dvAppoin_Detail .container,
+.dvWish_SMS .container {
+    border-bottom: 1px solid lightgray;
+}
+
+.dvAppoin_Detail .form-label,
+.dvWish_SMS .form-label {
+    font-size: 14px;
+    background-color: #F1F3F4;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dvAppoin_Detail .form-check .select-time {
+    width: 95px;
+    top: 180px;
+    left: 462px;
+    padding: 0 10px !important;
+    box-sizing: border-box;
+}
+
+.dvAppoin_Detail .form-check .select-months {
+    width: 115px;
+    padding: 0 10px !important;
+    box-sizing: border-box;
+}
+
+/* Emails */
+.dvEmails .container-sender-pre,
+.dvEmails .sender-email .table {
+    border: 2px solid #E5E5E5;
+    border-radius: 6px;
+}
+
+.dvEmails .sender-email,
+.dvEmails .email-insight {
+    border-bottom: 1px solid black;
+}
+
+.dvEmails .sender-email .para-email {
+    color: #8C8C8C;
+}
+
+.dvEmails .sender-email .col-para {
+    font-size: 14px;
+}
+
+.dvEmails .sender-email .div-col-right {
+    background-color: #F3F8FE;
+}
+
+.dvEmails .sender-email .div-col-right a,
+.dvEmails .table tbody tr td i {
+    font-size: 22px;
+}
+
+.dvEmails .sender-email .div-col-right,
+.dvEmails .sender-email .div-col-left {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dvEmails .email-insight .container-email-insight {
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid lightgray;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.dvEmails .email-insight .row {
+    padding: 10px 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.dvEmails .email-insight .row .col-head {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.dvEmails .email-insight .container-notes {
+    background-color: #F5EC96;
+
+}
+
+.dvEmails .email-insight .container-notes .col-12 {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* Notifications */
+.divNotifications .table thead tr:first-child,
+.divNotifications .table tbody tr:first-child td,
+.divNotifications .table tbody tr .form-check {
+    text-align: center;
+}
+
+.divNotifications .table tbody tr th {
+    background-color: #E7E9EA;
+}
+
+.divNotifications .table tbody tr td span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Pricing Catalog, Clinical Notes Catalog */
+.dvPricing_Catalog .table,
+.dvClinical_Notes_Catalog .table {
+    width: 1000px !important;
+    border: 1px solid #E5E5E5;
+}
+
+.dvPricing_Catalog .table thead tr th,
+.dvPricing_Catalog .table tbody tr td {
+    text-align: center;
+}
+
+/* Clinical Notes Catalog  */
+.dvTemplate .container {
+    border-bottom: 1px solid black;
+}
+
+.dvTemplate .dvAddTemplate .inputTemplate {
+    background-color: #FFEB35;
+}
+
+.dvTemplate .dvAddTemplate .input-group-text {
+    opacity: 0.5;
+    background-color: #FFEB35;
+}
+
+.dvAddTemplate .modal-dialog {
+    max-width: 1140px !important;
+}
+
+.dvAddTemplate .modal-dialog .modal-body .table tbody tr .input-number {
+    width: 60px !important;
+}
+
+.dvAddTemplate .modal-dialog .modal-body .table tbody tr .form-select {
+    width: 100px !important;
+}
+
+.dvAddTemplate .modal-dialog .modal-body .divList {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.dvClinical_Notes_Catalog .table tbody tr td i,
+.dvTemplate .container .row .col-1 .fa-pencil,
+.dvTemplate .container .selectTemplates .deleteNotes {
+    cursor: pointer;
+}
+
+.dvClinical_Notes_Catalog #popupDelete .modal-body i {
+    color: #EF8523;
+    font-size: 45px;
+}
+
+/* Code for Communication - appointment and followup sms, Wish sms, Emails, Notifications, Pricing Catalog, Clinical Notes Catalog  @anjudewangan*/

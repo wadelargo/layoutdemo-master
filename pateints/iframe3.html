@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.default.mobile.min.css" />
+    <link rel="stylesheet" href="formcss.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.301/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.301/js/kendo.all.min.js"></script>
+</head>
+
+<body>
+    <div class="containerBox">
+        <div class="center" style="font-size: small;">
+            <!-- ***Adding Clinical Notes -->
+            <div class="record">
+                <div class="boxRecord">
+                    <div class="innerboxs" id="prescription">
+                        <p><img src="https://img.icons8.com/ios-glyphs/30/000000/pharmacy.png"/>Prescriptions</p>
+                        <img id="prescriptionsetting" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/24/000000/external-setting-basic-ui-elements-flatart-icons-outline-flatarticons.png" />
+                    </div>
+                    <table class=" table order-list" id="prescriptiontable">
+                        <tr>
+                            <th>Sr.no</th>
+                            <th>Type</th>
+                            <th>Drug name and composition</th>
+                            <th>Route of Admistration</th>
+                            <th>Dosage frequency</th>
+                            <th>Intake</th>
+                            <th>Duration</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>TAB</td>
+                            <td class="zerodol">Calpol(500 Mg)
+                                <p>(paracetamol)</p>
+                            </td>
+                            <td>
+                                <select name="" id="" class="oral">
+                                    <option value="Oral">Oral</option>
+                                    <option value="injection">injection</option>
+                                    <option value="saline">saline</option>
+                                    <option value="sublingal/buccal">sublingal/buccal</option>
+                                    <option value="rectal">rectal</option>
+                                    <option value="topical">topical</option>
+                                    <option value="Transdermal">Transdermal</option>
+                                    <option value="Inhalation/pulmononary">Inhalation/pulmonary</option>
+                                    <option value="otic">otic</option>
+                                    <option value="nasal">nasal</option>
+                                </select>
+                            </td>
+                            <td class="dosagef">
+                                <P class="customp" id="customp" onclick="doseChange(this)">custom</P>
+                                <div id="dosagetype"></div>
+                                <div class="tables" id="tablets"></div>
+                                <div id="dosageopt"></div>
+                                <div id="regular"></div>
+                            </td>
+                            <td>
+                                <select name="" id="" class="presopt">
+                                    <option value="After Food">After Food</option>
+                                    <option value="Before Food">Before Food</option>
+                                </select>
+                                <p class="instractiond">Add instruction</p>
+                            </td>
+                            <td>
+                                <div class="duration">
+                                    <input type="number">
+                                    <select name="" id="daysd" class="daysd">
+                                        <option value="Day(s)">Day(s)</option>
+                                        <option value="Week(s)">Week(s)</option>
+                                        <option value="Month(s)">Months(s)</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="col-sm-1">
+                                <a class="deleteRow"><img src="https://img.icons8.com/material-outlined/16/ff0000/cancel--v1.png" id="crossoout" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>CAP</td>
+                            <td class="zerodol">Razo-D
+                                <p>(Domperidon(30mg)+Raboprazol(20mg) SR)</p>
+                            </td>
+                            <td>
+                                <select name="" id="" class="oral">
+                                    <option value="Oral">Oral</option>
+                                    <option value="injection">injection</option>
+                                    <option value="saline">saline</option>
+                                    <option value="sublingal/buccal">sublingal/buccal</option>
+                                    <option value="rectal">rectal</option>
+                                    <option value="topical">topical</option>
+                                    <option value="Transdermal">Transdermal</option>
+                                    <option value="Inhalation/pulmononary">Inhalation/pulmonary</option>
+                                    <option value="otic">otic</option>
+                                    <option value="nasal">nasal</option>
+                                </select>
+                            </td>
+                            <td class="dosagef">
+                                <P class="customp" id="customp2" onclick="doseChange2(this)">custom</P>
+                                <div id="dosagetype2"></div>
+                                <div class="tables" id="tablets2"></div>
+                                <div id="dosageopt2"></div>
+                                <div id="regular2"></div>
+                            </td>
+                            <td>
+                                <select name="" id="" class="presopt">
+                                    <option value="After Food">After Food</option>
+                                    <option value="Before Food">Before Food</option>
+                                </select>
+                                <p class="instractiond">Add instruction</p>
+                            </td>
+                            <td>
+                                <div class="duration">
+                                    <input type="number">
+                                    <select name="" id="" class="daysd">
+                                        <option value="Day(s)">Days(s)</option>
+                                        <option value="Week(s)">Week(s)</option>
+                                        <option value="Month(s)">Month(s)</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="col-sm-1">
+                                <a class="deleteRow"><img src="https://img.icons8.com/material-outlined/16/ff0000/cancel--v1.png" id="crossoout" /></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>TAB</td>
+                            <td class="zerodol">Zerodol-SP
+                                <p>Aceclofenac (100mg) + Paracetamol (325mg) + Serratiopeptidase (15mg)
+                                </p>
+                            </td>
+                            <td>
+                                <select name="" id="" class="oral">
+                                    <option value="Oral">Oral</option>
+                                    <option value="injection">injection</option>
+                                    <option value="saline">saline</option>
+                                    <option value="sublingal/buccal">sublingal/buccal</option>
+                                    <option value="rectal">rectal</option>
+                                    <option value="topical">topical</option>
+                                    <option value="Transdermal">Transdermal</option>
+                                    <option value="Inhalation/pulmononary">Inhalation/pulmonary</option>
+                                    <option value="otic">otic</option>
+                                    <option value="nasal">nasal</option>
+                                </select>
+                            </td>
+                            <td class="dosagef">
+                                <P class="customp" id="customp3" onclick="doseChange3(this)">custom</P>
+                                <div id="dosagetype3"></div>
+                                <div class="tables" id="tablets3"></div>
+                                <div id="dosageopt3"></div>
+                                <div id="regular3"></div>
+                            </td>
+                            <td>
+                                <select name="" id="" class="presopt">
+                                    <option value="After Food">After Food</option>
+                                    <option value="Before Food">Before Food</option>
+                                </select>
+                                <p class="instractiond">Add instruction</p>
+                            </td>
+                            <td>
+                                <div class="duration">
+                                    <input type="number">
+                                    <select name="" id="" class="daysd">
+                                        <option value="Day(s)">Day(s)</option>
+                                        <option value="Week(s)">Week(s)</option>
+                                        <option value="Month(s)">Month(s)</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="col-sm-1">
+                                <a class="deleteRow"><img src="https://img.icons8.com/material-outlined/16/ff0000/cancel--v1.png" id="crossoout" /></a>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- table -->
+                    <input class="drugandcompoinput" type="text" placeholder="Search drug and composition">
+                    <button>Add Drug</button>
+                    <div class="checkbox">
+                        <input type="checkbox" name="" id="check">
+                        <label for="check">or Any Cheaper Generic medicine are as per choice of patient with their own risk.</label>
+                    </div>
+                    <div class="generalintraction" id="generalintraction">
+                        <p>General Instruction</p>
+                        <p> -</p>
+                        <button type="button" id="Edit-btn">Edit</button>
+                    </div>
+                    <div class="innnercdbutton">
+                        <button class="canclebtn" onclick='cancleprescription()' name="canclebtn" value="OK" type="button">Cancle</button>
+                        <button class="savebtn" onclick="setprescription()" name="savebtn" value="OK" type="button">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="iframe3.js"></script>
+</body>

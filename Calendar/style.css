@@ -1,0 +1,1162 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+    padding: 95px 10px 10px 10px;
+}
+
+.secondary {
+    color: #0997FF !important;
+    background: none !important;
+}
+
+.btn-focus {
+    outline: none !important;
+}
+
+.secondary:focus {
+    box-shadow: none !important;
+}
+
+.warning {
+    color: #212529;
+    background-color: rgba(255, 227, 130, 1) !important;
+    border-color: rgba(255, 227, 130, 1) !important;
+    height: 32px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.date {
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.question i {
+    background: #e86e40;
+    border-radius: 7px;
+}
+
+hr {
+    border-top: 1px solid !important;
+}
+
+.Department {
+    border: 1px solid rgba(0, 113, 133, 1);
+    border-radius: 10px;
+    width: 200px;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#dropdownMenuButton1 {
+    border: none;
+}
+
+.Alldepartment {
+    display: inline-flex;
+}
+
+.timeDivMAin {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+    background: #E5FFFF;
+    border: 1px solid #E5FFFF;
+    border-radius: 10px;
+}
+
+.TimeStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    margin: 0 0 0 58px;
+}
+
+.belowSection {
+    display: grid;
+    grid-template-columns: 310px auto;
+    margin: 0 0 0 63px;
+}
+
+.AfterTimedivs {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.FirstTimeDiv {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border: 1px solid;
+    padding: 5px;
+    background: rgba(229, 255, 232, 1);
+    border-radius: 10px;
+}
+
+.FirstTimeDiv .LeftSideFirstTime {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReturningDiv {
+    color: rgba(208, 3, 3, 1);
+}
+
+.HasInsurance {
+    color: rgba(11, 194, 29, 1);
+}
+
+.SecondTimeDiv,
+.ThirdTimeDiv,
+.FourthTimeDiv,
+.FifthTimeDiv {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border: 1px solid;
+    padding: 5px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+}
+
+.LeftSideSecondTime,
+.LeftSideThirdTime,
+.LeftSideFourthTime,
+.LeftSideFifthTime {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+}
+
+.TimeStatus .TodayZero {
+    background: rgba(255, 148, 50, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    width: 60%;
+    text-align: center;
+    color: white;
+}
+
+.TimeStatus .WaitingZero {
+    background: rgba(255, 204, 0, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    width: 51%;
+    text-align: center;
+    color: white;
+}
+
+.TimeStatus .EngagedZero {
+    background: rgba(76, 91, 204, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    width: 43%;
+    text-align: center;
+    color: white;
+}
+
+.TimeStatus .DoneZero {
+    background: rgba(193, 101, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    width: 70%;
+    text-align: center;
+    color: white;
+}
+
+.MainCalender {
+    padding: 10px;
+}
+
+.DepartmentMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.table1,
+.table1 th,
+.table1 td {
+    border: 1px solid lightgray;
+}
+
+.table1 #AlldayList {
+    width: 10%;
+    padding: 5px;
+}
+
+.table1 {
+    width: 100%;
+    padding: 5px;
+}
+
+.table2 {
+    width: 100%;
+    padding: 5px;
+}
+
+.table2,
+.table2 th,
+.table2 td {
+    border: 1px solid lightgray;
+}
+
+.SundayMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.SundayMain .Sundaydate {
+    background: rgba(182, 255, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    /* text-align: center; */
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.MondayMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.MondayMain .Mondaydate {
+    background: rgba(182, 255, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    /* text-align: center; */
+    width: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.TuesdayMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.TuesdayMain .TuesdayDate {
+    background: rgba(182, 255, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    /* text-align: center; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.WednesdayMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.WednesdayMain .WednesdayDate {
+    background: rgba(182, 255, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    /* text-align: center; */
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.ThursdayMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.ThursdayMain .ThursdayDate {
+    background: rgba(182, 255, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    /* text-align: center; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.FridayMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.FridayMain .FridayDate {
+    background: rgba(182, 255, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    /* text-align: center; */
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.SaturdayMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.SaturdayMain .SaturdayDate {
+    background: rgba(182, 255, 255, 1);
+    border: 1px solid;
+    border-radius: 50%;
+    /* text-align: center; */
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.table3 {
+    width: 100%;
+}
+
+.table3,
+.table3 th,
+.table3 td {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+.table3 td {
+    height: 140px;
+}
+
+.table2 {
+    display: none;
+}
+
+.table3 {
+    display: none;
+}
+
+.table3 td::before {
+    content: attr(data-day);
+    display: block;
+    /* position: absolute; */
+    margin-top: -70px;
+    /* margin-right: 22px; */
+    margin-left: 147px;
+}
+
+
+/* modal  */
+
+.Colors {
+    display: inline-block;
+}
+
+.allcolor {
+    border-radius: 50%;
+    display: inline-block;
+    outline: none;
+    width: 18px;
+    height: 18px;
+    margin: 3px;
+}
+
+input {
+    border-radius: 6px;
+    border: 1px solid;
+    padding: 2px;
+}
+
+.Maincontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+select {
+    border-radius: 6px;
+    border: 1px solid;
+    padding: 2px;
+}
+
+.ARB {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ARB button {
+    background: none;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.PatientName {
+    display: flex;
+    flex-direction: column;
+}
+
+.PatientName label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+#required {
+    color: red;
+}
+
+.MobileNumber {
+    display: flex;
+    flex-direction: column;
+}
+
+.EmailId {
+    display: flex;
+    flex-direction: column;
+}
+
+.Doctor {
+    display: flex;
+    flex-direction: column;
+}
+
+.Notified {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    gap: 5px;
+}
+
+.Category {
+    display: flex;
+    flex-direction: column;
+}
+
+.FirstPart {
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.AppointmentBox {
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Appointmenttype {
+    padding: 5px;
+}
+
+.AppoitmentPandV {
+    display: flex;
+    justify-content: space-around;
+}
+
+.PhysicalVisit {
+    display: flex;
+    gap: 10px;
+}
+
+.VideoVisit {
+    display: flex;
+    gap: 10px;
+}
+
+.ScheduledOn {
+    padding: 5px;
+}
+
+.DandT {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.DurationSchedule {
+    background: rgba(238, 238, 238, 1);
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AddTxtProcedure textarea {
+    width: 100%;
+}
+
+.Notes textarea {
+    width: 100%;
+}
+
+.attachment {
+    display: flex;
+    gap: 10px;
+}
+
+.Notification {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    /* border-bottom-right-radius: calc(0.3rem - 1px); */
+    /* border-bottom-left-radius: calc(0.3rem - 1px); */
+}
+
+/* Code for Calendar new popup @anjudewangan */
+.modalend .btn-modalend {
+    width: 80%;
+    background: rgba(255, 160, 0, 1);
+    color: white;
+    border-radius: 5px;
+}
+
+/* Code for Calendar new popup @anjudewangan */
+.modalend {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.TitleName {
+    display: flex;
+    flex-direction: column;
+}
+
+.DoctorReminder {
+    display: flex;
+    flex-direction: column;
+}
+
+.DandT-Reminder {
+    display: flex;
+    gap: 10px;
+}
+
+.ScheduledOn-reminder {
+    display: flex;
+    padding: 21px;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.Repeat-Reminder {
+    display: flex;
+    gap: 10px;
+}
+
+.CustomAndAllday {
+    display: flex;
+    gap: 10px;
+}
+
+.Allday {
+    /* display: flex; */
+    align-items: center;
+}
+
+.CustomeRe {
+    /* display: flex; */
+    align-items: center;
+}
+
+.toggleReminder {
+    display: none;
+}
+
+.toggleBlockCalender {
+    display: none;
+}
+
+.LabelForCustomeRepetetion label {
+    display: none;
+}
+
+.CustomeRe input[type="radio"]:checked+.LabelForCustomeRepetetion label {
+    display: block;
+}
+
+.RepeatSection {
+    display: flex;
+    gap: 20px;
+}
+
+.RepeatEvery {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#NumInp {
+    width: 43px;
+}
+
+.expiryRepeat {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ExpiryOptions {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.OnExipry {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+}
+
+.After {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.AfterOccurance {
+    display: flex;
+    gap: 10px;
+}
+
+#inpnum {
+    width: 45px;
+    height: 20px;
+}
+
+.WeekDays {
+    display: flex;
+    gap: 5px;
+}
+
+.WeekDays input[type="checkbox"] {
+    display: none;
+}
+
+.WeekDays input[type="checkbox"]+label span {
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 8px;
+    height: 9px;
+    margin: 0px 0px 0 0;
+    vertical-align: middle;
+    background: none;
+    cursor: pointer;
+    line-height: 4px;
+    text-align: center;
+    border: solid 1px #000000;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    /* font-size: small; */
+    font-size: 10px;
+}
+
+.WeekDays input[type="checkbox"]:checked+label span {
+    background-color: rgba(45, 176, 232, 1);
+}
+
+.WeekDays input[type="checkbox"]:checked+label {
+    color: white;
+}
+
+.colorsChoose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.colorsChoose input[type="radio"] {
+    display: none;
+}
+
+.colorsChoose input[type="radio"]+label span {
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 8px;
+    height: 9px;
+    margin: 0px 0px 0 0;
+    vertical-align: middle;
+    background: none;
+    cursor: pointer;
+    line-height: 4px;
+    text-align: center;
+    border: solid 1px #000000;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    /* font-size: small; */
+    font-size: 10px;
+}
+
+.colorsChoose #BlueColor {
+    background-color: rgba(9, 151, 255, 1);
+}
+
+.colorsChoose #SkyColor {
+    background-color: rgba(182, 255, 255, 1);
+}
+
+.colorsChoose #lightgreenColor {
+    background-color: rgba(173, 249, 161, 1);
+}
+
+.colorsChoose #LightpinkColor {
+    background-color: rgba(253, 171, 171, 1);
+}
+
+.colorsChoose #YellowColor {
+    background-color: rgba(255, 204, 0, 1);
+}
+
+.colorsChoose #GreenColor {
+    background-color: rgba(0, 113, 133, 1);
+}
+
+.colorsChoose input[type="color"] {
+    display: none
+}
+
+.colorsChoose #ForColorPicker {
+    background-color: black;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-top: 5px;
+}
+
+.RepeatOnWeek {
+    display: none;
+}
+
+.RepeatOnMonth {
+    display: none;
+    margin-top: 20px;
+}
+
+.MonthDay {
+    margin-left: 10px;
+}
+
+.BlockCalender .FirstPart {
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+    flex-direction: column;
+}
+
+.BlockCalender .FirstPart .LeaveDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.BlockCalender .FirstPart .DoctorBlockCalender {
+    display: flex;
+    flex-direction: column;
+}
+
+.BlockCalender .SecondPart .BlockAndAllday {
+    display: flex;
+    gap: 10px;
+}
+
+.BlockCalender .SecondPart .BlockAndAllday .Alldayblockdiv {
+    /* display: flex; */
+    align-items: center;
+}
+
+.BlockCalender .SecondPart .BlockAndAllday .BlockSlot {
+    /* display: flex; */
+    align-items: center;
+}
+
+.BlockCalender .SecondPart .DatesBlock .AlldayHideDiv {
+    display: none;
+    padding: 10px;
+}
+
+.BlockCalender .SecondPart .DatesBlock .Alldayblock {
+    display: flex;
+    gap: 10px;
+}
+
+.BlockCalender .SecondPart .DatesBlock .BlockHidediv {
+    display: none;
+    padding: 10px;
+}
+
+.BlockCalender .SecondPart .DatesBlock .BlockSlotCustomWithTime {
+    display: flex;
+    gap: 10px;
+}
+
+.BlockCalender .SecondPart .DatesBlock .BlockSlotCustomWithTime .DateForBlockSlot {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.BlockCalender .SecondPart .DatesBlock .BlockSlotCustomWithTime .DateForBlockSlot .TimeForBlockSlot {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.BlockCalender .ThirdPart .SelectBlockType {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.BlockCalender .ThirdPart .SelectBlockType .VideoOrPhysical {
+    display: flex;
+    justify-content: space-between;
+}
+
+.BlockFooter {
+    display: flex;
+}
+
+.BlockFooter .NoticeAboutblock {
+    font-size: 14px;
+}
+
+#changecolor {
+    border: none;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    background: balck;
+    background-color: rgba(173, 249, 161, 1);
+}
+
+#exampleModalLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ChangeColorDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.LeftSideMainHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.RightsideMainDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+
+/* Edit */
+
+.color-1 {
+    color: #FFCC9D;
+}
+
+.color-2 {
+    color: #FFCC00;
+}
+
+.color-3 {
+    color: #4C5BCC;
+}
+
+
+/* Advanced Patient Search */
+
+.popup-form {
+    display: flex;
+    justify-content: center;
+}
+
+.dvSelect>select,
+#divControl>input,
+#divControl>select {
+    width: 12rem;
+    margin: 16px;
+    border: 1px solid black;
+    border-radius: 7px;
+    text-align: initial;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.popup-form>select>option {
+    width: 15rem;
+    font-size: 12px;
+}
+
+.fa-times-circle {
+    font-size: 18px;
+    color: red;
+    margin-top: 14px;
+    margin-left: -5px;
+}
+
+#btnAddMore {
+    color: rgb(0, 162, 255);
+    font-size: 15px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+#divCategories {
+    margin: 10px 27px;
+    box-shadow: 0 0 13px -7px #444444;
+    background-color: white;
+    width: 55%;
+}
+
+#divCategories>input {
+    /* width: 4rem; */
+    margin: 5px;
+}
+
+#divCategories>input,
+#divCategories>label {
+    cursor: pointer;
+}
+
+#divCategories>label:hover {
+    background-color: rgb(0, 162, 255);
+    color: white;
+}
+
+#divNoData {
+    color: red;
+    font-size: 14px;
+    margin-left: 36px;
+    display: none;
+}
+
+/* Code for Calendar new popup @anjudewangan */
+.modal-header .btn-close {
+    margin: 0 !important;
+}
+
+.modal-header .btn-modal-edit,
+.modal-header .btn-modal-copy {
+    border: none;
+    background: white;
+    opacity: .5;
+    font-size: 20px;
+    padding: 0.5rem 0.5rem;
+    margin-top: -8px;
+}
+
+.spanBloodGroup {
+    color: red;
+}
+
+.spanGender {
+    color: blue;
+}
+
+.spanWeight {
+    color: gray;
+}
+
+.modal-body .container-1 {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.container-2 {
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+.container-2 .row {
+    padding: 10px;
+}
+
+.container-2 .row-border-top {
+    border-top: 2px solid #dee2e6;
+}
+
+.container-2 ul li {
+    list-style-type: none;
+    padding: 3px;
+}
+
+.container-3 {
+    padding-top: 10px;
+    border-top: 2px solid #dee2e6;
+}
+
+.container-3 ul li {
+    list-style-type: none;
+    font-size: 16px;
+    padding: 2px;
+}
+
+.container-3 ul li ul li {
+    font-size: 12px;
+}
+
+.container-2 .btn-drop-out {
+    background-color: #FFD1D7;
+    border: 0.5px solid #000000;
+    border-radius: 3px;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+.container-2 .home-img {
+    width: 40px;
+}
+
+.container-2 .row .col-1 .fa-map-marker {
+    font-size: 20px;
+    margin-left: 17px
+}
+
+.modal-footer .btn-collect-payment {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #FFE382;
+    color: black;
+}
+
+.modal-footer .light-img {
+    width: 44px;
+}
+
+/* Code for Calendar new popup @anjudewangan */
+
+
+/* Code for admin setting box @anjudewangan  */
+#statusofAdmin,
+#emailofAdmin {
+    color: black;
+    font-weight: 400;
+}
+
+/* Code for admin setting box @anjudewangan  */
+
+
+/* Code for sidenav active link @anjudewangan */
+.navbar-sidenav>.nav-item>.active-link {
+    background-color: rgb(236, 236, 11);
+}
+
+/* Code for sidenav active link @anjudewangan */

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" />
+  <link rel="stylesheet" href="addpatient.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.1/html5-qrcode.min.js"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.common.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.default.min.css" />
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.default.mobile.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2022.1.301/js/jquery.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2022.1.301/js/kendo.all.min.js"></script>
+  <title>Hospital admin</title>
+</head>
+
+<body id="section">
+  <div class="nav">
+    <div class="mobile-nav">
+      <ul class="nav-links">
+        <div class="hamburger">
+          <i class="fa solid fa-bars"></i>
+        </div>
+        <a href="#" class="btn-1" id="add-btn">Add Patients</a>
+        <div class="search-bar">
+          <input type="search" placeholder="Search Patients" />
+          <button class="advnc-search" id="advnc-search">Advanced</button>
+          <i class="fa solid fa-magnifying-glass"></i>
+        </div>
+      </ul>
+      <span class="material-icons">perm_phone_msg</span>
+    </div>
+    <div class="container-1 hide">
+      <i class="fa solid fa-microphone"></i>
+      <div class="name-container">
+        <p>Dr.Aware Hospital and Nursing Home</p>
+      </div>
+      <div class="logo">
+        <a href="#">Logo</a>
+      </div>
+      <div class="menu-links">
+        <a href="" id="menu-hide">
+          <i class="fa-solid fa-calendar-days"></i>
+        </a>
+        <a href="" id="menu-hide">
+          <i class="fa-solid fa-bell"></i>
+        </a>
+        <a href="" id="chat">
+          <i class="fa-solid fa-message"></i>
+        </a>
+      </div>
+      <div class="profile" id="menu-hide">
+        <div class="profile-img">
+          <img src="../images/2.png" alt="" height="30px" width="30px" />
+        </div>
+        <div class="profile-name">
+          <a href="">Dr.Rakesh Nandre</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <section>
+    <div class="brcd-container">
+      <div id="display-image">
+        <div class="container_i">
+          <input type="file" id="image_input" accept=".jpg">
+          <label id="" for="image_input" id="img-label">
+            <span class="material-icons-outlined">add </span>
+          </label>
+        </div>
+      </div>
+      <div class="barcode">
+        <img id="barcode">
+      </div>
+    </div>
+    <div class="form">
+      <form action="" id="add_form">
+        <div class="reg">New Patient Registration</div>
+        <div class="item-container">
+          <div class="item">
+            <label for="">Patient Name</label>
+            <input type="text" value="" name="" id="first_name">
+          </div>
+          <div class="item">
+            <label for="">Last name </label>
+            <input type="text" value="" name="" id="last">
+          </div>
+          <div class="item">
+            <label for="">Middle Name (optional)</label>
+            <input type="text" value="" name="" id="middle_name">
+          </div>
+        </div>
+        <div class="item-container2">
+          <div class="item">
+            <label for="">Refered By</label>
+            <input type="text" value="" name="" id="refer">
+          </div>
+          <div class="item">
+            <label for="">Mobile Number</label>
+            <input type="text" value="" name="" id="mobile_number">
+          </div>
+          <div class="item">
+            <label for="">Email address</label>
+            <input type="text" value="" name="" id="email">
+          </div>
+        </div>
+        <div class="item-container3">
+          <div class="sms-item">
+            <input type="checkbox" name="" id="sms">
+            <label for="">SMS Notifications</label>
+            <a href="">Add new</a>
+          </div>
+          <div class="num-input">
+            <input type="text" placeholder="Mobile Number">
+          </div>
+        </div>
+        <div class="item-container4">
+          <div class="item dob">
+            <label for="">DOB</label>
+            <input type="date" name="" id="dob">
+          </div>
+          <div class="item age">
+            <label for="">Age</label>
+            <input type="number" name="" id="age">
+          </div>
+          <div class="item gender">
+            <label for="">Gender</label>
+            <select name="" id="gender">
+              <option value="">Select</option>
+              <option value="Male">Male</option>
+              <option value="FeMale">FeMale</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div class="item bg">
+            <label for="">Blood Group</label>
+            <select name="" id="blood_group">
+              <option value="">Select</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="AB">AB</option>
+              <option value="O">O</option>
+            </select>
+          </div>
+          <div class="item lang">
+            <label for="">Primary Language</label>
+            <select name="" id="language">
+              <option value="">English (Practice Default)</option>
+            </select>
+          </div>
+        </div>
+        <div class="item-container5">
+          <div class="item add">
+            <label for="">Address</label>
+            <input type="text" name="" id="address">
+          </div>
+          <div class="item pin">
+            <label for="">Pincode</label>
+            <input type="text" name="" id="pin">
+          </div>
+          <div class="item city">
+            <label for="">City</label>
+            <input type="text" name="" id="city">
+          </div>
+        </div>
+        <div class="item-container6">
+          <div class="container_6wrap">
+            <div class="item relation">
+              <label for="">Your Relationship</label>
+              <select name="" id="relation">
+                <option value="">Select</option>
+                <option value="Father">Father</option>
+                <option value="Mother">Mother</option>
+                <option value="Son">Son</option>
+                <option value="Daughter">Daughter</option>
+                <option value="Sister">Sister</option>
+                <option value="Brother">Brother</option>
+              </select>
+              <a href="#" id="add_new">+ Add Family Member</a>
+            </div>
+            <div class="item member" id="member">
+              <label for="">Member name </label>
+              <input type="text" name="" id="member_name">
+            </div>
+          </div>
+          <div id="relation_info" class="relation_container">
+          </div>
+        </div>
+
+        <div class="item-container7">
+          <div class="item">
+            <label for="">Insurance Holder</label>
+            <div class="rad">
+              <input type="radio" id="yes" name="yes" value="yes" />
+              <label for="yes">Yes</label>
+              <input type="radio" id="yes" name="yes" value="no" />
+              <label for="no">No</label>
+            </div>
+          </div>
+        </div>
+        <div class="item-container8">
+          <p>Medical Profile</p>
+          <div class="container-8">
+            <div class="item">
+              <div class="medical-hist">
+                <label for="">Personal Medical History</label>
+                <input type="text" class="input" name="" id="todo_input" placeholder="+ Click to add">
+                <ul id="todos" class="todos">
+                  <li>Tiabe</li>
+                  <li>Diabetes</li>
+                  <li>corona</li>
+                </ul>
+              </div>
+            </div>
+            <div class="allergy">
+              <label for="">Patient is allergic?</label>
+              <div class="allrgy-inpt">
+                <select name="" id="allergy">
+                  <option value="">Type of allergy</option>
+                  <option value="Skin">Skin</option>
+                </select>
+                <input type="text" name="" id="allergyadd" placeholder="Type allergy">
+
+              </div>
+              <div id="allergy_info" class="allergy_info">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item-container9">
+          <div class="item">
+            <p>Insurance Network</p>
+            <div class="insurance">
+              <div class="insr-provider">
+                <label for="">Insurance Provider</label>
+                <select name="" id="insurance">
+                  <option value="Reliance">Reliance</option>
+                  <option value="LIC">LIC</option>
+                  <option value="IDFC">IDFC</option>
+                  <option value="HDFC">HDFC</option>
+                  <option value="Life">Life Insurance</option>
+                </select>
+              </div>
+              <div class="plan">
+                <label for="">Choose Plan</label>
+                <select name="" id="plan">
+                  <option value="PLAN 1">PLAN 1</option>
+                  <option value="PLAN 2">PLAN 2</option>
+                  <option value="PLAN 3">PLAN 3</option>
+                  <option value="PLAN 4">PLAN 4</option>
+                  <option value="PLAN 5">PLAN 5</option>
+                </select>
+              </div>
+            </div>
+            <div class="policy">
+              <div class="policy-item1">
+                <label for="">Policy No/Certificate No</label>
+                <input type="text" id="policy">
+              </div>
+              <div class="img-container">
+                <label for="">Photo copy of insurance</label>
+                <div class="file">
+                  <div class="file-container">
+                    <div class="files">
+                      <div class="galleryselector" id="uploading">
+                        <input type="file" id="file" accept="image/*" onchange="loadFile(event)" style="display:none;"
+                          multiple></input>
+                        <label for="file">
+                          <i class="fa-regular fa-image">
+                          </i><span> upload a file</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="files">
+                      <div class="cameraselector" id="btn-start">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          <span class="material-icons-round">photo_camera</span>
+                          <span>Take a picture</span>
+                        </button>
+                      </div>
+                      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h6 class="modal-title" id="staticBackdropLabel">Capture images using a
+                                webcam</h6>
+                              <button type="button" class="btn-close" id="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="play-area-sub1" id="play-area-sub1">
+                                <video id="stream" style="width: 466px; height: 246px;"></video>
+                              </div>
+                              <div class="play-area-sub" id="play-area-sub">
+                                <canvas id="capture" width="320" height="240"></canvas>/
+                              </div>
+                              <div id="snapshot"></div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop1">
+                                Capture Photo
+                              </button>
+                              <button type="button" class="btn btn-secondary" id="btn-cancel"
+                                data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdrop1Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h6 class="modal-title" id="staticBackdrop1Label1">Capture images using a webcam </h6>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                id="btn-close-1"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="play-area-sub1-1" id="play-area-sub1-1">
+                                <video id="stream-1" style="width: 466px; height: 246px;"></video>
+                              </div>
+                              <div class="play-area-sub-1" id="play-area-sub-1">
+                                <canvas id="capture" width="320" height="240"></canvas>
+                              </div>
+
+                              <div class="mb-3">
+                                <label class="col-form-label">File name</label>
+                                <input type="text" class="form-control" id="fileName" placeholder="Write">
+                              </div>
+
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-warning" id="btn-capture">Save Photo</button>
+                              <button type="button" class="btn btn-secondary" id="retake">Retake</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="copy-container">
+              <div id="example-1">
+                <div id="uploadedfiles"></div>
+              </div>
+              <div class="innerboxs" id='filehead'>
+                <div id="example">
+                  <span id="snapshot-1"></span>
+                  <div class="responsive-message"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="appt-btn">
+          <button id="appt-btn">BOOK APPOINTMENT</button>
+        </div>
+      </form>
+    </div>
+    <div class="btn-3">
+      <button class="scan" id="scan">Scan Barcode</button>
+      <button class="merge" id="merge-btn">Merge Patients</button>
+    </div>
+  </section>
+  <div class="modal-1" id="modal-container">
+    <div class="modal-content1">
+      <div class="modal-bar">
+        <p>Merging Patients</p>
+        <button>
+          <span class="close">&times;</span>
+        </button>
+      </div>
+      <div class="modal-input">
+        <div class="modal-item1">
+          <label for="">Patient-1</label>
+          <input type="text" name="" id="" placeholder="Find patients to merge profiles">
+        </div>
+        <div class="">
+          <i class="material-icons-outlined 1">add</i>
+        </div>
+        <div class="modal-item2">
+          <label for="">Patient-2</label>
+          <input type="text" name="" id="" placeholder="Find patients to merge profiles">
+        </div>
+      </div>
+      <div class="modal-btn">
+        <label for="">
+          <span class="material-icons-outlined">
+            error
+          </span>
+          Patient-1's profile details and records will be sent to patient-2.Once this is action is
+          completed,you cannot undo it.
+        </label>
+        <button class="merge">Merge Patients</button>
+      </div>
+    </div>
+  </div>
+  <div id="scn_modal" class="scn_modal">
+    <div id="reader"></div>
+    <div class="code-input">
+      <input type="text" placeholder="Enter code">
+    </div>
+    <div id="qr-reader-results"></div>
+  </div>
+
+  <div class="advance-srch" id="advance-srch">
+    <div class="srch-head">
+      <p>Advanced Patient Search</p>
+    </div>
+    <div class="advance-item1">
+      <div class="sub-item1">
+        <select name="" id="">
+          <option value="">Choose</option>
+        </select>
+        <select name="" id="">
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="sub-item2">
+        <div class="wrap">
+          <select name="" id="">
+            <option value="">Refered by</option>
+          </select>
+          <a href="">Add another patient</a>
+        </div>
+        <select name="" id="">
+          <option value="">Select</option>
+        </select>
+      </div>
+    </div>
+    <div class="advance-item2">
+      <div class="sub-item one">
+        <label for="">Patient Name</label>
+        <input type="text" placeholder="Contains">
+      </div>
+      <div class="sub-item two">
+        <label for="">Contact Number</label>
+        <input type="number" placeholder="Contains">
+      </div>
+      <div class="sub-item three">
+        <label for="">Has Contact Number</label>
+        <select name="" id="">
+          <option value="">Yes</option>
+          <option value="">No</option>
+        </select>
+      </div>
+      <div class="sub-item four">
+        <label for="">Age is</label>
+        <input type="number" placeholder="">
+      </div>
+      <div class="sub-item five">
+        <label for="">Age is more than</label>
+        <input type="number" placeholder="">
+      </div>
+      <div class="sub-item six">
+        <label for="">Age is less than</label>
+        <input type="number" placeholder="">
+      </div>
+      <div class="sub-item seven">
+        <label for="">Date of Birth is</label>
+        <input type="date" placeholder="">
+      </div>
+      <div class="sub-item eight">
+        <label for="">Date of Birth is more than</label>
+        <input type="date" placeholder="">
+      </div>
+      <div class="sub-item nine">
+        <label for="">Date of Birth is less than</label>
+        <input type="date" placeholder="">
+      </div>
+      <div class="sub-item wrapper">
+        <div class="sub-item">
+          <label for="">Has Date of birth</label>
+          <select name="" id="">
+            <option value="">Yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Birthday is in</label>
+          <input type="month" placeholder="">
+        </div>
+        <div class="sub-item">
+          <label for="">Has Patient id </label>
+          <select name="" id="">
+            <option value="">Yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Patient id</label>
+          <input type="text" placeholder="Contains">
+        </div>
+        <div class="sub-item">
+          <label for="">Has Aadhaar ID</label>
+          <select name="" id="">
+            <option value="">Yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Aadhaar ID</label>
+          <input type="text" placeholder="Contains">
+        </div>
+        <div class="sub-item">
+          <label for="">Email</label>
+          <input type="email" placeholder="Contains">
+        </div>
+        <div class="sub-item">
+          <label for="">Has Email</label>
+          <select name="" id="">
+            <option value="">Yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Gender is</label>
+          <select name="" id="">
+            <option value="">Male</option>
+            <option value="">FeMale</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Has Gender</label>
+          <select name="" id="">
+            <option value="">Yes</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Pincode</label>
+          <input type="text" placeholder="Contains">
+
+        </div>
+        <div class="sub-item">
+          <label for="">Has Pincode</label>
+          <select name="" id="">
+            <option value="">Yes</option>
+            <option value="">No</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Has Street Address</label>
+          <select name="" id="">
+            <option value="">Choose</option>
+          </select>
+        </div>
+        <div class="sub-item">
+          <label for="">Street Address</label>
+          <input type="text" placeholder="Contains">
+        </div>
+        <div class="sub-item">
+          <label for="">Blood Group</label>
+          <select name="" id="">
+            <option value="" placeholder="sfnfjk">O+</option>
+          </select>
+        </div>
+      </div>
+      <div class="sub-item ten">
+        <label for="">Was referred by someone</label>
+        <select name="" id="">
+          <option value="">Choose</option>
+        </select>
+      </div>
+      <div class="sub-item eleven ">
+        <label for="">Referred By</label>
+        <select name="" id="">
+          <option value="">Choose</option>
+        </select>
+      </div>
+    </div>
+    <div class="advance-footer">
+      <button class="cancel">CANCEL</button>
+      <button class="search">Search</button>
+    </div>
+  </div>
+
+  <script src="addpatient.js"></script>
+  <script src="addpatient1.js"></script>
+</body>
+
+</html>

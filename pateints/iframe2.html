@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.1.301/styles/kendo.default.mobile.min.css" />
+    <link rel="stylesheet" href="formcss.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.301/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2022.1.301/js/kendo.all.min.js"></script>
+</head>
+
+<body>
+    <div class="containerBox">
+        <div class="center" style="font-size: small;">
+            <!-- ***Adding Clinical Notes -->
+            <div class="record">
+                <div class="boxRecord">
+                    <div class="innerboxs" id="ClinicalNotes">
+                        <p>Clinical Notes</p>
+                        <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/24/000000/external-setting-basic-ui-elements-flatart-icons-outline-flatarticons.png" />
+                    </div>
+                    <div class="marginclinic">
+                        <h5>Complaints</h5>
+                        <div class="complainBox">
+                            <div class="patientconplain" id="complaintslist">
+    
+                            </div>
+                            <div class="patientconplain" id="patientconplain">
+                                <textarea type="text" name="" id="Complaints" rows="2" cols="50">
+                                </textarea>
+                            </div>
+                            <div class="complaingallery">
+                                <img src="https://img.icons8.com/material-outlined/24/000000/camera--v2.png" id="complaintcam" alt="camera">
+                                <div class="playareasub1" id="playareacomplaint">
+                                    <video width="220" height="130" id="streamcomplaints"></video>
+                                    <button id="complaint-capture" type="button">capture image</button>
+                                </div>
+                                <div class="playareasub" id="complaintimage">
+                                    <canvas id="capturecomplaint" width="200" height="120"></canvas>
+                                    <div id="snapshotcomplaint"></div>
+                                </div>
+                                <input type="file" id="complaintfile" style="display: none;" onchange="complaintfile()" />
+                                <label for="complaintfile" id="complaintfilelabel"><img
+                                        src="https://img.icons8.com/external-prettycons-lineal-prettycons/24/000000/external-gallery-multimedia-prettycons-lineal-prettycons.png" /></label>
+                                <button id="addcomplaints" onclick="setComplaint()" style="margin: 0 0 0 0; display:block; padding: 0 0.3rem 0 0;">✅</button>
+                                <button id="deletecomplaints" onclick="deletecomplaint()" style="margin:0 0 0 0; display:none; padding:0 0.3rem 0 0;">❌</button>
+                            </div>
+                        </div>
+                        <div id="pressEnterc">
+                            <p>press Enter for next line.</p>
+                            <p>press green tick after filling Complaints</p>
+                        </div>
+                        <h5>Summary</h5>
+                        <div class="complainBox">
+                            <div class="pateintconplain" id="summarylist">
+                            </div>
+                            <div class="patientconplain" id="summarys">
+                                <textarea name="" id="summarytextarea" cols="50" rows="2"></textarea>
+                            </div>
+                            <div class="complaingallery">
+                                <img src="https://img.icons8.com/material-outlined/24/000000/camera--v2.png" id="summarycam" alt="camera">
+                                <div class="playareasub1" id="playareasummary">
+                                    <video width="220" height="130" id="streamsummary"></video>
+                                    <button id="summary-capture" type="button">capture image</button>
+                                </div>
+                                <div class="playareasub" id="summaryimage">
+                                    <canvas id="capturesummary" width="200" height="120"></canvas>
+                                    <div id="snapshotsummary"></div>
+                                </div>
+                                <input type="file" id="summaryfile" style="display:none" onchange="summaryfile()" />
+                                <label for="summaryfile" id="summaryfilelabel"><img
+                                        src="https://img.icons8.com/external-prettycons-lineal-prettycons/24/000000/external-gallery-multimedia-prettycons-lineal-prettycons.png" /></label>
+                                <button id="addsummary" onclick="setsummary()" style="display: block; margin: 0 0 0 0 ; padding: 0 0.3rem 0 0 ;">✅</button>
+                                <button id="deletesummary" onclick="deletesummary()" style="display: none; padding: 0 0.3rem 0 0;">❌</button>
+                            </div>
+                        </div>
+                        <div id="pressEnters">
+                            <p>press Enter for next line</p>
+                            <p>press green tick after filling Complaints</p>
+                        </div>
+                        <h5>Observation</h5>
+                        <div class="complainBox">
+                            <div class="pateintconplain" id="observationlist">
+                            </div>
+                            <div class="patientconplain" id="observations">
+                                <textarea name="" id="observationtextarea" cols="50" rows="2"></textarea>
+                            </div>
+                            <div class="complaingallery">
+                                <img id="observationcam" src="https://img.icons8.com/material-outlined/24/000000/camera--v2.png" alt="camera">
+                                <div class="playareasub1" id="playareaobservation">
+                                    <video width="220" height="130" id="streamobservation"></video>
+                                    <button id="observation-capture" type="button">capture image</button>
+                                </div>
+                                <div class="playareasub" id="observationimage">
+                                    <canvas id="captureobservation" width="200" height="120"></canvas>
+                                    <div id="snapshotobservation"></div>
+                                </div>
+                                <input type="file" id="observationfile" style="display: none;" onchange="observationfile()">
+                                <label for="observationfile" id="observationfilelabel"><img
+                                        src="https://img.icons8.com/external-prettycons-lineal-prettycons/24/000000/external-gallery-multimedia-prettycons-lineal-prettycons.png" /></label>
+                                <button id="addobservation" onclick="setobservation()" style="display: block; margin: 0 0 0 0; padding:0 0.3rem 0 0;">✅</button>
+                                <button id="deleteobservation" onclick="deleteobservation()" style="display: none; padding:0 0.3rem 0 0">❌</button>
+                            </div>
+                        </div>
+                        <div id="pressEntero">
+                            <p>press Enter for next line</p>
+                            <p>press green tick after filling Complaints</p>
+                        </div>
+                        <h5>Daignoses</h5>
+                        <div class="complainBox">
+                            <div class="patientconplain" id="daignoseslist">
+                            </div>
+                            <div class="patientconplain" id="daignosess">
+                                <textarea name="" id="daignosestextarea" cols="50" rows="2"></textarea>
+                            </div>
+                            <div class="complaingallery">
+                                <img id="daignosescam" src="https://img.icons8.com/material-outlined/24/000000/camera--v2.png" alt="camera">
+                                <div class="playareasub1" id="playareadaignoses">
+                                    <video width="220" height="130" id="streamdaignoses"></video>
+                                    <button id="daignoses-capture" type="button">capture image</button>
+                                </div>
+                                <div class="playareasub" id="daignosesimage">
+                                    <canvas id="capturedaignoses" width="200" height="120"></canvas>
+                                    <div id="snapshotdaignoses"></div>
+                                </div>
+                                <input type="file" id="daignosesfile" style="display: none;" onchange="daignosesfile()" />
+                                <label for="daignosesfile" id="daignosesfilelabel"><img
+                                        src="https://img.icons8.com/external-prettycons-lineal-prettycons/24/000000/external-gallery-multimedia-prettycons-lineal-prettycons.png" /></label>
+                                <button id="adddaignoses" onclick="setdaignoses()" style="display: block; padding:0 0.3rem 0 0">✅</button>
+                                <button id="deletedaignoses" onclick="deletedaignoses()" style="display: none; padding: 0 0.3rem 0 0;">❌</button>
+                            </div>
+                        </div>
+                        <div id="pressEnterd">
+                            <p>press Enter for next line.</p>
+                            <p>press green tick after filling Complaints</p>
+                        </div>
+                        <div class="addnote" id="addnotes">
+                            <div class="patientconplain" id="addnotesdiv">
+                                <textarea name="" id="notestextarea" cols="50" rows="2"></textarea>
+                            </div>
+                            <button id="addnotes-btn" onclick="AddNotes()">+ Add Notes</button>
+                        </div>
+                    </div>
+                    <div class="innnercdbutton">
+                        <button class="canclebtn" onclick="cancledivClinical()" name="canclebtn" value="OK" type="cancle">Cancle</button>
+                        <button class="savebtn" onclick="DoneClinical()" name="savebtn" value="true" type="submit">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="formscript.js"></script>
+</body>

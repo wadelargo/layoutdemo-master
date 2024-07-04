@@ -1,0 +1,1249 @@
+<!-- Code for add Purchases @anjudewangan -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navForDeskTop">
+        <a class="navbar-brand" href="http://127.0.0.1:5500/practice-registration/second-stage/html/index.html">
+            <span class="iconify" data-icon="carbon:add" data-width="35" data-height="35"></span>
+            <p>Add Establishment</p>
+        </a>
+        <button class="buttonForSideNav" type="button" onclick="openNav()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <div class="navbar-second">
+            <ul class="ml-auto secondNavUl">
+                <a class="hospital-name" href="#">WellDone</a>
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <div class="searchbox">
+                            <input class="form-control inputForSearch" type="text" placeholder="Search for..." />
+                            <button type="button" class="advnc-search" id="advnc-search" data-bs-toggle="modal"
+                                data-bs-target="#dashboardPopup">Advanced</button>
+                            <div class="modal fade" id="dashboardPopup" data-bs-backdrop="false"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="dashboardPopupLabel"
+                                aria-hidden="true" role="dialog" data-backdrop="false">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="dashboardPopupLabel">Advance Patient Search</h5>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close" onclick="HandleCancel()"></button>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" class="popup-form">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="dvSelect">
+                                                                <select id="ddlInfo">
+                                                                    <option value="patient_name">Patient Name</option>
+                                                                    <option value="has_contact_number">Has Contact
+                                                                        Number</option>
+                                                                    <option value="contact_number">Contact Number
+                                                                    </option>
+                                                                    <option value="age_is">Age is</option>
+                                                                    <option value="age_more_than">Age is More Than
+                                                                    </option>
+                                                                    <option value="age_less_than">Age is Less Than
+                                                                    </option>
+                                                                    <option value="has_date_of_birth">Has Date of Birth
+                                                                    </option>
+                                                                    <option value="date_of_birth">Date of Birth Is
+                                                                    </option>
+                                                                    <option value="date_of_birth_more_than">Date of
+                                                                        Birth is More Than</option>
+                                                                    <option value="date_of_birth_less_than">Date of
+                                                                        Birth is Less Than</option>
+                                                                    <option value="birthday_is_in">Birthday is in
+                                                                    </option>
+                                                                    <option value="has_patient_id">Has Patient ID
+                                                                    </option>
+                                                                    <option value="patient_id">Patient ID</option>
+                                                                    <option value="has_aadhaar_id">Has Aadhaar ID
+                                                                    </option>
+                                                                    <option value="aadhaar_id">Aadhaar ID</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="email">Email</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="has_gender">Has Gender</option>
+                                                                    <option value="gender">Gender is</option>
+                                                                    <option value="has_pincode">Has Pincode</option>
+                                                                    <option value="pincode">Pincode</option>
+                                                                    <option value="has_street_address">Has Street
+                                                                        Address</option>
+                                                                    <option value="street_address">Street Address
+                                                                    </option>
+                                                                    <option value="has_blood_group">Has Blood Group
+                                                                    </option>
+                                                                    <option value="blood_group">Blood Group</option>
+                                                                    <option value="was_referred_by_someone">Was Referred
+                                                                        By Someone</option>
+                                                                    <option value="referred_by_someone">Referred By
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div id="divControl">
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <button type="button" id="btnAddMore">Add another parameter</button>
+                                            <div id="divCategories">
+
+                                            </div>
+                                            <div id="divNoData" style="display: none;">No Data Found</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnSearch"
+                                                onclick="ShowNoDataMessage()">Search</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                id="btnCancel" onclick="HandleCancel()">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="input-group-append">
+                                <button class="btn btn-primary searchbtn1" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="microPhoneChoose" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-microphone"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="addPateintButton" href="../../Addpateints/addpatient.html">
+                        <button type="button" class="addpatient">Add Patient</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="calenderButton" href="../../Calendar/calendar.html">
+                        <i class="fa fa-fw fa-calendar"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="../../chat/index.html">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <!-- <span class="d-lg-none">Call-Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span> -->
+                    </a>
+                </li>
+            </ul>
+
+            <!-- message shortcut
+            <div class="messageAlertDetails" id="messageAlertDetails">
+                <div class="MADHeader">
+                    <h6 class="MADHeader-info">New Messages:</h6>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADBody">
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>David Miller</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>Jane Smith</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>John Doe</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADFooter">
+                    <a class="viewAllMsgs" href="#">View all messages</a>
+                </div>
+
+            </div> -->
+            <!-- admin setting box -->
+            <div class="adminSettingBox" id="adminSettingBox">
+                <div class="adminSettingHeader">
+                    <strong id="nameofAdmin">Rakesh Nandre</strong>
+                    <p id="statusofAdmin">Admin</p>
+                    <p id="emailofAdmin">xyz@gmail.com</p>
+                </div>
+                <hr style="margin: 15px 0;">
+                <ul id="settingOptions">
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><a href="../../admin profile/admin.html" style="text-decoration: none; color: black;"><span
+                                class="iconify" style="color: gray;" data-icon="akar-icons:pencil" data-width="17"
+                                data-height="17"></span> Edit Profile</a></li>
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><span class="iconify" data-icon="ant-design:setting-outlined" style="color: gray;"
+                            data-width="17" data-height="17"></span> Account Setting</li>
+                    <li><span class="iconify" data-icon="ant-design:user-outlined" style="color: gray;" data-width="17"
+                            data-height="17"></span> Add User</li>
+                    <li><span class="iconify" data-icon="bx:log-out" style="color: gray;" data-width="17"
+                            data-height="17"></span> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-third">
+            <div class="dropdown">
+                <button id="dropbtnMyfunction" class="dropbtn">
+                    <img class="user-img" src="../../images/2.png" />Rakesh Nandare
+                    <i class="fa fa-angle-down"></i>
+                </button>
+            </div>
+            <!-- alert details -->
+            <div class="alertDetails" id="alertDetails">
+                <div class="alertHeader">
+                    <p>New Alerts:</p>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="alertBody">
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                </div>
+                <div class="alertFooter">
+                    <a>View All Events</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="../../dashboard.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <a class="nav-link" href="../../doctor1/doctor.html">
+                    <i class="fa fa-fw fa-user-md"></i>
+                    <span class="nav-link-text">Doctors</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables"
+                onclick="showpateintTable()">
+                <a class="nav-link" href="../../pateints/index.html">
+                    <i class="fa fa-fw fa fa-wheelchair"></i>
+                    <span class="nav-link-text">Patient</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../../Calendar/calendar.html">
+                    <i class="fa fa-fw fa fa-calendar"></i>
+                    <span class="nav-link-text">Appointment</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Dr. Schedule @anjudewangan -->
+                <a class="nav-link" href="../../doctorschedule/doctorSchedule.html">
+                    <!-- Code for add Dr. Schedule @anjudewangan -->
+                    <i class="fa fa-fw fa fa-calendar-check-o"></i>
+                    <span class="nav-link-text">Dr. Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Department @anjudewangan -->
+                <a class="nav-link" href="../../department/department.html">
+                    <!-- Code for add Department @anjudewangan -->
+                    <i class="fa fa-fw fa-building-o"></i>
+                    <span class="nav-link-text">Departments</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Insurance @anjudewangan -->
+                <a class="nav-link" href="../../insurance/insurance.html">
+                    <!-- Code for add Insurance @anjudewangan -->
+                    <i class="fa fa-fw fa-umbrella" aria-hidden="true"></i>
+                    <span class="nav-link-text">Insurance Network</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-user"></i>
+                    <span class="nav-link-text">Employee</span>
+                </a>
+                <!-- Code for link Employee Section @anjudewangan -->
+                <ul class="collapse sidenav-second-level" id="collapseComponents">
+                    <li>
+                        <a href="../../employee/employeeList.html">Employee List</a>
+                    </li>
+                    <li>
+                        <a href="../../employee/leave.html">Leaves</a>
+                    </li>
+                    <li>
+                        <a href="../../employee/holiday.html">Holidays</a>
+                    </li>
+                    <li>
+                        <a href="../../employee/attendance.html">Attendance</a>
+                    </li>
+                </ul>
+                <!-- Code for link Employee Section @anjudewangan -->
+            </li>
+            <!-- Code for link item @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../../item/item.html">
+                    <i class="fa fa-fw fa-sitemap" aria-hidden="true"></i>
+                    <span class="nav-link-text">Item</span>
+                </a>
+            </li>
+            <!-- Code for link item @anjudewangan -->
+
+            <!-- Code for link Sales @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span class="nav-link-text">Sales</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="../../sales/customers/customers.html">Customers</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/estimates/estimates.html">Estimates</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/salesOrders/salesOrders.html">Sales Orders</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/packages-folder/packages.html">Packages</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/shipmets/shipments.html">Shipments</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/delivery-challans/deliveryChallans.html">Delivery Challans</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/invoices/invoices.html">Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/received-payments/receivedPayments.html">Received Payments</a>
+                    </li>
+                    <li>
+                        <a href="">Recurring Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/sales-return/salesReturn.html">Sales Return</a>
+                    </li>
+                    <li>
+                        <a href="../../sales/credit-notes/creditNotes.html">Credit Notes</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Sales @anjudewangan -->
+
+            <!-- Code for link Purchases @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed active-link" data-toggle="collapse"
+                    href="#collapsePurchases" data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-shopping-bag"></i>
+                    <span class="nav-link-text">Purchases</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapsePurchases">
+                    <li>
+                        <a href="./vendors.html" class="sales-link">Vendors</a>
+                    </li>
+                    <li>
+                        <a href="../purchase-order/purchaseOrder.html">Purchase Orders</a>
+                    </li>
+                    <li>
+                        <a href="../purchase-receives/purchaseReceives.html">Purchase Receives</a>
+                    </li>
+                    <li>
+                        <a href="../bills/bills.html">Bills</a>
+                    </li>
+                    <li>
+                        <a href="../payments-made/paymentsMade.html">Payments Made</a>
+                    </li>
+                    <li>
+                        <a href="../vendor-credits/vendorCredits.html">Vendor Credits</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Purchases @anjudewangan -->
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-book"></i>
+                    <span class="nav-link-text">Payroll</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="login.html">Pay slip</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa fa-commenting"></i>
+                    <span class="nav-link-text">Chat</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-video-camera"></i>
+                    <span class="nav-link-text">Call</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti">
+                    <li>
+                        <a href="#">Voice call</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEmail"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-envelope"></i>
+                    <span class="nav-link-text">Email</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseEmail">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBlog"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fas fa-comment"></i>
+                    <span class="nav-link-text">Blog</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseBlog">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fas fa-object-group"></i>
+                    <span class="nav-link-text">Assets</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa-bell-o"></i>
+                    <span class="nav-link-text">Activites</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-flag"></i>
+                    <span class="nav-link-text">Report</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseReport">
+                    <li>
+                        <a href="#">Expenses Report</a>
+                    </li>
+                    <li>
+                        <a href="#">Invoice Report</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="../../Setting Folder/practice-profile.html">
+                    <i class="fa fa-fw fa-cog"></i>
+                    <span class="nav-link-text">Setting</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- All Vendors -->
+    <main class="main">
+        <div class="container" style="max-width: 1533px !important;">
+            <div class="row">
+                <div class="col-3">
+                    <div class="row border-bottom pb-2">
+                        <div class="col-2"></div>
+                        <div class="col-6">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle fw-bold" type="button" id="dropdownMenuButton2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    All Vendors
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                    <li><a class="dropdown-item text-secondary" href="#">Default Filters</a></li>
+                                    <li><a class="dropdown-item" href="#">All Vendors</a></li>
+                                    <li><a class="dropdown-item" href="#">Active Vendors</a></li>
+                                    <li><a class="dropdown-item" href="#">CRM Vendors</a></li>
+                                    <li><a class="dropdown-item" href="#">Duplicate Vendors</a></li>
+                                    <li><a class="dropdown-item" href="#">Inactive Vendors</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <a href="./newVendor.html">
+                                <button class="btn btn-warning text-primary">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col-2">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary" type="button" id="dropdownMenuButton3"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-align-left" aria-hidden="true"></i>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                    <li><a class="dropdown-item fs-4" href="#">SORT BY</a></li>
+                                    <li><a class="dropdown-item" href="#">Name</a></li>
+                                    <li><a class="dropdown-item" href="#">Company Name</a></li>
+                                    <li><a class="dropdown-item" href="#">Payables</a></li>
+                                    <li><a class="dropdown-item" href="#">Created Time</a></li>
+                                    <li><a class="dropdown-item border-bottom" href="#">Last Modified Time</a></li>
+                                    <li><a class="dropdown-item fs-5" href="#"> <i class="fa fa-download text-secondary"
+                                                aria-hidden="true"></i>
+                                            Import Vendors</a></li>
+                                    <li><a class="dropdown-item fs-5 border-bottom" href="#">
+                                            <i class="fa fa-arrow-up text-secondary" aria-hidden="true"></i>
+                                            Export Vendors
+                                        </a></li>
+                                    <li><a class="dropdown-item fs-5" href="#">
+                                            <i class="fa fa-arrow-up text-secondary" aria-hidden="true"></i>
+                                            Export Current View
+                                        </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-3 px-5 active-item border-bottom">
+                        <div class="col-10">Appario Technology
+                            <div><small>₹0.00</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 border-left">
+                    <div class="row mb-4">
+                        <div class="col">
+                            <h6>Appario Technology</h6>
+                        </div>
+                        <div class="col">
+                            <i class="fa fa-mobile" aria-hidden="true"></i> 9876543210
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2">
+                            <a href="./allVendors.html"> <button class="btn btn-light border">Mark as
+                                    Active</button></a>
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-light border" data-bs-toggle="modal"
+                                data-bs-target="#popupDelete">Delete</button>
+                            <div class="modal fade" id="popupDelete" tabindex="-1" aria-labelledby="popupDeleteLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="col-10">Do you want to delete the selected contact’s ?
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-start">
+                                            <a href="./vendors.html"><button type="button"
+                                                    class="btn btn-primary">Delete</button></a>
+                                            <button type="button" class="btn btn-outline-secondary"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1 mt-1">
+                            <a href="./allVendors.html" class="text-dark"><i class="fa fa-times"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="row border-bottom">
+                        <div class="col"><a href="./allVendors.html" class="text-dark">Overview</a></div>
+                        <div class="col"><a href="./comments.html">Comments</a></div>
+                        <div class="col"><a href="./transactions.html">Transactions</a></div>
+                        <div class="col"><a href="./mails.html">Mails</a></div>
+                        <div class="col"><a href="./statement.html">Statement</a></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-light py-3 px-4">
+                            <div class="d-flex justify-content-between border-bottom pb-2">
+                                <div>RECORD INFO</div>
+                                <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                            </div>
+                            <div class="d-flex justify-content-between mt-3">
+                                <div>Vendor ID</div>
+                                <div>825664000000120035</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>Created on</div>
+                                <div>24/06/2022</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div>Created By</div>
+                                <div>rakeshnandre433</div>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom">
+                                <div>Address</div>
+                                <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                            </div>
+                            <div class="mt-3">Billing Address</div>
+                            <div class="d-flex justify-content-between">
+                                <div class="fw-bold">bashah</div>
+                                <i class="fa fa-pencil" aria-hidden="true" data-bs-toggle="modal"
+                                    data-bs-target="#popupBilling"></i>
+                                <div class="modal fade" id="popupBilling" tabindex="-1"
+                                    aria-labelledby="popupBillingLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <div class="modal-header bg-light">
+                                                <h5 class="modal-title" id="popupBillingLabel">Billing Address</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">House No/ building/ apartment <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Area / colony/ street/ sector/
+                                                        village <span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Landmark</label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Town/city<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Country / Region</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Select</option>
+                                                    </select>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">State / Province
+                                                                /Region</label>
+                                                            <select class="form-select"
+                                                                aria-label="Default select example">
+                                                                <option selected>Select or Type to add</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">Pin Code<span
+                                                                    class="text-danger">*</span></label>
+                                                            <input type="text" class="form-control" id="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Phone</label>
+                                                    <input type="text" class="form-control" id="">
+                                                </div>
+                                                <div class="container p-3" style="background-color: 
+                                                #FFF4D6;">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="flexCheckChecked" checked>
+                                                        <label class="form-check-label" for="flexCheckChecked">
+                                                            Upon checking this box, the new address will be updated in
+                                                            the following transactions:
+                                                        </label>
+                                                    </div>
+                                                    <ul class="ulBilling">
+                                                        <li>Draft Invoices</li>
+                                                        <li>Draft Estimates</li>
+                                                        <li>Draft Sales Orders</li>
+                                                        <li>Draft Purchase Orders</li>
+                                                        <li>Open Bills</li>
+                                                        <li>Open Credit Notes</li>
+                                                        <li>Open Vendor Credits</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-start">
+                                                <button type="button" class="btn btn-secondary">Save</button>
+                                                <button type="button" class="btn btn-outline-dark"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>dd</div>
+                            <div>sakri</div>
+                            <div>Maharashtra 424304</div>
+                            <div>India</div>
+                            <div>Phone: 9876543210</div>
+                            <div class="mt-3">Shipping Address</div>
+                            <div class="d-flex justify-content-between">
+                                <div class="fw-bold">bashah</div>
+                                <i class="fa fa-pencil" aria-hidden="true" data-bs-toggle="modal"
+                                    data-bs-target="#popupBilling"></i>
+                            </div>
+                            <div>dd</div>
+                            <div>sakri</div>
+                            <div>Maharashtra 424304</div>
+                            <div>India</div>
+                            <div class="mb-4">Phone: 9876543210</div>
+                            <div class="d-flex justify-content-between border-bottom pb-2">
+                                <div>Other Details</div>
+                                <div>
+                                    <i class="fa fa-pencil" aria-hidden="true" data-bs-toggle="modal"
+                                        data-bs-target="#popupOtherDetails"></i>
+                                    <i class="fa fa-sort-desc ml-4" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-3">
+                                <div>Customer Type</div>
+                                <div>Individual</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>Payment Terms</div>
+                                <div>Due on Receipt</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>Template Language</div>
+                                <div>English</div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div>GST Treatment</div>
+                                <div>Consumer</div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div>Place Of Supply</div>
+                                <div>Maharashtra</div>
+                            </div>
+                            <div class="d-flex justify-content-between border-bottom pb-2">
+                                <div>Tax Information</div>
+                                <div>
+                                    <i class="fa fa-plus-circle text-primary" aria-hidden="true" data-bs-toggle="modal"
+                                        data-bs-target="#popupManageTaxInfo"></i>
+                                    <i class="fa fa-sort-desc ml-4" aria-hidden="true"></i>
+                                </div>
+                                <div class="modal fade" id="popupManageTaxInfo" tabindex="-1"
+                                    aria-labelledby="popupManageTaxInfoLabel" aria-hidden="true">
+                                    <div class="modal-dialog modalManageTaxInfo">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="popupManageTaxInfoLabel">Manage Tax
+                                                    Informations</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#popupAddManageTaxInfo">Add New Tax
+                                                    Information</button>
+                                                <table class="table mt-4">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>GSTIN</th>
+                                                            <th>Place of Supply</th>
+                                                            <th>Business Legal Name</th>
+                                                            <th>Business Trade Name</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr data-bs-dismiss="modal" aria-label="Close">
+                                                            <td>27AABFB2177L1ZD
+                                                                <div><i class="text-success">(Primary Tax
+                                                                        Information)</i></div>
+                                                            </td>
+                                                            <td>Maharashtra</td>
+                                                            <td>BHARAT SWEET MART</td>
+                                                            <td>BHARAT SWEET MART</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="popupAddManageTaxInfo" tabindex="-1"
+                                aria-labelledby="popupAddManageTaxInfoLabel" aria-hidden="true">
+                                <div class="modal-dialog modalManageTaxInfo modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="popupAddManageTaxInfoLabel">Manage Tax
+                                                Informations</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container bg-light rounded p-3">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">GSTIN</label>
+                                                            <input type="text" class="form-control" id="">
+                                                            <span class="text-primary"><small>Validate</small></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">Place of Supply</label>
+                                                            <select class="js-example-basic-single" name="state">
+                                                                <option></option>
+                                                                <option>[AN] - Andaman and Nicobar Islands</option>
+                                                                <option>[AD] Andhra Pradesh</option>
+                                                                <option>[AR] Arunachal Pradesh</option>
+                                                                <option>[AS] - Assam</option>
+                                                                <option>[BR] - Bihar</option>
+                                                                <option>[CH] - Chandigarh</option>
+                                                                <option>[CG]- Chhattisgarh</option>
+                                                                <option>[DN] - Dadra and Nagar Haveli</option>
+                                                                <option>[DD] - Daman and Diu</option>
+                                                                <option>[DL] - Delhi</option>
+                                                                <option>[GA] - Goa</option>
+                                                                <option>[GJ] - Gujarat</option>
+                                                                <option>[HR] - Haryana</option>
+                                                                <option>[HP] - Himachal Pradesh</option>
+                                                                <option>[JK] - Jammu and Kashmir</option>
+                                                                <option>[JHI] - Jharkhand</option>
+                                                                <option>[KA] - Karnataka</option>
+                                                                <option>[KA] - Kerala</option>
+                                                                <option>[LA] - Ladakh</option>
+                                                                <option>[LD] - Lakshadweep</option>
+                                                                <option>[MP] - Madhya Pradesh</option>
+                                                                <option>[MH] - Maharashtra</option>
+                                                                <option>[MN] - Manipur</option>
+                                                                <option>[ML] Meghalaya</option>
+                                                                <option>[ML] Meghalaya</option>
+                                                                <option>[MZ]- Mizoram</option>
+                                                                <option>[NL] - Nagaland</option>
+                                                                <option>[OD] - Odisha</option>
+                                                                <option>[OT] - Other Territory</option>
+                                                                <option>[PY] - Puducherry</option>
+                                                                <option>[PB] - Punjab</option>
+                                                                <option>[RJ] - Rajasthan</option>
+                                                                <option>[SK] - Sikkim</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">Business Legal Name</label>
+                                                            <input type="text" class="form-control" id="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label">Business Trade Name</label>
+                                                            <input type="text" class="form-control" id="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer d-flex justify-content-start">
+                                                    <button type="button" class="btn btn-dark">Save</button>
+                                                    <button type="button" class="btn btn-outline-secondary"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#popupManageTaxInfo">Cancel</button>
+                                                </div>
+                                            </div>
+                                            <table class="table mt-4">
+                                                <thead>
+                                                    <tr>
+                                                        <th>GSTIN</th>
+                                                        <th>Place of Supply</th>
+                                                        <th>Business Legal Name</th>
+                                                        <th>Business Trade Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr data-bs-dismiss="modal" aria-label="Close">
+                                                        <td>27AABFB2177L1ZD
+                                                            <div><i class="text-success">(Primary Tax
+                                                                    Information)</i></div>
+                                                        </td>
+                                                        <td>Maharashtra</td>
+                                                        <td>BHARAT SWEET MART</td>
+                                                        <td>BHARAT SWEET MART</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div>GSTIN</div>
+                                <div>
+                                    <div>27AABFB2177L1ZD</div>
+                                    <div><small class="text-success"><i>(Primary)</i></small></div>
+                                    <div>Maharashtra</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mb-4">
+                                <div>PAN</div>
+                                <div>AALCA0171E</div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="popupOtherDetails" tabindex="-1"
+                            aria-labelledby="popupOtherDetailsLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header bg-light">
+                                        <h5 class="modal-title" id="popupOtherDetailsLabel">Other Details</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Payment Terms</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                                <option>Net 15</option>
+                                                <option>Net 30</option>
+                                                <option>Net 45</option>
+                                                <option>Net 60</option>
+                                                <option>Due end of the month</option>
+                                                <option>Due end of next month</option>
+                                                <option>Due on Receipt</option>
+                                                <option>Configure
+                                                    Terms</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Template Language</label>
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Select</option>
+                                                <option>English</option>
+                                                <option>Hindi</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">GST Treatment</label>
+                                            <select class="js-example-basic-single" name="state">
+                                                <option></option>
+                                                <option>Registered Business - Regular
+                                                    Business that is registered under GST</option>
+                                                <option>Registered Business -Composition
+                                                    Business that is registered under the Composition
+                                                    Scheme in GST</option>
+                                                <option>Unregistered Business
+                                                    Business that has not been registered under GST
+                                                </option>
+                                                <option>Consumer
+                                                    A customer who is a regular consumer</option>
+                                                <option>Overseas
+                                                    Persons with whom you do import or export of
+                                                    supplies outside India</option>
+                                                <option>Special Economic Zone
+                                                    Business (Unit) that is located in a Special
+                                                    Economic Zone (SEZ) of India or a SEZ Developer
+                                                </option>
+                                                <option>Deemed Export
+                                                    Supply of goods to an Export Oriented Unit or
+                                                    against Advanced Authorization/Export Promotion
+                                                    Capital Goods.</option>
+                                                <option>Tax Deductor
+                                                    Departments of the State/Central government,
+                                                    governmental agencies or local authorities</option>
+                                                <option>SEZ Developer
+                                                    A person/organisation who owns at least 26% of the
+                                                    equity in creating business units in a Special
+                                                    Economic Zone (SEZ)</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Place Of Supply</label>
+                                            <select class="js-example-basic-single" name="state">
+                                                <option></option>
+                                                <option>[AN] - Andaman and Nicobar Islands</option>
+                                                <option>[AD] Andhra Pradesh</option>
+                                                <option>[AR] Arunachal Pradesh</option>
+                                                <option>[AS] - Assam</option>
+                                                <option>[BR] - Bihar</option>
+                                                <option>[CH] - Chandigarh</option>
+                                                <option>[CG]- Chhattisgarh</option>
+                                                <option>[DN] - Dadra and Nagar Haveli</option>
+                                                <option>[DD] - Daman and Diu</option>
+                                                <option>[DL] - Delhi</option>
+                                                <option>[GA] - Goa</option>
+                                                <option>[GJ] - Gujarat</option>
+                                                <option>[HR] - Haryana</option>
+                                                <option>[HP] - Himachal Pradesh</option>
+                                                <option>[JK] - Jammu and Kashmir</option>
+                                                <option>[JHI] - Jharkhand</option>
+                                                <option>[KA] - Karnataka</option>
+                                                <option>[KA] - Kerala</option>
+                                                <option>[LA] - Ladakh</option>
+                                                <option>[LD] - Lakshadweep</option>
+                                                <option>[MP] - Madhya Pradesh</option>
+                                                <option>[MH] - Maharashtra</option>
+                                                <option>[MN] - Manipur</option>
+                                                <option>[ML] Meghalaya</option>
+                                                <option>[ML] Meghalaya</option>
+                                                <option>[MZ]- Mizoram</option>
+                                                <option>[NL] - Nagaland</option>
+                                                <option>[OD] - Odisha</option>
+                                                <option>[OT] - Other Territory</option>
+                                                <option>[PY] - Puducherry</option>
+                                                <option>[PB] - Punjab</option>
+                                                <option>[RJ] - Rajasthan</option>
+                                                <option>[SK] - Sikkim</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-start">
+                                        <button type="button" class="btn btn-secondary">Save</button>
+                                        <button type="button" class="btn btn-outline-dark"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="row p-3">
+                                <div class="col-6 border-right">
+                                    Outstanding Receivables
+                                    <div><span class="text-warning">₹0.00</span></div>
+                                    <div> <small class="text-primary">View Opening Balance</small></div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="d-flex justify-content-around mb-3">
+                                        <small>Unused Credits</small>
+                                        <small class="fw-bold">₹0.00</small>
+                                    </div>
+                                    <div class="d-flex justify-content-around">
+                                        <small>Payment due period</small>
+                                        <small class="fw-bold">Due on Receipt</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row border-bottom bg-light p-2">
+                                <div class="col-4 border-right">Items to be received: <span
+                                        class="text-warning">100.00</span></div>
+                                <div class="col-4">Total items ordered: <span class="text-warning">100.00</span></div>
+                                <div class="col-4"></div>
+                            </div>
+                            <div class="container border-top mb-5">
+                                <div class="timeline">
+                                    <div class="point1">
+                                        <div class="pointDate1"><small>11:06 AM</small>
+                                            <small class="text-secondary">24/06/2022</small>
+                                        </div>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                        <div class="bg-light rounded border border-secondary divBillContainer1">
+                                            <div>Purchase Order updated</div>
+                                            <div>Purchase Order PO-00001 marked as sent <b>by
+                                                    rakeshnandre433</b> - <a href="">View Detail</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="point2">
+                                        <div class="pointDate2"><small>11:06 AM</small>
+                                            <small class="text-secondary">24/06/2022</small>
+                                        </div>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                        <div class="bg-light rounded border border-secondary divBillContainer2">
+                                            <div>Contact updated</div>
+                                            <div>Marked as active <b>by
+                                                    rakeshnandre433</b></div>
+                                        </div>
+                                    </div>
+                                    <div class="point3">
+                                        <div class="pointDate3"><small>11:06 AM</small>
+                                            <small class="text-secondary">24/06/2022</small>
+                                        </div>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                        <div class="bg-light rounded border border-secondary divBillContainer3">
+                                            <div>Purchase Order added</div>
+                                            <div>Purchase Order PO-00001 of amount Rs.47,200.00 created from sales order
+                                                <b>by rakeshnandre433</b> - <a href="">View Detail</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="point4">
+                                        <div class="pointDate4"><small>11:06 AM</small>
+                                            <small class="text-secondary">24/06/2022</small>
+                                        </div>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                        <div class="bg-light rounded border border-secondary divBillContainer4">
+                                            <div>Bill Of Supply added</div>
+                                            <div>Bill Of Supply BOS-000001 of amount ₹49.00 created <b>by
+                                                    rakeshnandre433</b> - <a href="">View Detail</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="point5">
+                                        <div class="pointDate5"><small>11:06 AM</small>
+                                            <small class="text-secondary">24/06/2022</small>
+                                        </div>
+                                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                                        <div class="bg-light rounded border border-secondary divBillContainer5">
+                                            <div>Contact added</div>
+                                            <div>Contact created with GST Treatment 'Registered Business - Regular' &
+                                                GSTIN '27AALCA0171E1ZZ'. State updated to MH. <b>by rakeshnandre433</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- Code for select field @anjudewangan -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <!-- Code for select field @anjudewangan -->
+    <script src="../script.js"></script>
+</body>
+
+</html>
+<!-- Code for add Purchases @anjudewangan -->

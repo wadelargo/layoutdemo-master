@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar" id="nav">
+        <div class="logo">
+            <p>Logo</p>
+        </div>
+        <div class="title">
+            <p>Profile of Register Medical Practioner (RMP)</p>
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-bell"></i>
+            <label for="">
+                Settings
+            </label>
+        </div>
+    </div>
+    <div class="progress_bar">
+        <div class="accnt verf">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Account Verification</p>
+        </div>
+        <div class="accnt rmp">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Register Medical Practionar (RMP) Details</p>
+        </div>
+        <div class="accnt practice">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Practice Details</p>
+        </div>
+        <div class="accnt dashboard">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Dashboard</p>
+        </div>
+    </div>
+    <main>
+        <div class="section_1">
+            <div class="page_logo" id="pic">
+                <div class="logo_head" id="one">
+                    <label for="">Page Logo</label>
+                </div>
+                <div class="logo_input" id="logo_input">
+
+                    <input type="file" accept="image" name="" id="logo_image">
+                    <label for="logo_image" id="imgcatch">
+                        <span class="material-icons-outlined">
+                            edit
+                        </span>
+                    </label>
+                </div>
+                <div class="logo_info">
+                    <p>Your profile picture will appear where your practice will be presented on Welldone Health, as well as next to your prescription, invoice, pictures, videos, blogs and comments.
+                    </p>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="banner_head">
+                    <p>Banner Image</p>
+                </div>
+                <div class="banner_image_container" id="display_banner">
+                    <img src="../images/image 125.png" alt="" id="ex_img">
+                    <input type="file" id="banner_input">
+                    <label for="banner_input">Upload</label>
+                    <p id="banner_info">For the best results on all devices, use an image that's at least 2048 x 1152 pixels and 6MB orless.
+                    </p>
+                </div>
+                <p>This image will appear across the top of your Practice Profile</p>
+            </div>
+        </div>
+        <div class="section_2">
+            <div class="url">
+                <label for="">
+                    Welldone public URL
+                </label>
+                <input type="url">
+            </div>
+            <div class="tagline">
+                <label for="">
+                    Tagline
+                </label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="section_3">
+            <div class="section3_item1">
+                <div class="item_head">
+                    <p>Display Message</p>
+                    <p>! Provide details to display on your page</p>
+                </div>
+                <div class="text_container">
+                    <div class="text_collect">
+                        <input type="text" name="" id="display_message" placeholder="subject">
+                        <input type="text" name="" id="message_body">
+                    </div>
+                    <div class="add_del">
+                        <button id="add_btn">ADD</button>
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="section3_item2">
+                <div class="message_container" id="message_holder"></div>
+                <!-- <div class="img">
+                    <img src="./images/twemoji_pushpin.png" alt="" id="pin">
+                </div> -->
+            </div>
+            <div class="section3_item3">
+                <div class="section3_item3_head">
+                    <p>Statement</p>
+                </div>
+                <div class="statement_cntr">
+                    <iframe name="editor" id="editor" cols="30" rows="10" contenteditable="true">
+                    </iframe>
+                    <div class="text_opt">
+                        <button id="b" onClick="transform('bold', null)">
+                            <i class="fas fa-bold"></i>
+                        </button>
+                        <button id="i" onClick="transform('italic', null)">
+                            <i class="fas fa-italic"></i>
+                        </button>
+
+                        <button id="u" onClick="transform('underline', null)">
+                            <i class="fas fa-underline"></i>
+                        </button>
+                        <button id="ul" onClick="transform('insertUnorderedList', null)">
+                            <i class="fas fa-list-ul"></i>
+                        </button>
+                        <button id="ol" onClick="transform('insertOrderedList', null)">
+                            <i class="fas fa-list-ol"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="section3_item4" id="">
+                <div class="section3_item4_head">
+                    <p>Announcement</p>
+                </div>
+                <div class="section3_item4_container" id="item4_image">
+                    <label for="anncmnt">Upload</label>
+                    <input type="file" name="" id="anncmnt">
+                    <img src="../images/image 126.png" alt="" id="annnce_img">
+                </div>
+            </div>
+            <div class="section3_item5">
+                <div class="social_icons1">
+                    <div class="social_item1">
+                        <label for="">Website URL</label>
+                        <div class="media">
+                            <span>
+                                <img src="../images/image 281.png" alt="">
+                            </span>
+                            <input type="url" name="" id="">
+                        </div>
+                    </div>
+                    <div class="social_item1">
+                        <label for="">Google Business</label>
+                        <div class="media">
+                            <span>
+                                <img src="../images/image 280.png" alt="">
+                            </span> <input type="url" name="" id="google">
+                        </div>
+                        <label id="google_url" for="">https://www.google.com/</label>
+                    </div>
+                    <div class="social_item1">
+                        <label for="">Facebook</label>
+                        <div class="media">
+                            <span>
+                                <i class="fa-brands fa-facebook-square"></i>
+                            </span> <input type="url" name="" id="facebook">
+                        </div>
+                        <label id="facebook_url" for="">http://www.facebook.com/</label>
+                    </div>
+                </div>
+                <div class="social_icons1">
+                    <div class="social_item1">
+                        <label for="">Instagram</label>
+                        <div class="media">
+                            <span>
+                                <img src="../images/image 279.png" alt="">
+                            </span>
+                            <input type="url" name="" id="instagram">
+                        </div>
+                        <label id="instagram_url" for="">https://www.instagram.com/</label>
+                    </div>
+                    <div class="social_item1">
+                        <label for="">Twitter</label>
+                        <div class="media">
+                            <span>
+                                <i class="fa-brands fa-twitter"></i>
+                            </span>
+                            <input type="url" name="" id="twitter">
+                        </div>
+                        <label id="twitter_url" for="">http://www.twitter.com/</label>
+                    </div>
+                    <div class="social_item1">
+                        <label for="">Youtube</label>
+                        <div class="media">
+                            <span>
+                                <i class="fa-brands fa-youtube"></i>
+                            </span>
+                            <input type="url" name="" id="youtube">
+                        </div>
+                        <label id="youtube_url" for="">https://www.youtube.com/</label>
+                    </div>
+                </div>
+            </div>
+            <div class="section3_item6">
+                <p>https://www.welldonehealth.in/Practice Office/</p>
+                <div class="bot_icons">
+                    <p>Get better visibility by sharing Practice on:</p>
+                    <span>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <img src="../images/image 279.png" alt="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="section3_item7">
+                <div class="savebtn">
+                    <a href="../html/register5.html" class="back"><span class="material-icons-outlined">
+                            arrow_back
+                        </span>BACK</a>
+                    <a href="" class="next">SUBMIT</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../JS/register6.js"></script>
+</body>
+
+</html>

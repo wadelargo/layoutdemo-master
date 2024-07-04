@@ -1,0 +1,264 @@
+body {
+    box-sizing: border-box;
+
+}
+
+.ivitation {
+    height: 700px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+.invitation_container {
+    width: 961px;
+    height: 493px;
+    display: flex;
+    flex-direction: column;
+    border: 1pxx solid black;
+    position: relative;
+    left: 100px;
+    top: 85px;
+}
+
+.invitaion_nav {
+    border-bottom: 1px solid #A8A8A8;
+    display: flex;
+    gap: 37px;
+    position: relative;
+    top: 15px;
+}
+
+.invitaion_nav a {
+    padding-bottom: 14px;
+}
+
+.pending,
+.accepted {
+    display: flex;
+    flex-direction: column;
+}
+
+#pending {
+    width: 62px;
+    font-size: 16px;
+    font-family: 'inter';
+}
+
+.pending_search {
+    width: 908px;
+    height: 44px;
+    border: 1px solid #1CB5C6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: 20px;
+}
+
+.invitation_head p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* .pending{
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    transform-origin: center center;
+}
+.accepted{
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    transform-origin: center center;
+} */
+.pending_email_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+    width: 917px;
+    text-align: left;
+    border-bottom: 1px solid #A8A8A8;
+}
+
+.accepted_email_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+    width: 917px;
+    text-align: left;
+    border-bottom: 1px solid #A8A8A8;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 968px;
+    height: 100%;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    display: flex;
+}
+
+.pending_search input {
+    border: none;
+    outline: none;
+    font: 'inter';
+    font-size: 16px;
+    width: 850px;
+    position: relative;
+    left: 30px;
+}
+
+.pending_search .fa-magnifying-glass {
+    position: relative;
+    left: 20px;
+    font-size: 16px;
+}
+
+.accepted_search {
+    width: 908px;
+    height: 44px;
+    border: 1px solid #1CB5C6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: 20px;
+}
+
+.accepted_search input {
+    border: none;
+    outline: none;
+    font: 'inter';
+    font-size: 16px;
+    width: 850px;
+    position: relative;
+    left: 30px;
+}
+
+.accepted_search .fa-magnifying-glass {
+    position: relative;
+    left: 20px;
+    font-size: 16px;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 15px;
+}
+
+.email_col_value {
+    font-size: 14px;
+}
+
+.email_col_value p:nth-child(1) {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Inter';
+}
+
+.email_action_value {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+}
+
+.resend {
+    width: 157px;
+    height: 26px;
+    background: #E4FFE7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+}
+
+.revoke {
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97px;
+    height: 26px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.a_email {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.pemail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    font-size: 14px;
+    flex-shrink: 1;
+}
+
+.pending_emailinfo p {
+    font-size: 14px;
+}
+
+.email_date_value {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.email_date_value p {
+    position: relative;
+    right: 100px;
+}
+
+.pemail span {
+    width: 44px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DADADA;
+    border: 1px solid #797979;
+    border-radius: 5px;
+    color: #ffffff;
+    position: relative;
+    bottom: 20px;
+}
+
+.two p {
+    position: relative;
+    right: 130px;
+}
+
+/* Code for sidenav active link @anjudewangan */
+.navbar-sidenav>.nav-item>.active-link {
+    background-color: rgb(236, 236, 11);
+}
+
+/* Code for sidenav active link @anjudewangan */

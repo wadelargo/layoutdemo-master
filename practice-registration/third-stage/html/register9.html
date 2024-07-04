@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>Logo</p>
+        </div>
+        <div class="title">
+            <p>Profile of Register Medical Practioner (RMP)</p>
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-bell"></i>
+            <label for="">
+                Settings
+            </label>
+        </div>
+    </div>
+    <div class="progress_bar">
+        <div class="accnt verf">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Account Verification</p>
+        </div>
+        <div class="accnt rmp">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Register Medical Practionar (RMP) Details</p>
+        </div>
+        <div class="accnt practice">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Practice Details</p>
+        </div>
+        <div class="accnt dashboard">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Dashboard</p>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="detail_container reg_container">
+            <div class="inner1">
+                <div class="inner_head">
+                    <p>Registration of Bank Details</p>
+                </div>
+                <div class="inner_wrap">
+                    <div class="inner_input">
+                        <label for="">Account Holder Name</label>
+                        <input type="text" name="" id="account_holder_name" class="required" placeholder="Enter Account Holder Name">
+                    </div>
+                    <div class="inner_input">
+                        <label for="">Account Number</label>
+                        <input type="password" name="" id="account_number" class="required" placeholder="Enter Account Number" />
+                    </div>
+                    <div class="inner_input">
+                        <label for="">Re-Confirm Account Number</label>
+                        <input type="password" name="" id="confirm_account_number" class="required" placeholder="Enter Account Number" />
+                    </div>
+                    <div class="inner_input">
+                        <label for="">Bank Name</label>
+                        <input type="text" name="" id="bank_name" class="required" placeholder="Enter Bank Name">
+                    </div>
+                    <div class="inner_input">
+                        <label for="">IFSC Code</label>
+                        <input type="text" name="" id="ifsc_code" class="required" placeholder="Enter 11 Digit IFSC Code">
+                    </div>
+                    <div class="inner_input">
+                        <label for="">Account Type</label>
+                        <select name="" id="">
+                            <option value="">Saving Account</option>
+                            <option value="">Checking account</option>
+                            <option value="">Money market account</option>
+                            <option value="">Certificate of deposit (CD)</option>
+                            <option value="">Individual retirement arrangement (IRA)</option>
+                            <option value="">Brokerage account</option>
+                        </select>
+                    </div>
+                    <div class="inner_input">
+                        <label for="">Branch Address</label>
+                        <input type="text" name="" id="branch_address" class="required" placeholder="Enter Address">
+                    </div>
+                </div>
+            </div>
+            <div class="document dvDocument">
+                <p>By submitting these bank details, I agree to accept online payments from patients after consulting through weldonehealth.in. Fees received from patients will be credited to this account.</p>
+
+            </div>
+            <div class="note dvNote">
+                <h5>Note:</h5>
+                <p class="para_note">Upon submission of details, ₹1 will be credited to your account. This is to ensure that all your future settlements, including Weldon's, are seamless. For any queries or changes in the submitted details, please mail us at support@welldonehealth.in
+                    or contact us at +91-9999999999.</p>
+            </div>
+            <div class="btn">
+                <button target="_blank" onclick="openRegister8()"><span class="material-icons-outlined">
+                        arrow_back
+                    </span>BACK</button>
+                <button target="_blank" onclick="openIndex()" type="submit" id="btn-next">NEXT</button>
+            </div>
+        </div>
+        <div class="main_img">
+            <img src="../images/image 278.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

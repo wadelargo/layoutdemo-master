@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>Logo</p>
+        </div>
+        <div class="title">
+            <p>Profile of Register Medical Practioner (RMP)</p>
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-bell"></i>
+            <label for="">
+                Settings
+            </label>
+        </div>
+    </div>
+    <div class="progress_bar">
+        <div class="accnt verf">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Account Verification</p>
+        </div>
+        <div class="accnt rmp">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Register Medical Practionar (RMP) Details</p>
+        </div>
+        <div class="accnt practice">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Practice Details</p>
+        </div>
+        <div class="accnt dashboard">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Dashboard</p>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="detail_container dvtiming">
+            <div class="inner1">
+                <div class="inner_head">
+                    <p>Establishment Timings</p>
+                </div>
+                <div class="inner_wrap">
+                    <ul class="days">
+                        <li id="monday">M</li>
+                        <li id="tuesday">T</li>
+                        <li id="wednesday">W</li>
+                        <li id="thuesday">T</li>
+                        <li id="friday">F</li>
+                        <li id="saturday">S</li>
+                        <li id="sunday">S</li>
+                    </ul>
+                    <table class="table-1">
+                        <tr>
+                            <td>Office open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Office close at</td>
+                            <td><input type="time" class="time"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><span class="add-break" id="addBreak-1">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-1">
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne"></td>
+                            <td><input type="time" class="time" id="timeTwo"></td>
+                            <td id="time-difference"></td>
+                        </tr>
+                    </table>
+                    <div class="dvlabel">
+                        <input type="checkbox" id="showTable-2"><label for="" class="dvlabel">Appointment hours are not the same for all working days of the week</label></td>
+                    </div>
+                    <span class="dvtable" id="tableHead">Choose the day for the open office</span>
+                    <table class="table-2" id="table-2">
+                        <tr>
+                            <th><input type="checkbox" id="check-M"><label for="">Monday</label></th>
+                            <td>Open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Close at</td>
+                            <td><input type="time" class="time"></td>
+                            <td><span class="add-break" id="addBreak-M">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-M">
+                            <th></th>
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne-M"></td>
+                            <td><input type="time" class="time" id="timeTwo-M"></td>
+                            <td id="time-difference-M"></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" id="check-Tue"><label for="">Tuesday</label></th>
+                            <td>Open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Close at</td>
+                            <td><input type="time" class="time"></td>
+                            <td><span class="add-break" id="addBreak-Tue">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-Tue">
+                            <th></th>
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne-Tue"></td>
+                            <td><input type="time" class="time" id="timeTwo-Tue"></td>
+                            <td id="time-difference-Tue"></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" id="check-Wed"><label for="">Wednesday</label></th>
+                            <td>Open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Close at</td>
+                            <td><input type="time" class="time"></td>
+                            <td><span class="add-break" id="addBreak-Wed">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-Wed">
+                            <th></th>
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne-Wed"></td>
+                            <td><input type="time" class="time" id="timeTwo-Wed"></td>
+                            <td id="time-difference-Wed"></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" id="check-Thus"><label for="">Thursday</label></th>
+                            <td>Open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Close at</td>
+                            <td><input type="time" class="time"></td>
+                            <td><span class="add-break" id="addBreak-Thus">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-Thus">
+                            <th></th>
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne-Thus"></td>
+                            <td><input type="time" class="time" id="timeTwo-Thus"></td>
+                            <td id="time-difference-Thus"></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" id="check-F"><label for="">Friday</label></th>
+                            <td>Open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Close at</td>
+                            <td><input type="time" class="time"></td>
+                            <td><span class="add-break" id="addBreak-F">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-F">
+                            <th></th>
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne-F"></td>
+                            <td><input type="time" class="time" id="timeTwo-F"></td>
+                            <td id="time-difference-F"></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" id="check-Sat"><label for="">Saturday</label></th>
+                            <td>Open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Close at</td>
+                            <td><input type="time" class="time"></td>
+                            <td><span class="add-break" id="addBreak-Sat">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-Sat">
+                            <th></th>
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne-Sat"></td>
+                            <td><input type="time" class="time" id="timeTwo-Sat"></td>
+                            <td id="time-difference-Sat"></td>
+                        </tr>
+                        <tr>
+                            <th><input type="checkbox" id="check-Sun"><label for="">Sunday</label></th>
+                            <td>Open at</td>
+                            <td><input type="time" class="time"></td>
+                            <td>Close at</td>
+                            <td><input type="time" class="time"></td>
+                            <td><span class="add-break" id="addBreak-Sun">Add Break</span></td>
+                        </tr>
+                        <tr class="show-lunch-time" id="trLunch-Sun">
+                            <th></th>
+                            <td>Lunch Break</td>
+                            <td><input type="time" class="time" id="timeOne-Sun"></td>
+                            <td><input type="time" class="time" id="timeTwo-Sun"></td>
+                            <td id="time-difference-Sun"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="btn">
+                <button target="_blank" onclick="openRegister5()"><span class="material-icons-outlined">
+                        arrow_back
+                    </span>BACK</button>
+                <button target="_blank" onclick="openRegister7()">NEXT</button>
+            </div>
+            <div class="note">
+                <P><span>Note:</span>You can change these details later in Settings, if needed.</P>
+            </div>
+        </div>
+        <div class="main_img">
+            <img src="../images/image 278.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

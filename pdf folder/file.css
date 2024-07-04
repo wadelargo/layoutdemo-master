@@ -1,0 +1,1063 @@
+/* navbar 1 2 3 */
+
+.navbar {
+    position: fixed;
+    padding: 0;
+    height: 61px;
+    width: 100%;
+    z-index: 7;
+    border-bottom: 3px solid black;
+  }
+  .navbar-brand{
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+  }
+  .navbar-brand:hover{
+    background-color: #FFDEDE;
+  }
+  .navbar-brand p{
+    margin: 0 15px 0 0;
+  }
+  .buttonForSideNav {
+    outline: none;
+    height: 40px;
+    border: 1px solid #a4a4a4;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 9px;
+  }
+  
+  .buttonForSideNav:hover {
+    background-color: #a4a4a4;
+  }
+  
+  .navbar-first {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.hospital-name {
+    flex-wrap: nowrap;
+    color: black;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.hospital-name:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.navbar-second {
+    width: 84%;
+}
+
+.secondNavUl {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.navbar-second .nav-item {
+    list-style: none;
+}
+
+.addPateintButton {
+    font-size: 12px;
+    margin: 0;
+}
+
+.nav-item.dropdown>.nav-link .indicator {
+    position: absolute;
+    bottom: 16px;
+    left: 17px;
+    font-size: 10px;
+}
+
+#alertsDropdown,
+#messagesDropdown {
+    padding: 0;
+}
+.input-group-append {
+    margin-left: -48px;
+}
+.advnc-search {
+    background: none;
+    border: none;
+    color: #435aaa;
+    font-size: 14px;
+    position: relative;
+    right: 70px;
+    width: 61px;
+    margin-left: -17px;
+}
+
+.searchbox {
+    display: flex;
+}
+
+.inputForSearch {
+    width: auto;
+}
+
+.addpatient {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: orange;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 5px;
+}
+
+.navbar-third {
+    width: 15%;
+}
+
+.navbar-fourth {
+    width: 96%;
+    /* position: absolute; */
+    right: 0;
+    margin-top: 78px;
+    border-bottom: 2px solid black;
+    color: black;
+    background-color: white;
+    z-index: 1;
+}
+
+.RakeshName {
+    color: #000;
+    font-weight: 500;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(154, 157, 160);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 91%;
+    /* 100% Full-height */
+    width: 63px;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 13;
+    /* Stay on top */
+    top: 60px;
+    /* Stay at the top */
+    left: 0;
+    background-color: #FFFCE2;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#exampleAccordion .nav-item a {
+    color: rgb(14, 14, 14);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.navbar-sidenav>.nav-item>.nav-link:hover {
+    background-color: rgb(236, 236, 11);
+}
+
+#exampleAccordion .nav-link-text {
+    font-size: 11.5px;
+    margin-left: 36px;
+}
+
+#exampleAccordion .nav-link i {
+    margin-left: 20px;
+    font-size: 21px;
+}
+
+.sidenav-second-level li a {
+    font-size: 21px;
+}
+
+.alertDetails {
+    position: absolute;
+    top: 100%;
+    background-color: #ffffff;
+    left: 70%;
+    height: auto;
+    width: 30vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 16px;
+}
+
+.alertBodyitems {
+    background-color: transparent;
+    padding: 5px;
+    z-index: 10;
+}
+
+.alertBodyitems:hover {
+    background-color: #cce7ff;
+    z-index: 10;
+}
+
+.alertBodyitemsPart1 {
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.messageAlertDetails {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    height: auto;
+    width: 30vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 16px;
+}
+
+.MadBodyitemsPart2 p {
+    font-size: 10px;
+    z-index: 10;
+}
+
+.MADBody {
+    height: 25vh;
+    min-height: 25vh;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+.adminSettingBox {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 84%;
+    height: auto;
+    width: 16%;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 4;
+    padding: 16px;
+}
+
+.adminSettingBox p {
+    margin: 0;
+    padding: 0;
+}
+
+#settingOptions {
+    padding: 0;
+}
+
+#settingOptions li {
+    list-style: none;
+    font-size: 12px;
+    margin: 5px 0;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+#settingOptions li:hover {
+    background-color: #cce7ff;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: #818181;
+}
+
+/* ********************files page css start here******************** */
+
+#main_sections{
+    position: absolute;
+    top: 72px;
+    left: 64px;
+    background-color: #444444;
+    max-width: 94.7vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+#file_folder{
+    background-color: #ECECEC;
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#viewer_folder{
+   background-color: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.file_head{
+    margin-top: 8px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.file_head h6{
+    margin-left: 25px;
+    font-size: 20px;
+}
+.file_list{
+    height: 250px;
+}
+#list_file,#list_document{
+    height: 250px;
+    overflow-y: scroll;
+    padding: 0;
+}
+#list_file li{
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s linear;
+   height: 55px;
+}
+#list_file li:hover{
+    box-shadow: 2px 2px 2px gray;
+}
+.file_name,.doc_name{
+    font-size: 12px;
+    font-weight: bold;
+}
+.higlights_display,.modified_display,.last_name{
+    font-size: 12px;
+}
+.dlt_list{
+    color: red;
+}
+.dlt_list:hover{
+    color: #000;
+}
+#hglt_pdf,#share_pdf{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(59, 59, 59);
+}
+.additional_buttons{
+    justify-content: space-around;
+}
+#share_btn,#upload_btn{
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+#share_btn:hover,#upload_btn:hover{
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px gray;
+}
+.main_box{
+    height: 100%;
+    border: 2px solid gray;
+    overflow: scroll;
+}
+.page_buttons{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+.headOf_pdf{
+    display: flex;
+    justify-content: space-between;
+    background-color: #666666;
+    align-items: center;
+    height: 6%;
+    color: white;
+    z-index: 50;
+}
+.save_icons,.additional_icons{
+    display: flex;
+}
+#zoom,#file_signature,#comment,#highlighter_line,#print_pdf,#download_pdf,#rotate_pdf{
+    font-size: 25px;
+}
+.save_icons div,.additional_icons div,#zoom a{
+    margin: 0 5px;
+    cursor: pointer;
+}
+#pdf_container{
+    overflow: scroll;
+    height: 94%;
+    padding: 15px;
+    z-index: 3;
+    margin: auto;
+}
+.popup-tag{
+    position:absolute;
+    display:none;
+    background-color:#868686;
+    color:white;
+    padding:10px;
+    font-size:20px;
+    font-weight:bold;
+    text-decoration:underline;
+    cursor:pointer;
+    /* -webkit-filter: drop-shadow(0 1px 10px rgba(113,158,206,0.8)); */
+    }
+#popup-msg{
+    position:absolute;
+    display:none;
+    flex-direction: column;
+    background-color:#F5F5F5;
+    padding:10px;
+    font-weight:bold;
+    width: 30%;
+    cursor:pointer;
+    border: 1px solid gray;
+    border-radius: 10px;
+    z-index: 50;
+}
+.popUpMsgHead{
+    display: flex;
+    justify-content: space-around;
+}
+.msgBox textarea{
+    resize: none;
+    width: 100%;
+    outline: none;
+}
+#popup-msg #rply{
+    color: #1DD8AB;
+}
+#roundColor{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        background-color: aqua;
+}
+.roundColor{
+    width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        cursor: pointer;
+}
+#popup-colour{
+    position: absolute;
+    display: none;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 5px;
+}
+#popup-colour ul{
+    display: grid;
+    margin: 0;
+    padding: 5px;
+    grid-template-columns: repeat(3, 30px);
+    list-style: none;
+    grid-gap: 3px;
+}
+#c1{
+    background-color: #74C5FF;
+}
+#c2{
+    background-color: #B6FFFF;
+}
+#c3{
+    background-color: #2FB2B2;
+}
+#c4{
+    background-color: #ADF9A1;
+}
+#c5{
+    background-color: #FDABAB;
+}
+#c6{
+    background-color: #ECABFD;
+}
+#c7{
+    background-color: #FFDE70;
+}
+#c8{
+    background-color: #FFD6E4;
+}
+#c9{
+    background-color:#7CF276 ;
+}
+#c10{
+    background-color: #CCCCCC;
+}
+#num_of_pdf p{
+    margin: 0;
+}
+.content_Page1{
+    border: 1px solid black;
+}
+.sub_head{
+    display: flex;
+}
+.sub_head_part1,.sub_head_part2{
+    width: 48%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.dr_name{
+    font-weight: 600;
+}
+p{
+    margin: 0;
+}
+.vl {
+    border-left: 2px solid rgb(100, 100, 100);
+    height: 80px;
+  }
+  .details{
+    display: flex;
+
+  }
+  .details_part1,.details_part2{
+    width: 48%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+  .diagnosis,.summary_box p{
+    font-size: 12px;
+  }
+  .summary_box{
+    display: flex;
+    justify-content: center;
+  }
+  table,th,td{
+    border: 1px solid black;
+  }
+  table,.test_box,.instruction,.address_box,.email_box{
+    font-size: 12px;
+  }
+  /* second page css */
+  #list_document li{
+    border-bottom: 1px solid gray;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s linear;
+   height: 75px;
+   background-color: white;
+  }
+  #list_document li:hover{
+    background-color: #565656;
+    color: white;
+  }
+  .fullscreen-container,.fullscreen-container1{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(31, 31, 31, 0.5);
+    z-index: 9999;
+}
+#popDiv,#popDiv1{
+    height: auto;
+    width:  457px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 35%;
+    left: 33%;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .list_here{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .profile_pic img{
+    border-radius: 50%;
+    border: 1px solid gray;
+  }
+  .cont_name{
+    font-weight: 700;
+  }
+  .privilege{
+    font-weight: 600;
+  }
+  #share_part label{
+    font-weight: 600;
+  }
+  #share_part input{
+    background-color: #EAEAEA;
+    outline: none;
+    border: 1px solid gray;
+    padding: 2px 4px;
+    border-radius: 15px;
+  }
+  .done_btn{
+    float: right;
+  }
+  #access_list li{
+    cursor: pointer;
+  }
+  #access_list li:hover{
+    background-color:  #EAEAEA;
+  }
+.dlt_btns{
+    float: right;
+}
+  /* documnet page css************************************************* */
+  #word_section{
+    position: absolute;
+    top: 72px;
+    left: 64px;
+    background-color: #444444;
+    max-width: 94.7vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+#documentList_folder{
+    background-color: #ECECEC;
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#new_doc_folder{
+   background-color: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#ready_btn{
+    background-color: #A43A33;
+    color: white;
+    padding: 4px 8px;
+    margin: 0 5px;
+}
+#ready_btn:hover,#document_create:hover{
+   box-shadow: 2px 2px 5px black;
+   transition: all 0.5s;
+}
+#document_create{
+    background-color: #1DD8AB;
+    color: white;
+    padding: 4px 8px;
+    margin: 0 5px;
+
+}
+.headOfDocument{
+    background-color: #ECECEC;
+    height: 18%;
+}
+#main_content{
+    height: 82%;
+    background-color: #ffffff;
+}
+.layer1,.layer2,.layer3,.exports_btn{
+    display: flex;
+}
+.exports_btn{
+    width: 60%;
+    justify-content: space-between;
+}
+.layer1,.layer2{
+    justify-content: space-between;
+}
+#save_doc{
+    border: 1px solid rgb(138, 138, 138);
+    background-color: #AED2ED;
+    padding: 4px 6px;
+    border-radius: 5px;
+}
+#save_doc:hover{
+    background-color: #77a2c3;
+}
+#export,#new_doc{
+    border: 1px solid rgb(138, 138, 138);
+    padding: 4px 6px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+#export:hover{
+    background-color: #1DD8AB;
+}
+#new_doc:hover{
+    background-color: #666666;
+    color: white;
+}
+option,select{
+    background-color: transparent;
+    outline: none;
+    border:none;
+
+}
+#header1{
+    font-size: 20px;
+}
+#header2{
+    font-size: 18px;
+}
+#header3{
+    font-size: 16px;
+}
+#header4{
+    font-size: 14px;
+}
+#word_text{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    overflow-y: scroll;
+    outline: none;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .navbar-first{
+        width: 100px;
+    }
+    .navbar-second {
+        width: 69%;
+    }
+    .navbar-brand,.buttonForSideNav{
+        font-size: 12px;
+    }
+    .nav-link{
+        padding: 0;
+        margin: 0;
+    }
+    .d-lg-none{
+        display: none;
+    }
+    #addPateintButton{
+        width: 71px;
+    }
+   
+    .addpatient{
+        font-size: 10px;
+    }
+    .hospital-name{
+        font-size: 10px;
+    }
+    .inputForSearch{
+        width: 93px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .searchbtn1{
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+    #dropbtnMyfunction{
+        font-size: 10px;
+    }
+    .nav-link-text {
+        font-size: 14px;
+        margin-left: 25px;
+    }
+    .alertBodyitems {
+        font-size: 0.8rem;
+    }
+    .MadBodyitems{
+        font-size: 0.8rem;
+    }
+    .adminSettingBox {
+        left: 79%;
+        width: 21%;
+    }
+    .adminSettingHeader{
+        font-size: 13px;
+    }
+    .sidenav {
+        height: 91%;
+        width: 64px;
+        top: 55px;
+    }
+    .navForDeskTop{
+        display: flex;
+    }
+    /* css for file page */
+    .sub_head_part1, .sub_head_part2,.details_part1, .details_part2,.diagnosis, .summary_box p ,table, .test_box, .instruction, .address_box, .email_box {
+        font-size: 9px;
+    }
+    #zoom,#file_signature,#comment,#highlighter_line,#print_pdf,#download_pdf,#refresh_pdf{
+        font-size: 15px;
+    }
+    #share_btn, #upload_btn { 
+        font-size: 10px;
+    }
+    #hglt_pdf, #share_pdf {
+        font-size: 10px;
+    }
+    .file_name, .doc_name {
+        font-size: 10px;
+    }
+    .documents_btn {
+        font-size: 9px;
+    }
+    .exports_btn {
+        width: 70%;
+    }
+    .layer1, .layer2 {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .navbar-second,
+    .navbar-third {
+        display: none;
+    }
+    .sidenav {
+        top: 31px;
+    }
+    .navbar-first {
+        width: 100%;
+    }
+    .navbar-sidenav>.nav-item>.nav-link {
+        font-size: 15px;
+    }
+    #mySidenav {
+        width: 0px;
+        border: none;
+        background-color: #efefef;
+    }
+    .nav-link-text {
+        font-size: 14px;
+    }
+   /* css for page */
+   #main_sections,#word_section {
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    max-width: 100vw;
+    flex-direction: column;
+    height: auto;
+    }
+    
+    #file_folder ,#documentList_folder{
+        width: 100%;
+        height: 100vh;
+    }
+    .file_list{
+        height: 350px;
+    }
+    #list_file{
+        height: 350px;
+        
+    }
+    .documents_btn {
+        font-size: 14px;
+    }
+    #new_doc_folder {
+        height: 100vh;
+    }
+    /* share folder css */
+    #popDiv,#popDiv1 {
+        height: auto;
+        width:  400px;
+        background-color: #ffffff;
+        position: fixed;
+        top: 35%;
+        left: 13%;
+        border-radius: 10px;
+        flex-direction: column;
+      }
+}
+
+@media only screen and (max-width: 480px){
+    #popDiv,#popDiv1 {
+        height: auto;
+        width:  300px;
+        background-color: #ffffff;
+        position: fixed;
+        top: 35%;
+        left: 5%;
+        border-radius: 10px;
+        flex-direction: column;
+        padding: 5px;
+      }
+      #popDiv p,#popDiv label{
+        font-size: 12px
+      }
+      .layer1, .layer2 {
+        font-size: 8px;
+    }
+    #header1{
+        font-size: 16px;
+    }
+    #header2{
+        font-size: 14px;
+    }
+    #header3{
+        font-size: 12px;
+    }
+    #header4{
+        font-size: 10px;
+    }
+}
+/* USER IMAGE SIZE CSS */
+
+#dvUserImage {
+    width: 60px;
+}
+
+#barcodeimage {
+    width: 100px;
+}
+
+.insurance-img {
+    width: 80px;
+}
+
+.user-img {
+    width: 1.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+/* Advanced Patient Search */
+
+.popup-form {
+    display: flex;
+    justify-content: center;
+}
+
+.dvSelect>select,
+#divControl>input,
+#divControl>select {
+    width: 12rem;
+    margin: 16px;
+    border: 1px solid black;
+    border-radius: 7px;
+    text-align: initial;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.popup-form>select>option {
+    width: 15rem;
+    font-size: 12px;
+}
+
+.fa-times-circle {
+    font-size: 18px;
+    color: red;
+    margin-top: 14px;
+    margin-left: -5px;
+}
+
+#btnAddMore {
+    color: rgb(0, 162, 255);
+    font-size: 15px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+#divCategories {
+    margin: 10px 27px;
+    box-shadow: 0 0 13px -7px #444444;
+    background-color: white;
+    width: 55%;
+}
+
+#divCategories>input {
+    /* width: 4rem; */
+    margin: 5px;
+}
+#divCategories>label {
+    display: initial;
+}
+
+#divCategories>input,
+#divCategories>label {
+    cursor: pointer;
+}
+
+#divCategories>label:hover {
+    background-color: rgb(0, 162, 255);
+    color: white;
+}
+
+#divNoData {
+    color: red;
+    font-size: 14px;
+    margin-left: 36px;
+    display: none;
+}
+

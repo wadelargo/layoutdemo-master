@@ -1,0 +1,3213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>calendar1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+
+    <!-- Bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Fontawesone js file for icons -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <!-- Code for icon @anjudewangan -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <!-- Code for icon @anjudewangan -->
+
+    <!-- Google font Files -->
+    <link rel="stylesheet" href="css/classic.css">
+    <link rel="stylesheet" href="css/classic.date.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!--<script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>-->
+    <link rel="stylesheet" href="../layout1.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  -->
+
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.13.18/jquery.timepicker.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/timepicker@1.13.18/jquery.timepicker.min.css">
+<script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.18/jquery.timepicker.min.js"></script> -->
+    <style>
+        .buttonForSideNav {
+            outline: none;
+            height: 40px;
+            width: 40px;
+            border: 1px solid #a4a4a4;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navForDeskTop">
+        <div class="navbar-first">
+            <a class="navbar-brand" href="../practice-registration/second-stage/html/index.html">
+                <span class="iconify" data-icon="carbon:add" data-width="35" data-height="35"></span>
+                <p>Add Establishment</p>
+            </a>
+            <button class="buttonForSideNav" type="button" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-second">
+            <ul class="ml-auto secondNavUl">
+                <a class="hospital-name" href="#">WellDone</a>
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <div class="searchbox">
+                            <input class="form-control inputForSearch" type="text" placeholder="Search for..." />
+                            <button type="button" class="advnc-search" id="advnc-search" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Advanced</button>
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true" role="dialog" data-backdrop="false">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Advance Patient Search</h5>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close" onclick="HandleCancel()"></button>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" class="popup-form">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="dvSelect">
+                                                                <select id="ddlInfo">
+                                                                    <option value="patient_name">Patient Name</option>
+                                                                    <option value="has_contact_number">Has Contact
+                                                                        Number</option>
+                                                                    <option value="contact_number">Contact Number
+                                                                    </option>
+                                                                    <option value="age_is">Age is</option>
+                                                                    <option value="age_more_than">Age is More Than
+                                                                    </option>
+                                                                    <option value="age_less_than">Age is Less Than
+                                                                    </option>
+                                                                    <option value="has_date_of_birth">Has Date of Birth
+                                                                    </option>
+                                                                    <option value="date_of_birth">Date of Birth Is
+                                                                    </option>
+                                                                    <option value="date_of_birth_more_than">Date of
+                                                                        Birth is More Than</option>
+                                                                    <option value="date_of_birth_less_than">Date of
+                                                                        Birth is Less Than</option>
+                                                                    <option value="birthday_is_in">Birthday is in
+                                                                    </option>
+                                                                    <option value="has_patient_id">Has Patient ID
+                                                                    </option>
+                                                                    <option value="patient_id">Patient ID</option>
+                                                                    <option value="has_aadhaar_id">Has Aadhaar ID
+                                                                    </option>
+                                                                    <option value="aadhaar_id">Aadhaar ID</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="email">Email</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="has_gender">Has Gender</option>
+                                                                    <option value="gender">Gender is</option>
+                                                                    <option value="has_pincode">Has Pincode</option>
+                                                                    <option value="pincode">Pincode</option>
+                                                                    <option value="has_street_address">Has Street
+                                                                        Address</option>
+                                                                    <option value="street_address">Street Address
+                                                                    </option>
+                                                                    <option value="has_blood_group">Has Blood Group
+                                                                    </option>
+                                                                    <option value="blood_group">Blood Group</option>
+                                                                    <option value="was_referred_by_someone">Was Referred
+                                                                        By Someone</option>
+                                                                    <option value="referred_by_someone">Referred By
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div id="divControl">
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <button id="btnAddMore" type="button">Add another parameter</button>
+                                            <div id="divCategories">
+
+                                            </div>
+                                            <div id="divNoData" style="display: none;">No Data Found</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnSearch"
+                                                onclick="ShowNoDataMessage()">Search</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                id="btnCancel" onclick="HandleCancel()">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="input-group-append">
+                                <button class="btn btn-primary searchbtn1" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="microPhoneChoose" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-microphone"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="addPateintButton" href="../Addpateints/addpatient.html">
+                        <button type="button" class="addpatient">Add Patient</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="calenderButton" href="../Calendar/calendar.html">
+                        <i class="fa fa-fw fa-calendar"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span class="d-lg-none">Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- message shortcut -->
+            <div class="messageAlertDetails" id="messageAlertDetails">
+                <div class="MADHeader">
+                    <h6 class="MADHeader-info">New Messages:</h6>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADBody">
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>David Miller</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>Jane Smith</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>John Doe</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADFooter">
+                    <a class="viewAllMsgs" href="#">View all messages</a>
+                </div>
+
+            </div>
+            <!-- admin setting box -->
+            <div class="adminSettingBox" id="adminSettingBox">
+                <div class="adminSettingHeader">
+                    <strong id="nameofAdmin">Rakesh Nandre</strong>
+                    <p id="statusofAdmin">Admin</p>
+                    <p id="emailofAdmin">xyz@gmail.com</p>
+                </div>
+                <hr style="margin: 15px 0;">
+                <ul id="settingOptions">
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><a href="../admin profile/admin.html" style="text-decoration: none; color: black;"><span
+                                class="iconify" style="color: gray;" data-icon="akar-icons:pencil" data-width="17"
+                                data-height="17"></span> Edit Profile</a></li>
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><span class="iconify" data-icon="ant-design:setting-outlined" style="color: gray;"
+                            data-width="17" data-height="17"></span> Account Setting</li>
+                    <li><span class="iconify" data-icon="ant-design:user-outlined" style="color: gray;" data-width="17"
+                            data-height="17"></span> Add User</li>
+                    <li><span class="iconify" data-icon="bx:log-out" style="color: gray;" data-width="17"
+                            data-height="17"></span> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-third">
+            <div class="dropdown">
+                <button id="dropbtnMyfunction" class="dropbtn">
+                    <img class="user-img" src="../images/2.png" />Rakesh Nandare
+                    <i class="fa fa-angle-down"></i>
+                </button>
+            </div>
+            <!-- alert details -->
+            <div class="alertDetails" id="alertDetails">
+                <div class="alertHeader">
+                    <p>New Alerts:</p>
+                </div>
+                <div class="dropdown-divider"></div>
+
+                <div class="alertBody">
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                </div>
+                <div class="alertFooter">
+                    <a>View All Events</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="heading">
+            <div class="LeftSideMainHeader">
+                <h3>Calendar</h3>
+                <div class="dropdown">
+                    <!-- <button class="btn btn-secondary secondary secondary dropdown-toggle" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class='fas fa-user-circle'></i>Physical Visit
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul> -->
+                    <select name="" id="visitoptions"
+                        style="font-size: 10px; background-color: white;color: rgb(28, 105, 172);">
+                        <option value="physical Visit">Physical Visit</option>
+                        <option value="Video Call">Video Call</option>
+                    </select>
+                </div>
+                <div class="btn-warning warning">
+                    <h5>Today</h5>
+                </div>
+                <div class="date">
+                    <i class="fa fa-angle-left"></i>
+                    <span>26 Dec 2021</span>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="RightsideMainDiv">
+                <div class="search">
+                    <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                        <input type="text" placeholder="Search.." name="search2">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="question">
+                    <i class="fa fa-question-circle"></i>
+                    <!--<i class="far fa-question-circle"></i>-->
+                </div>
+                <div class="day">
+                    <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Day
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Day</a></li>
+          <li><a class="dropdown-item" href="#">Week</a></li>
+          <li><a class="dropdown-item" href="#">Year</a></li>
+        </ul> -->
+                    <select name="day" id="Chooseday" class="DayChoose">
+                        <option value="Day" id="day">Day</option>
+                        <option value="Week" id="week">Week</option>
+                        <option value="Month" id="Month">Month</option>
+                    </select>
+                </div>
+                <div class="print" data-bs-toggle="modal" data-bs-target="#printModal">
+                    <i class="fa fa-print"></i>
+                </div>
+                <div class="modal fade" id="printModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="printModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                            <!-- <div class="modal-header">
+                                <h5 class="modal-title" id="printModalLabel">Print preview</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div> -->
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-4 bg-light" id="printLeft">
+                                            <h5 class="modal-title" id="printModalLabel">Print preview</h5>
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="print-schedule" class="col-form-label">Print Schedule
+                                                        Settings</label>
+                                                    <select class="form-select" id="selectDays">
+                                                        <option value="day" selected>Day</option>
+                                                        <option value="week">Week</option>
+                                                        <option value="month">Month</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="print-range" class="col-form-label">Print range</label>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="input_from">From</label>
+                                                                <input type="text" class="form-control" id="input_from"
+                                                                    placeholder="Start Date">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label for="input_to">To</label>
+                                                                <input type="text" class="form-control" id="input_to"
+                                                                    placeholder="End Date">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="doctor" class="col-form-label">Doctor</label>
+                                                    <select class="form-select">
+                                                        <option value="alldoctor" selected>All Doctor</option>
+                                                        <option value="doctor-1">Dr. Rakesh Nandre</option>
+                                                        <option value="doctor-2">Dr. Jay Suryawanshi</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="font-size" class="col-form-label">Font size</label>
+                                                    <select class="form-select" id="selectFontSize">
+                                                        <option value="smallest">Smallest</option>
+                                                        <option value="smaller">Smaller</option>
+                                                        <option value="small">Small</option>
+                                                        <option value="normal" selected>Normal</option>
+                                                        <option value="big">Big</option>
+                                                        <option value="bigger">Bigger</option>
+                                                        <option value="biggest">Biggest</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="orientation" class="col-form-label">Orientation</label>
+                                                    <select class="form-select" id="selectOrientation">
+                                                        <option value="auto" selected>Auto</option>
+                                                        <option value="portrait">Portrait</option>
+                                                        <option value="landscape">Landscape</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="color-style" class="col-form-label">Color &
+                                                        style</label>
+                                                    <select class="form-select" id="selectColor">
+                                                        <option value="outline">Outline</option>
+                                                        <option value="fullcolor" selected>Full color</option>
+                                                        <option value="black-white">Black and white</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="showWeekends" checked>
+                                                        <label class="form-check-label" for="showWeekends">
+                                                            Show weekends
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="showEvents">
+                                                        <label class="form-check-label" for="showEvents">
+                                                            Show events you have declined
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="showContactNumber">
+                                                        <label class="form-check-label" for="showContactNumber">
+                                                            Show contact number
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="showNotes">
+                                                        <label class="form-check-label" for="showNotes">
+                                                            Show notes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="showAppointment">
+                                                        <label class="form-check-label" for="showAppointment">
+                                                            Show appointment categories
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="showTreatment">
+                                                        <label class="form-check-label" for="showTreatment">
+                                                            Show treatment plans
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="showSlots">
+                                                        <label class="form-check-label" for="showSlots">
+                                                            Show free slots
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="doctorGroup">
+                                                        <label class="form-check-label" for="doctorGroup">
+                                                            Group by doctors
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="modal-footer d-flex justify-content-end">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                    id="btnCancel">Cancel</button>
+                                                <button type="button" class="btn btn-warning"
+                                                    id="btnPrint">Print</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8 ms-auto" id="printRight">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting">
+                    <i class="fa fa-gear"></i>
+                </div>
+            </div>
+        </div>
+        <!-- <hr> -->
+    </section>
+    <div id="mySidenav" class="sidenav">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="../dashboard.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <a class="nav-link" href="../doctor1/doctor.html">
+                    <i class="fa fa-fw fa-user-md"></i>
+                    <span class="nav-link-text">Doctors</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../pateints/index.html">
+                    <i class="fa fa-fw fa fa-wheelchair"></i>
+                    <span class="nav-link-text">Patient</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link active-link" href="calendar.html">
+                    <i class="fa fa-fw fa fa-calendar"></i>
+                    <span class="nav-link-text">Appointment</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Doctor Schedule @anjudewangan -->
+                <a class="nav-link" href="../doctorschedule/doctorSchedule.html">
+                    <!-- Code for add Doctor Schedule @anjudewangan -->
+                    <i class="fa fa-fw fa fa-calendar-check-o"></i>
+                    <span class="nav-link-text">Doctor Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Department @anjudewangan -->
+                <a class="nav-link" href="../department/department.html">
+                    <!-- Code for add Department @anjudewangan -->
+                    <i class="fa fa-fw fa-building-o"></i>
+                    <span class="nav-link-text">Departments</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Insurance @anjudewangan -->
+                <a class="nav-link" href="../insurance/insurance.html">
+                    <!-- Code for add Insurance @anjudewangan -->
+                    <i class="fa fa-fw fa-umbrella" aria-hidden="true"></i>
+                    <span class="nav-link-text">Insurance Network</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-user"></i>
+                    <span class="nav-link-text">Employee</span>
+                </a>
+                <!-- Code for link Employee Section @anjudewangan -->
+                <ul class="collapse sidenav-second-level" id="collapseComponents">
+                    <li>
+                        <a href="../employee/employeeList.html">Employee List</a>
+                    </li>
+                    <li>
+                        <a href="../employee/leave.html">Leaves</a>
+                    </li>
+                    <li>
+                        <a href="../employee/holiday.html">Holidays</a>
+                    </li>
+                    <li>
+                        <a href="../employee/attendance.html">Attendance</a>
+                    </li>
+                </ul>
+                <!-- Code for link Employee Section @anjudewangan -->
+            </li>
+            <!-- Code for link item @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../item/item.html">
+                    <i class="fa fa-fw fa-sitemap" aria-hidden="true"></i>
+                    <span class="nav-link-text">Item</span>
+                </a>
+            </li>
+            <!-- Code for link item @anjudewangan -->
+            <!-- Code for link Sales @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span class="nav-link-text">Sales</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="../sales/customers/customers.html">Customers</a>
+                    </li>
+                    <li>
+                        <a href="../sales/estimates/estimates.html">Estimates</a>
+                    </li>
+                    <li>
+                        <a href="../sales/salesOrders/salesOrders.html">Sales Orders</a>
+                    </li>
+                    <li>
+                        <a href="../sales/packages-folder/packages.html">Packages</a>
+                    </li>
+                    <li>
+                        <a href="../sales/shipmets/shipments.html">Shipments</a>
+                    </li>
+                    <li>
+                        <a href="../sales/delivery-challans/deliveryChallans.html">Delivery Challans</a>
+                    </li>
+                    <li>
+                        <a href="../sales/invoices/invoices.html">Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../sales/received-payments/receivedPayments.html">Received Payments</a>
+                    </li>
+                    <li>
+                        <a href="">Recurring Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../sales/sales-return/salesReturn.html">Sales Return</a>
+                    </li>
+                    <li>
+                        <a href="../sales/credit-notes/creditNotes.html">Credit Notes</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Sales @anjudewangan -->
+
+            <!-- Code for link Purchases @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePurchases"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-shopping-bag"></i>
+                    <span class="nav-link-text">Purchases</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapsePurchases">
+                    <li>
+                        <a href="../purchases/vendors/vendors.html">Vendors</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/purchase-order/purchaseOrder.html">Purchase Orders</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/purchase-receives/purchaseReceives.html">Purchase Receives</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/bills/bills.html">Bills</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/payments-made/paymentsMade.html">Payments Made</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/vendor-credits/vendorCredits.html">Vendor Credits</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Purchases @anjudewangan -->
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-book"></i>
+                    <span class="nav-link-text">Payroll</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="login.html">Pay slip</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa fa-commenting"></i>
+                    <span class="nav-link-text">Chat</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-video-camera"></i>
+                    <span class="nav-link-text">Call</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti">
+                    <li>
+                        <a href="#">Voice call</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEmail"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-envelope"></i>
+                    <span class="nav-link-text">Email</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseEmail">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBlog"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fas fa-comment"></i>
+                    <span class="nav-link-text">Blog</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseBlog">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fas fa-object-group"></i>
+                    <span class="nav-link-text">Assets</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa-bell-o"></i>
+                    <span class="nav-link-text">Activites</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-flag"></i>
+                    <span class="nav-link-text">Report</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseReport">
+                    <li>
+                        <a href="#">Expenses Report</a>
+                    </li>
+                    <li>
+                        <a href="#">Invoice Report</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="../Setting Folder/practice-profile.html">
+                    <i class="fa fa-fw fa-cog"></i>
+                    <span class="nav-link-text">Setting</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="belowSection">
+        <div class="sideBar">
+            <div class="app">
+                <div class="DepartmentMain">
+                    <div class="Department">
+                        <button class="btn btn-secondary secondary Alldepartment " type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            All Departments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+                                class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">All doctors</a></li>
+                            <li><a class="dropdown-item" href="#">Dr.Ashok Patil</a></li>
+                            <li><a class="dropdown-item" href="#">Dr.Jay Suryanwanshi</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeDivMAin">
+                    <div class="time">
+                        <div class="TimeStatus">
+                            <div>Today</div>
+                            <div class="TodayZero">0</div>
+                        </div>
+                        <div class="TimeStatus">
+                            <div>Wating</div>
+                            <div class="WaitingZero">0</div>
+                        </div>
+                        <div class="TimeStatus">
+                            <div>Engaged</div>
+                            <div class="EngagedZero">0</div>
+                        </div>
+                        <div class="TimeStatus">
+                            <div>Done</div>
+                            <div class="DoneZero">0</div>
+                        </div>
+                    </div>
+                    <div class="AfterTimedivs">
+                        <div class="FirstTimeDiv">
+                            <div class="LeftSideFirstTime">
+                                <div class="FirstTimeDivTime">
+                                    09:45 AM
+                                </div>
+                                <div class="NameFirstTime">
+                                    Dr. Rakesh Nandre
+                                </div>
+                            </div>
+                            <div class="RightSideFirstTime">
+
+                                <div class="NameRightFirst">
+                                    Rakesh Nandre
+                                </div>
+                                <div class="VisitingInfo">
+                                    <div class="VisitReason">
+                                        visit reasons Specified
+                                    </div>
+                                    <div class="ReturningDiv">
+                                        Returning
+                                    </div>
+                                    <div class="HasInsurance">
+                                        Insurance Holder
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="SecondTimeDiv">
+                            <div class="LeftSideSecondTime">
+                                <div class="SecondTimeDivTime">
+                                    <h3>2</h3>
+                                </div>
+                                <div class="NameSecondTime">
+                                    09:45 AM
+                                </div>
+                            </div>
+                            <div class="RightSideSecondTime">
+                                <div class="NameRightSecond">
+                                    jay kumar
+                                </div>
+                                <div class="VisitingInfo">
+                                    <div class="VisitReason">
+                                        visit reasons Specified
+                                    </div>
+                                    <div class="ReturningDiv">
+                                        Returning
+                                    </div>
+                                    <div class="HasInsurance">
+                                        Insurance Holder
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ThirdTimeDiv">
+                            <div class="LeftSideThirdTime">
+                                <div class="ThirdTimeDivTime">
+                                    <h3>3</h3>
+                                </div>
+                                <div class="NameThirdTime">
+                                    09:45 AM
+                                </div>
+                            </div>
+                            <div class="RightSideThirdTime">
+                                <div class="NameRightThird">
+                                    jay kumar
+                                </div>
+                                <div class="VisitingInfo">
+                                    <div class="VisitReason">
+                                        visit reasons Specified
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="FourthTimeDiv">
+                            <div class="LeftSideFourthTime">
+                                <div class="FourthTimeDivTime">
+                                    <h3>4</h3>
+                                </div>
+                                <div class="NameFourthTime">
+                                    09:45 AM
+                                </div>
+                            </div>
+                            <div class="RightSideFourthTime">
+                                <div class="NameRightFourth">
+                                    jay kumar
+                                </div>
+                                <div class="VisitingInfo">
+                                    <div class="VisitReason">
+                                        visit reasons Specified
+                                    </div>
+                                    <div class="ReturningDiv">
+                                        Returning
+                                    </div>
+                                    <div class="HasInsurance">
+                                        Insurance Holder
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="FifthTimeDiv">
+                            <div class="LeftSideFifthTime">
+                                <div class="FifthTimeDivTime">
+                                    <h3>5</h3>
+                                </div>
+                                <div class="NameFifthTime">
+                                    09:45 AM
+                                </div>
+                            </div>
+                            <div class="RightSideFifthTime">
+                                <div class="NameRightFifth">
+                                    jay kumar
+                                </div>
+                                <div class="VisitingInfo">
+                                    <div class="VisitReason">
+                                        visit reasons Specified
+                                    </div>
+                                    <div class="ReturningDiv">
+                                        Returning
+                                    </div>
+                                    <div class="HasInsurance">
+                                        Insurance Holder
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day">
+                        <button class="btn btn-secondary secondary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Doctor
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-1"
+                                        aria-hidden="true"></i>Dr. Rakesh Nandre-1</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-2"
+                                        aria-hidden="true"></i>Dr. Rakesh Nandre-2</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-3"
+                                        aria-hidden="true"></i>Dr. Rakesh Nandre-3</a></li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <button class="btn btn-secondary secondary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropd  ownMenuButton1">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-1"
+                                        aria-hidden="true"></i>Non-categories</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-2"
+                                        aria-hidden="true"></i>Non-categories</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-3"
+                                        aria-hidden="true"></i>Non-categories</a></li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <button class="btn btn-secondary secondary dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Other
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-1"
+                                        aria-hidden="true"></i>Birthday</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-2"
+                                        aria-hidden="true"></i>Reminders</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-fw fa-circle color-3"
+                                        aria-hidden="true"></i>Tasks</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="RightSideMAin">
+            <div class="MainCalender">
+                <table class="table1" id="table1" border="1">
+                    <thead>
+                        <tr>
+                            <th id="AlldayList">All-day</th>
+                            <th style="text-align: center;"> Tueday,26 December </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:00 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:15 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:30 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:45 PM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:45 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:00 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:15 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:30 AM</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:45 AM</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table2" id="table2" border="1">
+                    <thead>
+                        <tr>
+                            <th id="AlldayList">All-day</th>
+                            <th>
+                                <div class="SundayMain">
+                                    <div class="Sundaydate dateColor">26</div>
+                                    <div class="Sunday">
+                                        Sunday
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="MondayMain">
+                                    <div class="Mondaydate dateColor">27</div>
+                                    <div class="Monday">
+                                        Monday
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="TuesdayMain">
+                                    <div class="TuesdayDate dateColor">28</div>
+                                    <div class="Tuesday">
+                                        Tuesday
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="WednesdayMain">
+                                    <div class="WednesdayDate dateColor">29</div>
+                                    <div class="Wednesday">
+                                        Wednesday
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="ThursdayMain">
+                                    <div class="ThursdayDate dateColor">30</div>
+                                    <div class="Thursday">
+                                        Thursday
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="FridayMain">
+                                    <div class="FridayDate dateColor">31</div>
+                                    <div class="Friday">
+                                        Friday
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="SaturdayMain">
+                                    <div class="SaturdayDate dateColor">31</div>
+                                    <div class="Saturday">
+                                        Saturday
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>8:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>8:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>8:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>9:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>10:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:00 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:15 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:30 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>11:45 PM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>12:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>4:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>6:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:00 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:15 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:30 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>7:45 AM</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <Table class="table3" id="table3" border="1">
+                    <thead>
+                        <th>SUN</th>
+                        <th>MON </th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THU</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-day="28"></td>
+                            <td data-day="29"></td>
+                            <td data-day="30"></td>
+                            <td data-day="01"></td>
+                            <td data-day="02"></td>
+                            <td data-day="03"></td>
+                            <td data-day="04"></td>
+                        </tr>
+                        <tr>
+                            <td data-day="05"></td>
+                            <td data-day="06"></td>
+                            <td data-day="07"></td>
+                            <td data-day="08"></td>
+                            <td data-day="09"></td>
+                            <td data-day="10"></td>
+                            <td data-day="11"></td>
+                        </tr>
+                        <tr>
+                            <td data-day="12"></td>
+                            <td data-day="13"></td>
+                            <td data-day="14"></td>
+                            <td data-day="15"></td>
+                            <td data-day="16"></td>
+                            <td data-day="17"></td>
+                            <td data-day="18"></td>
+                        </tr>
+                        <tr>
+                            <td data-day="19"></td>
+                            <td data-day="20"></td>
+                            <td data-day="21"></td>
+                            <td data-day="22"></td>
+                            <td data-day="23"></td>
+                            <td data-day="24"></td>
+                            <td data-day="25"></td>
+                        </tr>
+                    </tbody>
+                </Table>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    <div class="ChangeColorDiv">
+                                        <i class="fas fa-angle-down" style="font-size: 12px;"></i>
+                                        <button type="button" id="changecolor" data-bs-toggle="modal"
+                                            data-bs-target="#changecolorModal">
+                                            <div class="defaultcolor">
+                                            </div>
+                                        </button>
+                                        <div class="modal fade modal3" id="changecolorModal" tabindex="-1"
+                                            aria-labelledby="changecolorModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="colorsChoose">
+                                                            <input type="radio" name="Colors" id="Blue">
+                                                            <label for="Blue"><span id="BlueColor"></span></label>
+                                                            <input type="radio" name="Colors" id="Sky">
+                                                            <label for="Sky"><span id="SkyColor"></span></label>
+                                                            <input type="radio" name="Colors" id="lightgreen">
+                                                            <label for="lightgreen"><span
+                                                                    id="lightgreenColor"></span></label>
+                                                            <input type="radio" name="Colors" id="Lightpink">
+                                                            <label for="Lightpink"><span
+                                                                    id="LightpinkColor"></span></label>
+                                                            <input type="radio" name="Colors" id="Yellow">
+                                                            <label for="Yellow"><span id="YellowColor"></span></label>
+                                                            <input type="radio" name="Colors" id="Green">
+                                                            <label for="Green"><span id="GreenColor"></span></label>
+                                                            <label for="colorpicker" id="ForColorPicker"><input
+                                                                    type="color" name="Colors" id="colorpicker"><span
+                                                                    id="Colorpick"></span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <strong>Dr.Nayan kanade</strong>
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="Maincontainer">
+                                        <div class="ARB">
+                                            <div class="AppointmentDiv"><button type="button"
+                                                    id="Appointment">Appointment</button>
+                                            </div>
+                                            <div class="Remider"><button type="button" id="Reminder">Reminder</button>
+                                            </div>
+                                            <div class="Block Calender"><button type="button" id="BlockCalender">Block
+                                                    Calender</button></div>
+                                        </div>
+                                        <div class="ToggleAppointment">
+                                            <div class="FirstPart">
+                                                <div class="PatientName">
+                                                    <label for="PatientNameInput">Patient Name <span
+                                                            id="required">*</span></label>
+                                                    <input type="text" name="PatientName" id="PatientNameInput"
+                                                        placeholder="Enter Patient Name" required>
+                                                </div>
+                                                <div class="MobileNumber">
+                                                    <label for="MobileNumberInput">Mobile Number </label>
+                                                    <input type="text" name="MobileNumber" id="MobileNumberInput"
+                                                        placeholder="Enter Mobile Number">
+                                                </div>
+                                                <div class="EmailId">
+                                                    <label for="EmailId">Email Id </label>
+                                                    <input type="text" name="EmailId" id="EmailId"
+                                                        placeholder="Enter Email Id">
+                                                </div>
+                                                <div class="Doctor">
+                                                    <div>Doctor</div>
+                                                    <select name="Doctors" id="">
+                                                        <option value="SelectDoctor" disabled selected>Select Doctor
+                                                        </option>
+                                                        <option value="Doctorname">xyxysh</option>
+                                                    </select>
+                                                    <div class="Notified">
+                                                        will be notified <input type="checkbox" name="" id="">SMS <input
+                                                            type="checkbox" name="" id=""> Email
+                                                    </div>
+                                                </div>
+                                                <div class="Category">
+                                                    <div>Category</div>
+                                                    <select name="" id="">
+                                                        <option value="SelectCategory" disabled selected>Select Category
+                                                        </option>
+                                                        <option value="">Hello</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="AppointmentBox">
+                                                <div class="Appoin  tmenttype">
+                                                    <h6>Appointment Type</h6>
+                                                    <div class="AppoitmentPandV">
+                                                        <div class="PhysicalVisit">
+                                                            <div><input type="radio" name="Visit"
+                                                                    id="PhysicalVisitAppointment"></div>
+                                                            <div><img src="" alt="" srcset=""></div>
+                                                            <label for="PhysicalVisitAppointment">Physical Visit</label>
+                                                        </div>
+                                                        <div class="VideoVisit">
+                                                            <div><input type="radio" name="Visit"
+                                                                    id="VideoVisitAppointment"></div>
+                                                            <div><img src="" alt="" srcset=""></div>
+                                                            <label for="VideoVisitAppointment">Video Visit</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ScheduledOn">
+                                                    <h6>Scheduled On</h6>
+                                                    <div class="DandT">
+                                                        <div class="TimeIcon"><img src="" alt="" srcset="">
+                                                        </div>
+                                                        <input type="date" name="" id="">
+                                                        <input type="time" name="" id="">
+                                                        <select name="" id="">
+                                                            <option value="">5 mins</option>
+                                                            <option value="">15 mins</option>
+                                                            <option value="">30 mins</option>
+                                                            <option value="">45 mins</option>
+                                                            <option value="">1 hr</option>
+                                                            <option value="">1.5 hr</option>
+                                                            <option value="">2.5 hr</option>
+                                                            <option value="">3 hr</option>
+                                                        </select>
+                                                        <!-- <input type="hidden" id="datepickerAppointmnet" onchange="showDateAppoint(this)">
+                                            <div class="triggerDateScheduleAppointment">12/12/2021</div>
+                                            <input type="hidden" class="some-time-inputs" onchange="showTime(this)">
+                                            <div class="triggerTime">11:00 AM</div> -->
+                                                        <!-- <div class="DateSchedule">12/12/2021</div>
+                                            <div class="TimeSchedule">11:00 AM</div>
+                                            <div class="DurationSchedule">15 Min</div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="Procedureprogram">
+                                                <div class="ProcedureHeading">Procedure program</div>
+                                                <div class="AddTxtProcedure"><textarea name="" id="" cols="5" rows="5"
+                                                        placeholder="Add Procedure"></textarea></div>
+                                            </div>
+                                            <div class="Notes">
+                                                <div class="NotesHeading">Notes</div>
+                                                <div class="AddTxtNotes"><textarea name="" id="" cols="5" rows="5"
+                                                        placeholder="Add Notes"></textarea></div>
+                                            </div>
+                                            <div class="attachment">
+                                                <div class="AttachmentIcon"><img src="" alt="" srcset="">
+                                                </div>
+                                                <div class="AddAttachment">
+                                                    Add Attachment
+                                                </div>
+                                            </div>
+                                            <div class="Notification">
+                                                <div class="NotificationIcon"><img src="" alt="" srcset=""></div>
+                                                <div class="Before">
+                                                    <div class="befortime">Before 30 min</div>
+                                                    <div class="addNotification"><a href="#">Add notification</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="toggleReminder">
+                                            <div class="Reminder">
+                                                <div class="FirstPart">
+                                                    <div class="TitleName">
+                                                        <label for="TitleInput">Title <span
+                                                                id="required">*</span></label>
+                                                        <input type="text" name="TitleName" id=""
+                                                            placeholder="Enter Event Name" required>
+                                                    </div>
+                                                    <div class="DoctorReminder">
+                                                        <div>Doctor <span id="required">*</span></div>
+                                                        <select name="Doctors" id="" required>
+                                                            <option value="RemindeSelectDoctor" disabled selected>Select
+                                                                Doctor
+                                                            </option>
+                                                            <option value="RemindDoctorname">xyxysh</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="SecondPart">
+                                                    <div class="ScheduledOn-reminder">
+                                                        <div class="DandT-Reminder">
+                                                            <div class="TimeIcon"><img src="" alt="" srcset="">
+                                                            </div>
+                                                            <input type="date" name="" id="">
+                                                            <input type="time" name="" id="">
+                                                            <!-- <input type="hidden" id="datepicker-reminder" onchange="showDate(this)">
+                                                <div class="triggerDateSchedule-reminder">12/12/2021</div>
+
+                                                <input type="hidden" class="some-time-inputs2" onchange="showTime2(this)">
+                                                <div class="triggerTime2">11:00 AM</div> -->
+                                                        </div>
+                                                        <div class="Repeat-Reminder">
+                                                            <div class="RepeatIcon"><img src="" alt="" srcset=""></div>
+                                                            <div class="RepeatDropDown">
+                                                                <select name="SelectRepeat" id="SelectRepeat">
+                                                                    <option value="">Doesn't Repeat</option>
+                                                                    <option value="">Daily</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="CustomAndAllday">
+                                                            <div class="Allday">
+                                                                <input type="radio" name="ChooseOptions" id="allday"
+                                                                    onclick="onAllday()">
+                                                                <label for="allday">All Day</label>
+                                                            </div>
+                                                            <div class="CustomeRe">
+                                                                <input type="radio" name="ChooseOptions"
+                                                                    id="CustomRepetetion" onclick="oncustom()">
+                                                                <label for="CustomRepetetion">Custom Repetetion</label>
+                                                            </div>
+                                                        </div>
+                                                        <div id="contact">
+                                                            <!-- <a data-bs-toggle="modal" data-bs-target="#myModal" class="btn btn-primary">Launch modal</a> -->
+                                                            <div class="modal fade modal2" id="myModal" tabindex="-1"
+                                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog modal-dialog-centered">
+                                                                    <div class="modal-content">
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title"
+                                                                                id="exampleModalLabel">Custome
+                                                                                Repetition
+                                                                            </h5>
+                                                                            <button type="button" class="btn-close"
+                                                                                onclick="$('#myModal').modal('hide');"
+                                                                                aria-label="Close"></button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="RepeatSection">
+                                                                                <div class="RepeatMain">
+                                                                                    <div class="RepeatEvery">
+                                                                                        <label for="NumbersInut">Repeat
+                                                                                            every</label>
+                                                                                        <input type="number" name=""
+                                                                                            id="NumInp" min="1">
+                                                                                        <select name="" id=""
+                                                                                            onchange="displayDivDemo(this)">
+                                                                                            <option value="0">Day
+                                                                                            </option>
+                                                                                            <option value="1">Week
+                                                                                            </option>
+                                                                                            <option value="2">Month
+                                                                                            </option>
+                                                                                            <option value="3">Year
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="RepeatOnWeek">
+                                                                                        <div class="RepeatWeekHeading">
+                                                                                            Repeat On
+                                                                                        </div>
+                                                                                        <div class="WeekDays">
+                                                                                            <div class="Sunday">
+                                                                                                <input type="checkbox"
+                                                                                                    id="Sunday"
+                                                                                                    name="Sunday" />
+                                                                                                <label
+                                                                                                    for="Sunday"><span>S</span></label>
+                                                                                            </div>
+                                                                                            <div class="Monday">
+                                                                                                <input type="checkbox"
+                                                                                                    id="Monday"
+                                                                                                    name="Monday" />
+                                                                                                <label
+                                                                                                    for="Monday"><span>M</span></label>
+                                                                                            </div>
+                                                                                            <div class="Tuesday">
+                                                                                                <input type="checkbox"
+                                                                                                    id="Tuesday"
+                                                                                                    name="Tuesday" />
+                                                                                                <label
+                                                                                                    for="Tuesday"><span>T</span></label>
+                                                                                            </div>
+                                                                                            <div class="Wednesday">
+                                                                                                <input type="checkbox"
+                                                                                                    id="Wednesday"
+                                                                                                    name="Wednesday" />
+                                                                                                <label
+                                                                                                    for="Wednesday"><span>W</span></label>
+                                                                                            </div>
+                                                                                            <div class="Thursday">
+                                                                                                <input type="checkbox"
+                                                                                                    id="Thursday"
+                                                                                                    name="Thursday" />
+                                                                                                <label
+                                                                                                    for="Thursday"><span>T</span></label>
+                                                                                            </div>
+                                                                                            <div class="Friday">
+                                                                                                <input type="checkbox"
+                                                                                                    id="Friday"
+                                                                                                    name="Friday" />
+                                                                                                <label
+                                                                                                    for="Friday"><span>F</span></label>
+                                                                                            </div>
+                                                                                            <div class="Saturday">
+                                                                                                <input type="checkbox"
+                                                                                                    id="Saturday"
+                                                                                                    name="Saturday" />
+                                                                                                <label
+                                                                                                    for="Saturday"><span>S</span></label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="RepeatOnMonth">
+                                                                                        <div class="RepeatMonthHeading">
+                                                                                            Month On
+                                                                                        </div>
+
+                                                                                        <div class="MonthDay">
+                                                                                            <Select>
+                                                                                                <option value="">
+                                                                                                    Day 3
+                                                                                                </option>
+                                                                                            </Select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="expiryRepeat">
+                                                                                    <h5>Expiry</h5>
+                                                                                    <div class="ExpiryOptions">
+                                                                                        <div class="Never">
+                                                                                            <input type="radio"
+                                                                                                name="Expiry-Reminder"
+                                                                                                id="NeverExpiry">
+                                                                                            <label
+                                                                                                for="NeverExpiry">Never</label>
+                                                                                        </div>
+                                                                                        <div class="OnExipry">
+                                                                                            <input type="radio"
+                                                                                                name="Expiry-Reminder"
+                                                                                                id="OnExpiry">
+                                                                                            <label
+                                                                                                for="OnExpiry">On</label>
+                                                                                            <input type="date" name=""
+                                                                                                id="">
+                                                                                            <!-- <div class="dateOfExpiry">
+                                                                                    <input type="hidden" id="datepicker"
+                                                                                        onchange="showDate(this)">
+                                                                                    <div class="triggerDateSchedule">
+                                                                                        12/12/2021</div>
+                                                                                </div> -->
+                                                                                        </div>
+                                                                                        <div class="After">
+                                                                                            <input type="radio"
+                                                                                                name="Expiry-Reminder"
+                                                                                                id="AfterExpiry">
+                                                                                            <label
+                                                                                                for="AfterExpiry">After</label>
+                                                                                            <div class="AfterOccurance">
+                                                                                                <input type="number"
+                                                                                                    name="" id="inpnum"
+                                                                                                    min="1">
+                                                                                                <div class="Made">Made
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer ">
+                                                                            <button type="button"
+                                                                                class="btn btn-secondary secondary"
+                                                                                onclick="$('#myModal').modal('hide');">Cancel</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-primary">Done</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="toggleBlockCalender">
+                                            <div class="BlockCalender">
+                                                <div class="FirstPart">
+                                                    <div class="LeaveDetails">
+                                                        <label for="LeaveInput">Leave Details <span
+                                                                id="required">*</span></label>
+                                                        <input type="text" name="LeaveName" id="" placeholder=""
+                                                            required>
+                                                    </div>
+                                                    <div class="DoctorBlockCalender">
+                                                        <div>Doctor <span id="required">*</span></div>
+                                                        <select name="Doctors" id="" required>
+                                                            <option value="RemindeSelectDoctor">All Doctors
+                                                            </option>
+                                                            <option value="RemindDoctorname">xywxysh</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="SecondPart">
+                                                    <div class="BlockAndAllday">
+                                                        <div class="Alldayblockdiv">
+                                                            <input type="radio" name="ChooseOptions" id="allday-block"
+                                                                onclick="onAllday2()">
+                                                            <label for="allday-block">All Day</label>
+                                                        </div>
+                                                        <div class="BlockSlot">
+                                                            <input type="radio" name="ChooseOptions" id="blockslot"
+                                                                onclick="onBlockList()">
+                                                            <label for="blockslot">Block Slot</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="DatesBlock">
+                                                        <div class="AlldayHideDiv">
+                                                            <div class="Alldayblock">
+                                                                <div class="TimeIcon"><img src="" alt="" srcset="">
+                                                                </div>
+                                                                <input type="date" name="" id="">
+                                                                <input type="date" name="" id="">
+                                                                <!-- <input type="hidden" id="datepicker-BLockslot"
+                                                        onchange="showDateBlock(this)">
+                                                    <div class="triggerDateSchedule-BLockslot">12/12/2021</div>
+
+                                                    <input type="hidden" id="datepicker-BLockslotEnd"
+                                                        onchange="showDateBlockEnd(this)">
+                                                    <div class="triggerDateSchedule-BLockslotend">End Date</div> -->
+                                                            </div>
+                                                        </div>
+                                                        <div class="BlockHidediv">
+                                                            <div class="BlockSlotCustomWithTime">
+                                                                <div class="TimeIcon"><img src="" alt="" srcset="">
+                                                                </div>
+                                                                <div class="DateForBlockSlot">
+                                                                    <div class="DateforAllday">
+                                                                        <input type="date" name="" id=""
+                                                                            data-date-inline-picker="true">
+                                                                    </div>
+                                                                    <!-- <input type="hidden" id="datepicker-BLockslot2"
+                                                            onchange="showDateBlock2(this)">
+                                                        <div class="triggerDateSchedule-BLockslot2">12/12/2021</div> -->
+                                                                    <div class="TimeForBlockSlot">
+                                                                        <input type="time" name="" id=""> TO
+                                                                        <input type="time" name="" id="">
+                                                                    </div>
+                                                                    <!-- <div class="TimeForBlockSlot">
+                                                            <div class="TimeTriggerForblock">
+                                                            <input type="hidden" class="some-time-inputs3"
+                                                                onchange="showTime3(this)">
+                                                            <div class="triggerTime3">11:00 AM</div>
+                                                        </div>
+
+                                                            To
+
+                                                            <div class="TimeTriggerForblock2">
+                                                            <input type="hidden" class="some-time-inputs4"
+                                                                onchange="showTime4(this)">
+                                                            <div class="triggerTime4">11:00 AM</div>
+                                                        </div>
+                                                        </div> -->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ThirdPart">
+                                                    <div class="SelectBlockType">
+                                                        <div class="HeadingforBlocktype">
+                                                            <h5>
+                                                                Select Block Type <span id="required">*</span>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="VideoOrPhysical">
+                                                            <div class="VideoAppoint">
+                                                                <input type="checkbox" name="VideoAppointment"
+                                                                    id="VideoAppointment">
+                                                                <label for="VideoAppointment"> Video
+                                                                    Appointments</label>
+                                                            </div>
+                                                            <div class="PhysicalAppoint">
+                                                                <input type="checkbox" name="PhysicalAppointment"
+                                                                    id="PhysicalAppointment">
+                                                                <label for="PhysicalAppointment"> Physical
+                                                                    Appointments</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="BlockFooter">
+                                                        <div class="NoticeAboutblockimg">
+                                                            <img src="" alt="" srcset="">
+                                                        </div>
+                                                        <div class="NoticeAboutblock">
+                                                            Block your page or your calender for personal reasons. The
+                                                            patient will not be able to book an appointment for the same
+                                                            day and time
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer modalend">
+                                <!-- Code for Calendar new popup @anjudewangan-->
+                                <button type="button" class="btn-modalend" data-bs-toggle="modal"
+                                    data-bs-target="#popupBox" id="btn-done">Done</button>
+                            </div>
+                            <div class="modal fade" id="popupBox" tabindex="-1" aria-labelledby="popupBoxLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header d-flex justify-content-end">
+                                            <button type="button" class="btn-modal-edit"><i class="fa fa-pencil"
+                                                    aria-hidden="true"></i></button>
+                                            <button type="button" class="btn-modal-copy"><i class="fa fa-clone"
+                                                    aria-hidden="true"></i></button>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container container-1">
+                                                <!-- <div class="row">
+                                                    <div class="col-2">
+                                                        <a class="user-img-link" href="#">
+                                                            <img src="../images/ava3.jfif" class="user-img-second"
+                                                                id="dvUserImage" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <h5>Rakesh Nandre</h5>
+                                                        <div class="row">
+                                                            <div class="col"> 25Y 2M Old
+                                                            </div>
+                                                            <div class="col"><span class="spanGender"><i
+                                                                        class="fa fa-mars"
+                                                                        aria-hidden="true"></i></span>
+                                                                <span>Male</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col"><span class="spanWeight"><i
+                                                                        class="fa fa-line-chart"
+                                                                        aria-hidden="true"></i></span> 25 kg</div>
+                                                            <div class="col"> <span class="spanBloodGroup"><i
+                                                                        class="fa fa-tint"
+                                                                        aria-hidden="true"></i></span>
+                                                                <span>B+</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2">
+                                                        <div class="col"><i class="fa fa-phone"
+                                                                aria-hidden="true"></i><span class="spanMobile">
+                                                                +919130077618
+                                                            </span></div>
+                                                        <div class="col"><i class="fa fa-envelope-o"
+                                                                aria-hidden="true"></i><span class="spanEmail">
+                                                                zxyfg@domin.com</span></div>
+                                                    </div>
+                                                    <div class="row my-2">
+                                                        <div class="col">
+                                                            <img src="../images/insurance.jpg" class="insurance-img" />
+                                                            <span class="spanInsurance">Individual Health Insurance
+                                                                Policy</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row my-2">
+                                                        <div class="col">
+                                                            Address - <span class="spanAddress">Mumbai,
+                                                                Maharashtra</span></div>
+                                                    </div>
+                                                    <div class="row my-2">
+                                                        <div class="col">
+                                                            Language -
+                                                            <span class="spanLanguage">Gujrati, Hindi</span>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                            <div class="container container-2 mt-2">
+                                                <div class="row">
+                                                    <div class="col-1">
+                                                        <img src="../images/home.jpg" class="home-img" id="" />
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <ul>
+                                                            <li>In-Office Appointment</li>
+                                                            <li>
+                                                                <h6>Dr.Nayan kanade</h6>
+                                                            </li>
+                                                            <li><i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                                11:28 AM for 15 mins
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-3 d-flex align-items-center"><button
+                                                            class="btn btn-drop-out">Drop Out</button></div>
+                                                </div>
+                                                <div class="row row-border-top">
+                                                    <div class="col-1">
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-11">
+                                                        <ul>
+                                                            <li>Office-1</li>
+                                                            <li>Clinic address with pin code</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container container-3 mt-2">
+                                                <ul>
+                                                    <li>Planned Procedures</li>
+                                                    <li>
+                                                        <ul>
+                                                            <li>Eyeball operations</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Notes
+                                                    </li>
+                                                    <li>
+                                                        <ul>
+                                                            <li>No</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Medical History
+                                                    </li>
+                                                    <li>
+                                                        <ul>
+                                                            <li>Heart disease, Diabetes
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Allergic Information
+                                                    </li>
+                                                    <li>
+                                                        <ul>
+                                                            <li>Drug Allergy
+                                                                <ul>
+                                                                    <li>Paracetamol</li>
+                                                                    <li>Aspirin</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Clinical Notes</li>
+                                                    <li>Special Instruction</li>
+                                                    <li>Files</li>
+                                                    <li>Lab Test Advice</li>
+                                                    <li>Prescriptions</li>
+                                                    <li>Completed Procedures</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <button type="button" class="btn btn-collect-payment"
+                                                id="btnCollectPayment">Collect
+                                                Payment</button>
+                                            <div class="d-flex justify-content-center">
+                                                <div>
+                                                    <img src="../images/light.jpg" alt="" class="light-img">
+                                                    Collect online payments from patients.<a href="">How ?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Code for Calendar new popup @anjudewangan-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<!-- <script src="../pateints/layout.js"></script> -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/picker.js"></script>
+<script src="js/picker.date.js"></script>
+<script src="js/main.js"></script>
+
+</html>

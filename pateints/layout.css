@@ -1,0 +1,1285 @@
+/* navbar 1 2 3 */
+::-webkit-scrollbar {
+    display: none;
+}
+.navbar {
+    position: fixed;
+    padding: 0;
+    height: 61px;
+    width: 100%;
+    z-index: 7;
+    border-bottom: 3px solid black;
+  }
+  .navbar-brand{
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+  }
+  .navbar-brand:hover{
+    background-color: #FFDEDE;
+  }
+  .navbar-brand p{
+    margin: 0 15px 0 0;
+  }
+  .buttonForSideNav {
+    outline: none;
+    height: 40px;
+    border: 1px solid #a4a4a4;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 9px;
+  }
+  
+  .buttonForSideNav:hover {
+    background-color: #a4a4a4;
+  }
+  
+  .navbar-first {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.hospital-name {
+    flex-wrap: nowrap;
+    color: black;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.hospital-name:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.navbar-second {
+    width: 84%;
+}
+
+.secondNavUl {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.navbar-second .nav-item {
+    list-style: none;
+}
+
+.addPateintButton {
+    font-size: 12px;
+    margin: 0;
+}
+
+.nav-item.dropdown>.nav-link .indicator {
+    position: absolute;
+    bottom: 16px;
+    left: 17px;
+    font-size: 10px;
+}
+
+#exampleAccordion .nav-item a {
+    color: rgb(14, 14, 14);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.navbar-sidenav>.nav-item>.nav-link:hover {
+    background-color: rgb(236, 236, 11);
+}
+
+#alertsDropdown,
+#messagesDropdown {
+    padding: 0;
+}
+
+.advnc-search {
+    background: none;
+    border: none;
+    color: #435aaa;
+    font-size: 14px;
+    position: relative;
+    /* right: 70px; */
+    right: 85px;
+    width: 61px;
+}
+
+.searchbox {
+    display: flex;
+}
+
+.inputForSearch {
+    width: 50px;
+}
+
+.addpatient {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: orange;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 5px;
+}
+
+.navbar-third {
+    width: 15%;
+}
+
+.navbar-fourth {
+    width: 78%;
+    /* position: absolute; */
+    right: 0;
+    margin-top: 78px;
+    height: 150px;
+    border-bottom: 2px solid black;
+    color: black;
+    background-color: white;
+    z-index: 1;
+}
+
+.RakeshName {
+    color: #000;
+    font-weight: 500;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(154, 157, 160);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 90%;
+    /* 100% Full-height */
+    width: 63px;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 13;
+    /* Stay on top */
+    top: 60px;
+    /* Stay at the top */
+    left: 0;
+    background-color: #FFFCE2;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbar-sidenav>.nav-item>.nav-link {
+    color: rgb(14, 14, 14);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.navbar-sidenav>.nav-item>.nav-link:hover {
+    background-color: rgb(236, 236, 11);
+}
+
+/* Code for sidenav active link @anjudewangan */
+.navbar-sidenav>.nav-item>.active-link {
+    background-color: rgb(236, 236, 11);
+}
+
+/* Code for sidenav active link @anjudewangan */
+
+.nav-link-text {
+    font-size: 18px;
+    margin-left: 25px;
+}
+
+#exampleAccordion .nav-link-text {
+    font-size: 11.5px;
+    margin-left: 36px;
+}
+
+#exampleAccordion .nav-link i {
+    margin-left: 20px;
+    font-size: 21px;
+}
+
+.sidenav-second-level li a {
+    font-size: 10px;
+}
+
+.alertDetails {
+    position: absolute;
+    top: 100%;
+    background-color: #ffffff;
+    left: 70%;
+    height: auto;
+    width: 30vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 16px;
+}
+
+.alertBodyitems {
+    background-color: transparent;
+    padding: 5px;
+    z-index: 10;
+}
+
+.alertBodyitems:hover {
+    background-color: #cce7ff;
+    z-index: 10;
+}
+
+.alertBodyitemsPart1 {
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.messageAlertDetails {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    height: auto;
+    width: 30vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 16px;
+}
+
+.MadBodyitemsPart2 p {
+    font-size: 10px;
+    z-index: 10;
+}
+
+.MADBody {
+    height: 25vh;
+    min-height: 25vh;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+.adminSettingBox {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 84%;
+    height: auto;
+    width: 16%;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 4;
+    padding: 16px;
+}
+
+.adminSettingBox p {
+    margin: 0;
+    padding: 0;
+}
+
+#settingOptions {
+    padding: 0;
+}
+
+#settingOptions li {
+    list-style: none;
+    font-size: 12px;
+    margin: 5px 0;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+#settingOptions li:hover {
+    background-color: #cce7ff;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: #818181;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar-first {
+        width: 100px;
+    }
+
+    .navbar-brand,
+    .buttonForSideNav {
+        font-size: 12px;
+    }
+
+    .nav-link {
+        padding: 0;
+        margin: 0;
+    }
+
+    .d-lg-none {
+        display: none;
+    }
+
+    #addPateintButton {
+        width: 71px;
+    }
+
+    .addpatient {
+        font-size: 10px;
+    }
+
+    .hospital-name {
+        font-size: 10px;
+    }
+
+    .inputForSearch {
+        width: 93px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .searchbtn1 {
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    #dropbtnMyfunction {
+        font-size: 10px;
+    }
+
+    .nav-link-text {
+        font-size: 14px;
+        margin-left: 25px;
+    }
+
+    .alertBodyitems {
+        font-size: 0.8rem;
+    }
+
+    .MadBodyitems {
+        font-size: 0.8rem;
+    }
+
+    .adminSettingBox {
+        left: 79%;
+        width: 21%;
+    }
+
+    .adminSettingHeader {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .navbar-second,
+    .navbar-third {
+        display: none;
+    }
+
+    .navbar-first {
+        width: 100%;
+    }
+
+    .navbar-sidenav>.nav-item>.nav-link {
+        font-size: 15px;
+    }
+
+    #mySidenav {
+        width: 0px;
+        border: none;
+        background-color: #efefef;
+    }
+
+    .nav-link-text {
+        font-size: 14px;
+    }
+}
+
+
+/* USER IMAGE SIZE CSS */
+
+#dvUserImage {
+    width: 60px;
+}
+
+#barcodeimage {
+    width: 100px;
+}
+
+.insurance-img {
+    width: 80px;
+}
+
+.user-img {
+    width: 1.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+/* div leftright */
+
+.leftright {
+    width: 95.5%;
+    position: absolute;
+    right: 0;
+    display: flex;
+}
+
+
+/* vertical line on page */
+
+.vl {
+    margin-top: 220px;
+    border-left: 3px solid black;
+    height: 10000px;
+    width: fit-content;
+    margin-left: 300px;
+    position: sticky;
+}
+
+
+/* css for table of pateints */
+
+.btn-secondary {
+    background-color: #f2f9fb;
+    color: black;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show>.btn-secondary.dropdown-toggle {
+    background-color: #28c0db;
+    color: black;
+}
+
+.pateintTable {
+    margin-top: 80px;
+    width: 280px;
+    height: 650px;
+    /* left: 64px;
+    top:172px; */
+    background-color: #E5FFFF;
+    border-radius: 0px 15px 0px 0px;
+    position: fixed;
+}
+
+.pateintul {
+    background-color: white;
+    margin-top: 50px;
+    list-style: none;
+}
+
+.visitselect {
+    color: rgb(248, 248, 254);
+}
+
+.e-queque {
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.pateintnamelist {
+    overflow-y: scroll;
+    width: 280px;
+    height: 500px;
+    /* left: 64px;
+    top:172px; */
+    background-color: #E5FFFF;
+    border-radius: 0px 15px 0px 0px;
+}
+
+.PatientTableTitle {
+    display: flex;
+}
+
+.PatientTableTitle p {
+    padding: 5px 12px 0px 12px;
+}
+
+.PateintName1 {
+    display: inline-flex;
+    border: 1px solid #007185;
+    border-radius: 0px 10px 10px 0px;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+
+/* .lefthalfpateint{
+
+} */
+
+.pateintnumber {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25.78px;
+}
+
+.pateinttime {
+    margin-left: 1rem;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12.89px;
+}
+
+.righthalfpateint {
+    margin-right: 1rem;
+}
+
+.pateintName {
+    margin-left: 3rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+}
+
+.visitreason {
+    margin-left: 3rem;
+    line-height: 0;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.Returning {
+    margin-left: 3rem;
+    line-height: 0;
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.InsuranceHolder {
+    margin-left: 3rem;
+    line-height: 0;
+    color: green;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.PateintName2 {
+    display: inline-flex;
+    border: 1px solid #007185;
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+
+/* communication and med complete div */
+
+.commeddiv {
+    position: sticky;
+    top: 250px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    margin-left: 5px;
+    height: fit-content;
+    /* text-align: center; */
+}
+
+
+/* communication div css */
+
+.Communicationdiv {
+    border: 1px solid #007185;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.Communicationdiv h5 {
+    font-size: small;
+}
+
+.Communicationdiv p {
+    font-size: smaller;
+}
+
+.communicationpng img {
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.setschedule {
+    color: #34d0eb;
+    line-height: 0.5rem;
+    font-size: small;
+}
+
+
+/* Medical history div css */
+
+.MedicalHistorydiv {
+    border: 1px solid #28c0db;
+    border-radius: 10px 10px 10px 10px;
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.MedicalHistorydiv span {
+    display: flex;
+    position: relative;
+}
+
+.MedicalHistorydiv h6 {
+    margin-left: 10px;
+    font-size: smaller;
+}
+
+.MedicalHistorydiv input {
+    width: 100px;
+    margin-left: 5px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* Code for patient alignment @anjudewangan */
+
+.MedicalHistorydiv ul {
+    list-style-type: none;
+    margin-left: -21px;
+}
+
+.MedicalHistorydiv ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Code for patient alignment @anjudewangan */
+
+.Addsign {
+    position: absolute;
+    right: 5px;
+    color: #2fcbe7;
+    cursor: pointer;
+    font-size: smaller;
+}
+
+.hrline {
+    border-top: 2px solid grey;
+    width: 90%;
+}
+
+.bulb {
+    margin-right: 100%;
+}
+
+.hints {
+    display: flex;
+    margin-left: 10px;
+}
+
+.addsymbol {
+    width: 20px;
+    height: 22px;
+}
+
+.addeditems {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 12px;
+}
+
+
+/* carosel css for pateints list */
+
+.carousel-indicators {
+    top: 0;
+}
+
+.carousel-indicators li {
+    top: 0;
+    color: black;
+    text-indent: 0px;
+    width: 50px;
+}
+
+.carousel-indicators .active {
+    background-color: #2ecbae;
+}
+
+
+/* center appointment div */
+
+.Appointment {
+    height: fit-content;
+    margin-top: 250px;
+    margin-left: 180px;
+    /* border-left: 3px solid black; */
+}
+
+.appointmentwith {
+    border: 2px solid grey;
+    width: max-content;
+    height: max-content;
+    display: flex;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.appointmentwithtime {
+    line-height: 0.5rem;
+    padding-top: 20px;
+}
+
+.appointmentwithdr {
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.openbuttondiv {
+    padding: 20px 0px 8px 10px;
+}
+
+.openbtn {
+    background-color: yellow;
+    color: #2451C5;
+    border-radius: 5px;
+}
+
+
+/* create new case study */
+
+#CreateCaseStudy {
+    padding-top: 15px;
+    color: blue;
+}
+
+
+/* visist report bttuon */
+
+#VisitReportButton {
+    border: rgb(237, 97, 162);
+    color: #000;
+    border-radius: 5px;
+    background-color: rgb(237, 97, 162);
+    width: 150px;
+    text-align: center;
+}
+
+
+/* VeiwsAndPaymentsbutton */
+
+#VeiwsAndPaymentsbutton {
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+    margin-left: 8px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* ReadyCaseFormatButton */
+
+#ReadyCaseFormatButton {
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: grey;
+    margin-left: 150px;
+    font-weight: 500;
+    height: fit-content;
+    text-align: center;
+}
+
+
+/* appontment details input for create new case study */
+
+#AppointmentDetails {
+    border: 2px solid rgb(38, 215, 174);
+    border-radius: 5px;
+    display: none;
+}
+
+.PateintAppointmentDetails {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.Appno {
+    float: right;
+}
+
+.apdatetime {
+    font-weight: 500;
+}
+
+.appointmentinput {
+    border: 2px solid grey;
+    color: black;
+    border-radius: 5px;
+    background-color: rgb(172, 170, 170);
+    margin-left: 10px;
+}
+
+.selectdoctor {
+    border-radius: 5px;
+    border: 2px solid grey;
+}
+
+.AddRecordButton {
+    border: 2px solid yellow;
+    border-radius: 5px;
+    background-color: yellow;
+    color: rgb(45, 14, 130);
+    padding: 5px 5px 5px 5px;
+    margin-left: 35%;
+}
+
+.btn-warning {
+    color: blue;
+    font-weight: 500;
+}
+
+
+/* VeiwsAndPaymentsContent */
+
+#VeiwsAndPaymentsContent {
+    border: 2px solid rgb(198, 251, 233);
+    background-color: rgb(198, 251, 233);
+    height: 500px;
+    border-radius: 5px;
+    display: none;
+    margin-top: -12px;
+    position: relative;
+    z-index: 0;
+}
+
+.VeiwsAndPaymentsTable {
+    background-color: rgb(253, 255, 254);
+    width: 100%;
+    border: 2px solid rgb(24, 131, 173);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.makepaymentsbtn {
+    border: 1px solid grey;
+    background-color: #9BBBB2;
+    color: white;
+    border-radius: 5px;
+}
+
+.tdsettings {
+    padding-top: 40px;
+    padding-bottom: 10px;
+}
+
+.veiwHistory {
+    border: 2px solid rgb(198, 251, 233);
+    background-color: rgb(198, 251, 233);
+    border-radius: 5px;
+    display: none;
+}
+
+.Billingandhistory {
+    display: flex;
+    color: #000;
+    margin-left: 20px;
+}
+
+#Billingp {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 0px;
+    background-color: yellow;
+}
+
+#paymenthistoryp {
+    border: 1px solid black;
+    margin-left: 25px;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-bottom: 0px;
+}
+
+#Billingt {
+    background-color: rgb(253, 255, 254);
+    width: 100%;
+    border: 2px solid rgb(24, 131, 173);
+    border-radius: 5px;
+}
+
+.Unpaidbtn {
+    border: 1px solid red;
+    border-radius: 5px;
+    color: red;
+}
+
+.Paid {
+    border: 1px solid green;
+    border-radius: 5px;
+    color: green;
+}
+
+.paymenthistoryt {
+    background-color: rgb(253, 255, 254);
+    width: 100%;
+    border: 2px solid rgb(24, 131, 173);
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+#ReadyCaseFormatContent {
+    border: 2px solid rgb(198, 251, 233);
+    background-color: rgb(198, 251, 233);
+    height: 800px;
+    border-radius: 5px;
+    display: none;
+    margin-top: -12px;
+    position: relative;
+    z-index: 0;
+}
+
+
+/* Ready case format tab css */
+
+#ReadyCaseFormatContent tr {
+    border: 1px solid grey;
+}
+
+#ReadyCaseFormatContent td {
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+}
+
+
+/* pateint visit report c ss */
+
+
+/* iframes added in visit reports */
+
+.iframes {
+    background-color: rgba(187, 245, 247, 0.87);
+    margin-top: -12px;
+}
+
+.iframe {
+    background-color: rgba(187, 245, 247, 0.87);
+    display: none;
+}
+
+
+/* Advanced Patient Search */
+
+.popup-form {
+    display: flex;
+    justify-content: center;
+}
+
+.dvSelect>select,
+#divControl>input,
+#divControl>select {
+    width: 12rem;
+    margin: 16px;
+    border: 1px solid black;
+    border-radius: 7px;
+    text-align: initial;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.popup-form>select>option {
+    width: 15rem;
+    font-size: 12px;
+}
+
+.fa-times-circle {
+    font-size: 18px;
+    color: red;
+    margin-top: 14px;
+    margin-left: -5px;
+}
+
+#btnAddMore {
+    color: rgb(0, 162, 255);
+    font-size: 15px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+#divCategories {
+    margin: 10px 27px;
+    box-shadow: 0 0 13px -7px #444444;
+    background-color: white;
+    width: 55%;
+}
+
+#divCategories>input {
+    /* width: 4rem; */
+    margin: 5px;
+}
+
+#divCategories>label {
+    display: initial;
+}
+
+#divCategories>input,
+#divCategories>label {
+    cursor: pointer;
+}
+
+#divCategories>label:hover {
+    background-color: rgb(0, 162, 255);
+    color: white;
+}
+
+#divNoData {
+    color: red;
+    font-size: 14px;
+    margin-left: 36px;
+    display: none;
+}
+
+/* Advanced Search Popup */
+@media (min-width: 576px) {
+    .form-inline label {
+        display: initial !important;
+    }
+}
+
+.input-group-append {
+    margin-left: -64px !important;
+}
+
+.btn-sec-popup {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* mobile view */
+@media screen and (max-width:428px) {
+    .vl{
+        display: none;
+    }
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    .pateintul{
+        display: flex;
+        gap: 15px;
+        width: 410px;
+        position: relative;
+        /* bottom: 70px;
+        right: 17.9px; */
+        /* left: 22px; */
+        margin: 0;
+        padding: 0;
+        left: 10px;
+        top: 10px;
+    }
+    
+    .e-queque{
+        position: relative;
+        left: 30px;
+    }
+    .e-queque div{
+        width: 148px;
+       height: 30px;
+    }
+    .e-queque label{
+        display: flex;
+        align-items: center;
+    }
+    .nav-link{
+        display: flex;
+        position: relative;
+        left: 20px;
+        width: max-content;
+    }
+    .carousel{
+        width: 428px;
+        position: relative;
+        /* right: 17px;
+        bottom: 50px; */
+        /* z-index: 0; */
+        overflow-x: hidden;
+    }
+    .pateintnamelist{
+        background-color: #ffffff;
+        position: relative;
+        width: 420px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 5px;
+        overflow-x: hidden;
+        border-radius: 0;
+        top: 10px;
+    }
+    .pateintnamelist div{
+        width: 400px;
+        position: relative;
+        left: 10px;
+    }
+    #visitoptions{
+        position: relative;
+        left: 30px;
+        outline: none;
+        border: none;
+    }
+    .pateintTable{
+        background-color: #ffffff;
+        width: 428px;
+        position: relative;
+        /* right: 18px; */
+        /* background-color: #007185; */
+        padding: 0;
+        border-radius: 0;
+        margin: 0;
+        top: 0;
+        height: max-content;
+    }
+    .pateintTableTitle{
+        font-size: 16px;
+        width: 428px;
+        position: relative;
+        left: -140px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        height: auto;
+        top: 29px;
+    }
+    .Appointment{
+        display: none;
+     }
+    .commeddiv{
+        display: none;
+    } 
+    .navbar-fourth{
+        display: none;
+    }
+    .navbar{
+        position: relative;
+        width: 428px;
+    }
+}
+@media screen and (max-width:428px) {
+    
+    /* .pateintnamelist{
+        display: none;
+    }
+    .pateintTableTitle{
+        display: none;
+    }
+    .pateintul{
+        display: none;
+    } */
+    .leftright{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 428px;
+        gap: 0px;
+        overflow-x: hidden;
+        z-index: 0;
+        height: max-content;
+    }
+    .Appointment{
+        width:  428px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        position: relative;
+        right: 90px;
+        /* top: 450px; */
+        bottom: 220px;
+    }
+    .Appointment > div{
+        width: 400px;
+        position: relative;
+        left: 16px;
+        display: flex;
+    }
+
+    .commeddiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 428px;
+        position: relative;
+        top: -200px;
+    }
+    .commeddiv > div{
+        width: 384px;
+    }
+    .MedicalHistorydiv{
+        width: 384px;
+    }
+    .hrline{
+        width: 384px;
+        background-color: #CACACA;
+    }
+    .commeddiv div:nth-child(2)>div img{
+        display: none;
+    }
+    .Communicationdiv{
+        position: relative;
+        right: 15px;
+    }
+    
+}

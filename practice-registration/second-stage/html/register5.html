@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>Logo</p>
+        </div>
+        <div class="title">
+            <p>Profile of Register Medical Practioner (RMP)</p>
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-bell"></i>
+            <label for="">
+                Settings
+            </label>
+        </div>
+    </div>
+    <div class="progress_bar">
+        <div class="accnt verf">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Account Verification</p>
+        </div>
+        <div class="accnt rmp">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Register Medical Practionar (RMP) Details</p>
+        </div>
+        <div class="accnt practice">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Practice Details</p>
+        </div>
+        <div class="accnt dashboard">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Dashboard</p>
+        </div>
+    </div>
+    <div class="main5">
+        <div class="main5_head">
+            <p>Type of clinical Estabishment -</p>
+            <p>(please tick whichever is applicable)-You can select more than one option</p>
+        </div>
+        <div class="clinical_container">
+            <div class="inpatient" id="inpatient">
+                <div class="in_items inpatient_head">
+                    <input type="checkbox" id="inpatient_head">
+                    <label for="">Inpatient</label>
+                </div>
+                <div class="check_items inpatient_item" id="inpatient_item">
+                    <div class="in_items">
+                        <label for="">(a)</label>
+                        <input type="checkbox" id="in_input1">
+                        <label for="">Hospital</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="in_input2">
+                        <label for="">Nursing Home</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="in_input3">
+                        <label for="">Maternity Home</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="in_input4">
+                        <label for="">Primary Health Centre</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="in_input5">
+                        <label for="">Community Health Centre</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="in_input6">
+                        <label for="">Sanatorium</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="in_input7">
+                        <label for="">Palliative Care</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="in_input8">
+                        <label for="">Any other, please specify</label>
+                    </div>
+                </div>
+                <div class="no_bed">
+                    <label for="">(b) Number of Beds:</label>
+                    <input type="number" id="in_input9">
+                </div>
+            </div>
+            <div class="outpatient">
+                <div class="in_items outpatient_head">
+                    <input type="checkbox" id="outpatient_head">
+                    <label for="">Outpatient</label>
+                </div>
+                <div class="check_items outpatient_item">
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input1">
+                        <label for="">Single Practitioner</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input2">
+                        <label for="">Polyclinic</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input3">
+                        <label for="">Sub-Centre</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input4">
+                        <label for="">Physiotherapy / Occupational Therapy Clinic</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input5">
+                        <label for="">Infertility Clinic</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input6">
+                        <label for="">Dental Clinic</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input7">
+                        <label for="">Dialysis Centre</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input8">
+                        <label for="">Mobile Clinic</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="out_input9">
+                        <label for="">Any other, please specify</label>
+                    </div>
+                </div>
+            </div>
+            <div class="laboratory">
+                <div class="in_items laboratory_head">
+                    <input type="checkbox" id="laboratory_head">
+                    <label for="">Laboratory</label>
+                </div>
+                <div class="check_items laboratory_items">
+                    <div class="in_items">
+                        <input type="checkbox" id="lab_input1">
+                        <label for="">Pathology</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="lab_input2">
+                        <label for="">Haematology</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="lab_input3">
+                        <label for="">Biochemistry</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="lab_input4">
+                        <label for="">Microbiology</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="lab_input5">
+                        <label for="">Genetics</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="lab_input6">
+                        <label for="">Collection Centre</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="lab_input7">
+                        <label for="">Any other, please specify</label>
+                    </div>
+                </div>
+            </div>
+            <div class=" imagingcentre">
+                <div class="in_items imagingcentre_head">
+                    <input type="checkbox" id="imagingcentre_head">
+                    <label for="">Imaging Centre</label>
+                </div>
+                <div class="check_items imgng_items">
+                    <div class="in_items">
+                        <input type="checkbox" id="imgng_input1">
+                        <label for="">X-Ray</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="imgng_input2">
+                        <label for="">Electro Cardio Graph (ECG)</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="imgng_input3">
+                        <label for="">Ultra Sound</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="imgng_input4">
+                        <label for="">CT Scan</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="imgng_input5">
+                        <label for="">Magnetic Resonance Imaging (MRI)</label>
+                    </div>
+                    <div class="in_items">
+                        <input type="checkbox" id="imgng_input6">
+                        <label for="">Any other, please specify</label>
+                    </div>
+                </div>
+            </div>
+            <div class="other">
+                <div class="other_item">
+                    <input type="checkbox" id="other_input">
+                    <label for="">Any other (please specify)</label>
+                </div>
+                <input type="text" name="" id="other_text">
+            </div>
+        </div>
+        <div class="declaration">
+            <div class="dec_head">
+                <p>Declaration-</p>
+                <div class="dec_para">
+                    <p>
+                        I hereby declare that the above statement is true and correct to the best of my knowledge and complies with all the rules and declarations made under the Clinical Establishment (Registration and Regulation) Act, 2010. I promise that if any of the above
+                        features change I will suggest for proper registration.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="savebtn">
+            <a href="../html/register4.html" class="back"><span class="material-icons-outlined">
+                    arrow_back
+                </span>BACK</a>
+            <a href="../html/register6.html" class="next">SAVE & NEXT</a>
+        </div>
+    </div>
+    <script src="../JS/register6.js"></script>
+</body>
+
+</html>

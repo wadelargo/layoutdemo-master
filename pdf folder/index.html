@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- country selector links -->
+        <script src="https://jsuites.net/v4/jsuites.js"></script>
+        <link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+        <!-- Bootstrap CSS -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"
+        />
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
+        <link rel="stylesheet" href="file.css">
+      
+        <!-- jquery script -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- Fontawesome kit link -->
+        <script
+          src="https://kit.fontawesome.com/c096fa5e26.js"
+          crossorigin="anonymous"
+        ></script>
+        <!-- iconify cdn link -->
+        <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+        <!-- animate css -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+       
+
+        <!-- code by aakash -->
+        <title>Admin</title>
+      </head>
+<body onload="enableEditMode()">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navForDeskTop">
+        <div class="navbar-first">
+            <a class="navbar-brand" href="../practice-registration/second-stage/html/index.html">
+                <span class="iconify" data-icon="carbon:add" data-width="35" data-height="35"></span>
+                <p>Add Establishment</p>
+            </a>
+            <button class="buttonForSideNav" type="button" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-second">
+            <ul class="ml-auto secondNavUl">
+                <a class="hospital-name" href="#">WellDone</a>
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <div class="searchbox">
+                            <input class="form-control inputForSearch" type="text" placeholder="Search for..." />
+                            <button type="button" class="advnc-search" id="advnc-search" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Advanced</button>
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true" role="dialog" data-backdrop="false">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Advance Patient Search</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" class="popup-form">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="dvSelect">
+                                                                <select id="ddlInfo">
+                                                                    <option value="patient_name">Patient Name</option>
+                                                                    <option value="has_contact_number">Has Contact
+                                                                        Number</option>
+                                                                    <option value="contact_number">Contact Number
+                                                                    </option>
+                                                                    <option value="age_is">Age is</option>
+                                                                    <option value="age_more_than">Age is More Than
+                                                                    </option>
+                                                                    <option value="age_less_than">Age is Less Than
+                                                                    </option>
+                                                                    <option value="has_date_of_birth">Has Date of Birth
+                                                                    </option>
+                                                                    <option value="date_of_birth">Date of Birth Is
+                                                                    </option>
+                                                                    <option value="date_of_birth_more_than">Date of
+                                                                        Birth is More Than</option>
+                                                                    <option value="date_of_birth_less_than">Date of
+                                                                        Birth is Less Than</option>
+                                                                    <option value="birthday_is_in">Birthday is in
+                                                                    </option>
+                                                                    <option value="has_patient_id">Has Patient ID
+                                                                    </option>
+                                                                    <option value="patient_id">Patient ID</option>
+                                                                    <option value="has_aadhaar_id">Has Aadhaar ID
+                                                                    </option>
+                                                                    <option value="aadhaar_id">Aadhaar ID</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="email">Email</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="has_gender">Has Gender</option>
+                                                                    <option value="gender">Gender is</option>
+                                                                    <option value="has_pincode">Has Pincode</option>
+                                                                    <option value="pincode">Pincode</option>
+                                                                    <option value="has_street_address">Has Street
+                                                                        Address</option>
+                                                                    <option value="street_address">Street Address
+                                                                    </option>
+                                                                    <option value="has_blood_group">Has Blood Group
+                                                                    </option>
+                                                                    <option value="blood_group">Blood Group</option>
+                                                                    <option value="was_referred_by_someone">Was Referred
+                                                                        By Someone</option>
+                                                                    <option value="referred_by_someone">Referred By
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div id="divControl">
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <button type="button" id="btnAddMore">Add another parameter</button>
+                                            <div id="divCategories">
+
+                                            </div>
+                                            <div id="divNoData" style="display: none;">No Data Found</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnSearch"
+                                                onclick="ShowNoDataMessage()">Search</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                id="btnCancel" onclick="HandleCancel()">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="input-group-append">
+                                <button class="btn btn-primary searchbtn1" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="microPhoneChoose" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-microphone"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="addPateintButton" href="Addpateints/addpatient.html">
+                        <button type="button" class="addpatient">Add Patient</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="calenderButton" href="Calendar/calendar.html">
+                        <i class="fa fa-fw fa-calendar"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="chat/index.html">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <!-- <span class="d-lg-none">Call-Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span> -->
+                    </a>
+                </li>
+            </ul>
+
+            <!-- message shortcut
+            <div class="messageAlertDetails" id="messageAlertDetails">
+                <div class="MADHeader">
+                    <h6 class="MADHeader-info">New Messages:</h6>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADBody">
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>David Miller</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>Jane Smith</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>John Doe</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADFooter">
+                    <a class="viewAllMsgs" href="#">View all messages</a>
+                </div>
+
+            </div> -->
+            <!-- admin setting box -->
+            <div class="adminSettingBox" id="adminSettingBox">
+                <div class="adminSettingHeader">
+                    <strong id="nameofAdmin">Rakesh Nandre</strong>
+                    <p id="statusofAdmin">Admin</p>
+                    <p id="emailofAdmin">xyz@gmail.com</p>
+                </div>
+                <hr style="margin: 15px 0;">
+                <ul id="settingOptions">
+                    <li><span class="iconify" data-icon="akar-icons:pencil" style="color: gray;" data-width="17"
+                            data-height="17"></span> Edit Profile</li>
+                    <li><span class="iconify" data-icon="ant-design:setting-outlined" style="color: gray;"
+                            data-width="17" data-height="17"></span> Account Setting</li>
+                    <li><span class="iconify" data-icon="ant-design:user-outlined" style="color: gray;" data-width="17"
+                            data-height="17"></span> Add User</li>
+                    <li><span class="iconify" data-icon="bx:log-out" style="color: gray;" data-width="17"
+                            data-height="17"></span> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-third">
+            <div class="dropdown">
+                <button id="dropbtnMyfunction" class="dropbtn">
+                    <img class="user-img" src="" />Rakesh Nandare
+                    <i class="fa fa-angle-down"></i>
+                </button>
+            </div>
+            <!-- alert details -->
+            <div class="alertDetails" id="alertDetails">
+                <div class="alertHeader">
+                    <p>New Alerts:</p>
+                </div>
+                <div class="dropdown-divider"></div>
+
+                <div class="alertBody">
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                </div>
+                <div class="alertFooter">
+                    <a>View All Events</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- sidenavbar -->
+    <div id="mySidenav" class="sidenav">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <a class="nav-link" href="doctor1/doctor.html">
+                    <i class="fa fa-fw fa-user-md"></i>
+                    <span class="nav-link-text">Doctors</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables"
+                onclick="showpateintTable()">
+                <a class="nav-link" href="pateints/index.html">
+                    <i class="fa fa-fw fa fa-wheelchair"></i>
+                    <span class="nav-link-text">Patient</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="Calendar/calendar.html">
+                    <i class="fa fa-fw fa fa-calendar"></i>
+                    <span class="nav-link-text">Appointment</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="tables.html">
+                    <i class="fa fa-fw fa fa-calendar-check-o"></i>
+                    <span class="nav-link-text">Dr. Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="tables.html">
+                    <i class="fa fa-fw fa-building-o"></i>
+                    <span class="nav-link-text">Departments</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="tables.html">
+                    <i class="fa fa-fw fa-umbrella" aria-hidden="true"></i>
+                    <span class="nav-link-text">Insurance Network</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-user"></i>
+                    <span class="nav-link-text">Employee</span>
+                </a>
+                <ul class="collapse sidenav-second-level " id="collapseComponents">
+                    <li>
+                        <a href="navbar.html">Employee List</a>
+                    </li>
+                    <li>
+                        <a href="cards.html">Leaves</a>
+                    </li>
+                    <li>
+                        <a href="cards.html">Holidays</a>
+                    </li>
+                    <li>
+                        <a href="cards.html">Attendance</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-book"></i>
+                    <span class="nav-link-text">Payroll</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="login.html">Pay slip</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa fa-commenting"></i>
+                    <span class="nav-link-text">Chat</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-video-camera"></i>
+                    <span class="nav-link-text">Call</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti">
+                    <li>
+                        <a href="#">Voice call</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEmail"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-envelope"></i>
+                    <span class="nav-link-text">email</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseEmail">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBlog"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fas fa-comment"></i>
+                    <span class="nav-link-text">Blog</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseBlog">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fas fa-object-group"></i>
+                    <span class="nav-link-text">Assets</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa-bell-o"></i>
+                    <span class="nav-link-text">Activites</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-flag"></i>
+                    <span class="nav-link-text">Report</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseReport">
+                    <li>
+                        <a href="#">Expenses Report</a>
+                    </li>
+                    <li>
+                        <a href="#">Invoice Report</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="./Setting Folder/practice-profile.html">
+                    <i class="fa fa-fw fa-cog"></i>
+                    <span class="nav-link-text">Setting</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- share folder -->
+    <div class="fullscreen-container">
+        <div id="popDiv" class="popDiv">
+          <h2>Share Folder</h2>
+          <div id="contributor_num" class="d-flex align-items-center">
+            <span class="iconify" data-icon="bi:folder-symlink-fill" style="color: #7399c6;" data-width="40" data-height="40"></span>
+            <p>&nbsp;<span id="cont_num">1</span>&nbsp;contributors</p>
+          </div>
+          <p>Who has access :</p>
+          <ul id="access_list" class="mt-2">
+            <li class="list_here">
+                <div class="contributor d-flex">
+                    <div class="profile_pic">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600" alt="profile_image" width="40" height="40">
+                    </div>
+                    <div class="cont_details ms-2">
+                        <p class="cont_name">Jay Suryawanshi</p>
+                        <p class="cont_email">jaysuryavanshir7896@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="privilege">
+                    <p>Owner</p>
+                </div>
+            </li>
+          </ul>
+          <p class="mt-2">Invited</p>
+          <form id="share_part" action="/">
+            <label for="invite">Invite People:</label>
+            <input type="email" name="invite" id="invite" placeholder="Enter email address here">
+          </form>
+          <button class="done_btn btn btn-primary btn-sm mt-2">Done</button>
+        </div>
+      </div>
+  
+      <!-- delete page popup -->
+    <div class="fullscreen-container1">
+        <div id="popDiv1" class="popDiv1">
+          <h4>welldonehealth says</h4>
+          <p>Are you sure to delete this?</p>
+          <div class="dlt_btns">
+            <button id="ok_dlt" class="btn btn-sm btn-info">OK</button>
+            <button id="cancle_dlt" class="btn btn-sm btn-light">Cancle</button>
+          </div>
+        </div>
+      </div>
+    <!-- first page -->
+    <main id="main_sections">
+            
+            <section id="file_folder" class="p-2">
+                <div class="file_head">
+                    <h6>Files</h6>
+                </div>
+                <div class="file_list">
+                    <ul id="list_file">
+                        <li class="d-flex folder_list">
+                            <div class="d-flex icon_list align-items-center">
+                                <span class="iconify" data-icon="ci:file-pdf" style="color:gray;" data-width="35" data-height="35">
+                                </span>
+                                <div class="name_list ms-2">
+                                    <p class="file_name m-1">
+                                        Prescription.pdf
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="dlt_list me-2">
+                                <span class="iconify" data-icon="ant-design:delete-twotone"data-width="20" data-height="20">
+                            </div>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="additional_buttons d-flex mt-5">
+                    <div class="highlights_btn d-flex flex-column align-items-center">
+                        <p id="hglt_pdf" class="text-center">Highlight Pdf from <br> my computer </p>
+                        <input id="fileInput" type="file" style="display:none;" />
+                        <button id="upload_btn" onclick="document.getElementById('fileInput').click();"><span class="iconify" data-icon="akar-icons:cloud-upload" style="color: gray;" data-width="20" data-height="20"></span> Upload PDFs</button>
+                    </div>
+                    <div class="share_collection_btn d-flex flex-column align-items-center">
+                        <p id="share_pdf" class="text-center">Collaborate with <br> other people</p>
+                        <button id="share_btn"><span class="iconify" data-icon="akar-icons:share-box" style="color: gray;" data-width="20" data-height="20"></span> Share collaction</button>
+                    </div>
+                </div>
+                <div class="page_buttons">
+                    <a class="btn btn-sm btn-dark active">
+                        Highlights
+                    </a>
+                    <a id="document_btn" class="btn btn-sm btn-light">
+                        documents
+                    </a>
+                </div>
+            </section>
+            <section id="viewer_folder" class="p-2">
+                <div class="main_box">
+                    <div class="headOf_pdf">
+                        <div id="nameOfpdf">Prescription.pdf</div>
+                        <div id="zoom">
+                            <a id="zoomIn"><span class="iconify" data-icon="akar-icons:plus" style="color: white;"></span></a>
+                            <a id="zoomOut"><span class="iconify" data-icon="akar-icons:minus" style="color: white;"></span></a>
+                        </div>
+                        <div id="num_of_pdf">
+                            <p>1 of 1</p>
+                        </div>
+                        <div class="save_icons">
+                            <div id="rotate_pdf" onclick="rotatePdf()">
+                                <span class="iconify" data-icon="mi:refresh" style="color: white;" ></span>
+                            </div>
+                            <div id="download_pdf">
+                                <span class="iconify" data-icon="charm:download" style="color: white;" ></span>
+                            </div>
+                            <div id="print_pdf">
+                                <span class="iconify" data-icon="bytesize:print" style="color: white;" ></span>
+                            </div>
+                        </div>
+                        <div class="additional_icons">
+                            <div id="highlighter_line">
+                                <span class="iconify" data-icon="bxs:pencil" style="color: white;" ></span>
+                            </div>
+                            <div id="comment">
+                                <span class="iconify" data-icon="akar-icons:comment" style="color: white;" ></span>
+                            </div>
+                            <div id="file_signature">
+                                <span class="iconify" data-icon="fa-solid:file-signature" style="color: white;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- pop up when select some text -->
+                    <span class="popup-tag">
+                        <a id="msg_popUp"><span  class="iconify ms-1 me-1" data-icon="bi:chat-right" data-width="20" data-height="20"></span></a>
+                        
+                        <p id="roundColor"></p>
+                        <span class="iconify ms-1 me-1" data-icon="fluent:delete-12-regular" data-width="20" data-height="20"></span>
+                    </span>
+
+                    <!-- pop up message box for text -->
+                    <div id="popup-msg">
+                        <div class="popUpMsgHead">
+                            <h6>Dr.Rakesh Nandre</h6>
+                            <a id="rply">Reply</a>
+                            <a id="closeMsgBox"><span class="iconify" data-icon="akar-icons:cross" data-width="20" data-height="20"></span></a>
+                        </div>
+                        <div class="msgBox">
+                            <textarea name="msgBox" id="msgBox">
+
+                            </textarea>
+                        </div>
+                        <button class="btn btn-sm btn-primary">Post</button>
+                    </div>
+                    <!-- popup colour box for selected text -->
+                    <div id="popup-colour">
+                        <ul>
+                            <li class="roundColor" id="c1"></li>
+                            <li class="roundColor" id="c2"></li>
+                            <li class="roundColor" id="c3"></li>
+                            <li class="roundColor" id="c4"></li>
+                            <li class="roundColor" id="c5"></li>
+                            <li class="roundColor" id="c6"></li>
+                            <li class="roundColor" id="c7"></li>
+                            <li class="roundColor" id="c8"></li>
+                            <li class="roundColor" id="c9"></li>
+                            <li class="roundColor" id="c10"></li>
+                        </ul>
+                    </div>
+
+                    <div id="pdf_container" name="pdf_container">
+                       
+                        <div class="content_Page1 p-3" >
+                            <div class="pdf_head">
+                                <h5 class="text-center">ARHAM REUMAOIOGY CENTER</h5>
+                            </div>
+                            <div class="sub_head">
+                                <div class="sub_head_part1 p-2">
+                                    <p class="dr_name">DR. PRACHI NAISAR NAHAR</p>
+                                    <p>CLINICAL ASSOCIATE</p>
+                                    <p>BAMS</p>
+                                    <p>REG NO : I - 54711 - A</p>
+                                </div>
+                                <div class="vl"></div>
+                                <div class="sub_head_part2 p-2">
+                                    <p>DR NAISAR DILIP NAHAR</p>
+                                    <p>         CONSULTANT PHYSICIAN & RHUMATOLOGIST 
+                                        MSSS DNB (INTERNAL MEDICINE ),MNAMS 
+                                                         FELLOW IN RHEUMTOLOGY (CRD)
+                               EUIAR COURES IN PEDIATRIC REUHUMATOLOGY,
+                                                       CCRD (EULAR ),PGDMLS (MUMBAI)</p>
+                                </div>
+                            </div>
+                           <hr style="margin: 1px;">
+                           <div class="details ">
+                                <div class="details_part1">
+                                    <p>Reg No.     : 424554</p>
+                                    <p> Name         : LABAI NAIBA</p>
+                                    <p>Age / Sex  : 45 YEARS 7 MONTH / Female</p>
+                                </div>
+                                <div class="details_part2">
+                                    <p> Date   :11/01/2021</p>
+                                   <p>Wt      : 64.10</p>
+                                   <p>Bp      : 130/80</p>
+                                </div>
+                           </div>
+                           <hr style="margin: 5px;">
+                           <p class="diagnosis">DIAGNOSIS : RHEUMATOID ARTHITIS </p>
+                           <hr style="margin: 5px;">
+
+                           <div class="summary_box">
+                            <p>Summary :</p>
+                            <p class="ms-2">
+                                INFLAMMATORY SYMMETRICAL PERIPHERAL PORIPHERAL SINCE 1 YR WAS 
+                                ON DMARD (MTX 15 MG / WK & SSZ & LEF ) IN PAT 
+                                NO OTHER SIGNIFICANT PAST OR FAMILY HISTORY      NO KNOWN DRUG ALLERGY 
+                                MSK - MULTIPLE SYNOVITS 
+                                </p>
+                           </div>
+                           <hr style="margin: 5px;">
+
+                           <table style="width: 100%;">
+                            <tr>
+                              <th>SR NO.</th>
+                              <th>DRUG NAME </th>
+                              <th>Stregth </th>
+                              <th>Instruction  </th>
+                              <th>days  </th>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>INJ  -  VITANOVA D3</td>
+                              <td>(6L)</td>
+                              <td>IM STAT </td>
+                              <td>1 days  </td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>TAB - RA  -  TREX </td>
+                              <td>(15 MG)</td>
+                              <td>1 TAB ON EVERY SUNDAY AFTER LUNCH </td>
+                              <td>1 days  </td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>TAB  -  FOLVITE </td>
+                              <td>(5 MG)</td>
+                              <td>1 TAB ON EVERY SUNDAY TUESDAY & WEDNESDAY 
+                                AFTER BREAKFAST </td>
+                              <td>1 days  </td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>TAB  -  ACTICORT </td>
+                              <td>(60 MG)</td>
+                              <td>1-0-1 AFTER FOOG </td>
+                              <td>1 days  </td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>TAB  -  RETOZ  </td>
+                              <td>(20MG)</td>
+                              <td>1-0-1 AFTER FOOD 
+                                1-0-0 AFTER BREAKFAST </td>
+                              <td>1 days  </td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>TAB  -  RABLITE </td>
+                              <td>(6L)</td>
+                              <td>1-0-0 BEFORE BREAKFEST </td>
+                              <td>1 days  </td>
+                            </tr>
+                            
+                          </table>
+                          <p>RIVIEW AFTER 30 DAYS ( 10/02/21 )</p>
+                          <div class="test_box">
+                            <p>TESTS FOR NEXT VISIT : ESR,CBC,SGPT,BSL,CREAT</p>
+                            <p>SPECIAL INSTRUCTION   : NUTURE OF DISEASE &PROGNOSIS EXPALNED IN DETAIL , EXERCISE AS EXPLAINED
+                                MEDITETION, DO CXR PA VIEW, REFER TO PHYSI, CHIRE COMMODE</p>
+                          </div>
+                          <div class="instruction mt-5">
+                            <p>OR ANY CHEAPER GENERIC MEDICINE AS PER CHOICE OF PATIENT WITH THEIR OWN RISK </p>
+                          </div>
+                          <hr style="margin: 5px;">
+                          <div class="address_box">
+                            <p>FLAT NO.1, FRIST FIOOR , AVANI HEIDHTS OPP . SUYASH HOSPITAL , BEHAIND  AUTO WORD , OPP. TUPSAKHARE 
+                                LAWNS ,MUMBAI NAKA NASHIK -422002</p>
+                          </div>
+                          <div class="email_box">
+                            <p>EMAIL : DR .NAISAR@YAHOO.COM </p>
+                          </div>
+                        </div>
+                    </div>
+                       
+                    
+                </div>
+            </section>
+    </main>
+    
+    <!-- second page -->
+    <main id="word_section">
+        <!-- left part -->
+        <section id="documentList_folder" class="p-3">
+            <div class="documents_btn mt-4 text-center">
+                <a id="ready_btn" type="button">Ready Format </a>
+                <a id="document_create" type="button">New Document </a>
+            </div>
+            <div class="list_document mt-3">
+                <ul id="list_document">
+                    <li class="d-flex doc_list">
+                        <div class="icon_list d-flex align-items-center">
+                            <span class="iconify" data-icon="clarity:document-line" style="color: #00b8c2;" data-width="25" data-height="25"></span>
+                            <div class="name_document ms-2">
+                                <p class="doc_name m-1">Untitle</p>
+                                <p class="modified_display m-1">Last modified</p>
+                                <p class="last_name">untitled</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dlt_list me-2">
+                            <span class="iconify" data-icon="ant-design:delete-twotone" data-width="20" data-height="20"></span>
+                        </div>
+                    </li>
+                    <li class="d-flex doc_list">
+                        <div class="icon_list d-flex align-items-center">
+                            <span class="iconify" data-icon="clarity:document-line" style="color: #00b8c2;" data-width="25" data-height="25"></span>
+                            <div class="name_document ms-2">
+                                <p class="doc_name m-1">Untitle</p>
+                                <p class="modified_display m-1">Last modified</p>
+                                <p class="last_name">untitled</p>
+                            </div>
+                        </div>
+                        
+                        <div class="dlt_list me-2">
+                            <span class="iconify" data-icon="ant-design:delete-twotone" data-width="20" data-height="20"></span>
+                        </div>
+                    </li>
+                    
+                   
+                </ul>
+            </div>
+            <div class="page_buttons">
+                <a id="highlights_btn" class="btn btn-sm btn-light">
+                    Highlights
+                </a>
+                <a class="btn btn-sm btn-dark active">
+                    documents
+                </a>
+            </div>
+        </section>
+        <!-- right part -->
+        <section id="new_doc_folder">
+            <div class="headOfDocument p-2">
+                <div class="layer1 mt-2 mb-2">
+                    <div class="name_in_document">
+                        <p>Untitled document</p>
+                    </div>
+                    <div class="exports_btn">
+                        <p>all saved</p>
+                        <a id="save_doc" type="button">Save</a>
+                        <a id="export" type="button">Export to word</a>
+                        <a id="new_doc" type="button">New Document</a>
+                        <a type="button"><span class="iconify" data-icon="bx:expand-alt" style="color: gray;"></span></a>
+                        <a type="button" id="closeDoc"><span class="iconify" data-icon="akar-icons:cross" style="color: gray;"></span></a>
+                    </div>
+                </div>
+                <div class="layer2 mt-2 mb-2">
+                    <a type="button"><span class="iconify" data-icon="cil:print" style="color: gray;"></span></a>
+                    <a type="button" onclick="Edit('undo')"><span class="iconify" data-icon="akar-icons:arrow-back-thick" style="color: gray;"></span></a>
+                    <a type="button" onclick="Edit('redo')"><span class="iconify" data-icon="akar-icons:arrow-forward-thick" style="color: gray;"></span></a>
+
+                    <!-- paragraph editorial -->
+                    <select id="paragraph" onchange="execVal('formatBlock',this.value)">
+                        <option value="">Paragraph</option>
+                        <option value="H1" id="header1">Header 1</option>
+                        <option value="H2" id="header2">Header 2</option>
+                        <option value="H3" id="header3">Header 3</option>
+                        <option value="H4" id="header4">Header 4</option>
+                        <option value="H5" id="header4">Header 5</option>
+                        <option value="H6" id="header4">Header 6</option>
+                      </select>
+                    <select id="font_family" onchange="execVal('fontName',this.value)">
+                        <option value="">Font-family</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Brush Script MT">Brush Script MT</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Courier">Courier</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Garamond">Garamond </option>
+                        <option value="Helvetica ">Helvetica </option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Trebuchet MS">Trebuchet MS</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Verdana">Verdana</option>
+                        
+                    </select>
+                    <select id="font_size" onchange="execVal('fontSize',this.value)">
+                        <option value="">Font-size</option>
+                        <option value="1">10</option>
+                        <option value="2">12</option>
+                        <option value="3">14</option>
+                        <option value="4">16</option>
+                        <option value="5">18</option>
+                        <option value="6">20</option>
+                        <option value="7">22</option>
+                    </select>
+                    <!-- bold -->
+                    <a type="button" id="bold" class="myBtn" onclick="Edit('bold')"><span class="iconify" data-icon="ant-design:bold-outlined" style="color: gray;"></span></a>
+                    <!-- italic -->
+                    <a type="button" id="italic" class="myBtn" onclick="Edit('italic')"><span class="iconify" data-icon="ant-design:italic-outlined" style="color: gray;"></span></a>
+                    <!-- underline -->
+                    <a type="button" id="underline" class="myBtn" onclick="Edit('underline')"><span class="iconify" data-icon="ant-design:underline-outlined" style="color: gray;"></span></a>
+
+                    <!-- font colour -->
+                    <div class="font_colour">
+                        <span class="iconify" data-icon="ant-design:font-colors-outlined" style="color: gray;"></span>
+                        <select id="font_colour">
+                            Font Colour
+                            <input type="color" onchange="execVal('foreColor',this.value)">
+                        </select>
+                    </div>
+                    <a type="button"><span class="iconify" data-icon="akar-icons:link-chain" style="color: gray;" onclick="insertURLBased('createLink')"></span></a>
+                    <a type="button" onclick="insertURLBased('insertImage')"><span class="iconify" data-icon="charm:image" style="color: gray;"></span></a>
+                    <a type="button" class="myBtn" onclick="Edit('insertUnorderedList')"><span class="iconify" data-icon="clarity:bullet-list-line" style="color: gray;"></span></a>
+                    <a type="button" class="myBtn" onclick="Edit('insertOrderedList')"><span class="iconify" data-icon="ant-design:ordered-list-outlined" style="color: gray;"></span></a>
+                    
+                </div>
+                <div class="layer3 mt-2 mb-2">
+                    <a type="button" class="ms-2 myBtn" id="left_align" onclick="Edit('justifyLeft')"><span class="iconify" data-icon="akar-icons:text-align-left" style="color: gray;"></span></a>
+                    <a type="button" class="ms-2 myBtn" onclick="Edit('justifyCenter')"><span class="iconify" data-icon="ant-design:align-center-outlined" style="color: gray;"></span></a>
+                    <a type="button" class="ms-2 myBtn" onclick="Edit('justifyRight')"><span class="iconify" data-icon="akar-icons:text-align-right" style="color: gray;"></span></a>
+                    <a type="button" class="ms-2 myBtn" onclick="Edit('justifyFull')"><span class="iconify" data-icon="carbon:text-align-justify" style="color: gray;"></span></a>
+                </div>
+            </div>
+            <div id="main_content" autofocus=true>
+                <iframe name="word_text" id="word_text" autofocus=true>
+
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="file.js"></script>
+
+</body>
+</html>

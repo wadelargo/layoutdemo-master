@@ -1,0 +1,1471 @@
+/* navbar 1 2 3 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    position: fixed;
+    padding: 0;
+    height: 61px;
+    width: 100%;
+    z-index: 7;
+    border-bottom: 3px solid black;
+}
+.navbar-brand{
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    height: 100%;
+    font-weight: 700;
+}
+.navbar-brand:hover{
+    background-color: #FFDEDE;
+}
+.navbar-brand p{
+    margin: 0 15px 0 0;
+}
+.buttonForSideNav {
+    outline: none;
+    height: 40px;
+    border: 1px solid #a4a4a4;
+    margin-right: 10px;
+    margin-top: 10px;
+    border-radius: 9px;
+}
+
+.buttonForSideNav:hover {
+    background-color: #a4a4a4;
+}
+
+.navbar-first {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hospital-name {
+    flex-wrap: nowrap;
+    color: black;
+    margin-top: 7px;
+    font-size: 15px;
+}
+
+.hospital-name:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.navbar-second {
+    width: 84%;
+}
+
+.secondNavUl {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.navbar-second .nav-item {
+    list-style: none;
+}
+
+.addPateintButton {
+    font-size: 12px;
+    margin: 0;
+}
+
+.nav-item.dropdown>.nav-link .indicator {
+    position: absolute;
+    bottom: 16px;
+    left: 17px;
+    font-size: 10px;
+}
+
+#alertsDropdown,
+#messagesDropdown {
+    padding: 0;
+}
+
+.input-group-append {
+    margin-left: -48px;
+}
+
+.advnc-search {
+    background: none;
+    border: none;
+    color: #435aaa;
+    font-size: 14px;
+    position: relative;
+    right: 70px;
+    width: 61px;
+    margin-left: -17px;
+}
+
+.searchbox {
+    display: flex;
+}
+
+.inputForSearch {
+    width: 50px;
+}
+
+.addpatient {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: orange;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 5px;
+}
+
+.navbar-third {
+    width: 15%;
+}
+
+.navbar-fourth {
+    width: 96%;
+    /* position: absolute; */
+    right: 0;
+    margin-top: 78px;
+    border-bottom: 2px solid black;
+    color: black;
+    background-color: white;
+    z-index: 1;
+}
+
+.RakeshName {
+    color: #000;
+    font-weight: 500;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: rgb(154, 157, 160);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 4px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 91%;
+    /* 100% Full-height */
+    width: 63px;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 13;
+    /* Stay on top */
+    top: 60px;
+    /* Stay at the top */
+    left: 0;
+    background-color: #FFFCE2;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#exampleAccordion .nav-item a {
+    color: rgb(14, 14, 14);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.navbar-sidenav>.nav-item>.nav-link:hover {
+    background-color: rgb(236, 236, 11);
+}
+
+/* Code for sidenav active link @anjudewangan */
+.navbar-sidenav>.nav-item>.active-link {
+    background-color: rgb(236, 236, 11);
+}
+
+/* Code for sidenav active link @anjudewangan */
+#exampleAccordion .nav-link-text {
+    font-size: 11.5px;
+    margin-left: 36px;
+}
+
+#exampleAccordion .nav-link i {
+    margin-left: 20px;
+    font-size: 21px;
+}
+
+.sidenav-second-level li a {
+    font-size: 10px;
+}
+
+.alertDetails {
+    position: absolute;
+    top: 100%;
+    background-color: #ffffff;
+    left: 60%;
+    max-height: 550px;
+    height: auto;
+    width: 40vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 16px;
+}
+.alertHeader{
+    display: flex;
+    justify-content: space-around;
+}
+.alertBody ul{
+    padding: 0;
+    overflow-y: scroll;
+}
+.optionsInNotif{
+    display: flex;
+}
+.optionsInNotif p:first-child{
+    margin-right: 15px;
+}
+.optionsInNotif p{
+    color: #000000;
+    cursor: pointer;
+}
+.optionsInNotif p:hover{
+    color:#0897FF;
+    border-bottom: 2px solid #0997FF;
+    border-radius: 4px;
+}
+.notifList,.announceList{
+    display: flex;
+    margin: 0;
+}
+.notifList div,.announceList div{
+    margin: 0 15px;
+}
+.alertBodyitems {
+    background-color: transparent;
+    padding: 5px;
+    z-index: 10;
+}
+
+.alertBodyitems:hover {
+    background-color: #cce7ff;
+    z-index: 10;
+}
+.alertBody li:hover{
+    background-color: #ECECEC;
+}
+.alertBodyitemsPart1 {
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.messageAlertDetails {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    height: auto;
+    width: 30vw;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 10;
+    padding: 16px;
+}
+
+.MadBodyitemsPart2 p {
+    font-size: 10px;
+    z-index: 10;
+}
+
+.MADBody {
+    height: 25vh;
+    min-height: 25vh;
+    overflow-y: scroll;
+    z-index: 10;
+}
+
+.adminSettingBox {
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 84%;
+    height: auto;
+    width: 16%;
+    border: 0.01rem solid black;
+    box-shadow: 11px 11px 30px -9px black;
+    border-radius: 5px;
+    z-index: 4;
+    padding: 16px;
+}
+
+.adminSettingBox p {
+    margin: 0;
+    padding: 0;
+}
+
+#settingOptions {
+    padding: 0;
+}
+
+#settingOptions li {
+    list-style: none;
+    font-size: 12px;
+    margin: 5px 0;
+    border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+#settingOptions li:hover {
+    background-color: #cce7ff;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: #818181;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .navbar-first {
+        width: 15%;
+    }
+
+    .navbar-second {
+        width: 67%;
+    }
+    .navbar-brand{
+        display: flex;
+        font-size: 10px;
+    }
+    .navbar-brand,
+    .buttonForSideNav {
+        font-size: 12px;
+    }
+
+    .nav-link {
+        padding: 0;
+        margin: 0;
+    }
+
+    .d-lg-none {
+        display: none;
+    }
+
+    #addPateintButton {
+        width: 71px;
+    }
+
+    .addpatient {
+        font-size: 10px;
+    }
+
+    .hospital-name {
+        font-size: 10px;
+    }
+
+    .inputForSearch {
+        width: 93px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .searchbtn1 {
+        height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    #dropbtnMyfunction {
+        font-size: 10px;
+    }
+
+    .nav-link-text {
+        font-size: 14px;
+        margin-left: 25px;
+    }
+
+    .alertBodyitems {
+        font-size: 0.8rem;
+    }
+
+    .MadBodyitems {
+        font-size: 0.8rem;
+    }
+
+    .adminSettingBox {
+        left: 79%;
+        width: 21%;
+    }
+
+    .adminSettingHeader {
+        font-size: 13px;
+    }
+
+    .sidenav {
+        height: 91%;
+        width: 64px;
+        top: 55px;
+    }
+
+    .navForDeskTop {
+        display: flex;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .navbar-second,
+    .navbar-third {
+        display: none;
+    }
+    .buttonForSideNav {
+        margin-left: auto;
+    }
+    .sidenav {
+        top: 60px;
+    }
+
+    .navbar-first {
+        width: 100%;
+        float: right;
+    }
+
+    .navbar-sidenav>.nav-item>.nav-link {
+        font-size: 15px;
+    }
+
+    #mySidenav {
+        width: 0px;
+        border: none;
+        background-color: #efefef;
+    }
+
+    .nav-link-text {
+        font-size: 14px;
+    }
+}
+
+/* USER IMAGE SIZE CSS */
+
+#dvUserImage {
+    width: 60px;
+}
+
+#barcodeimage {
+    width: 100px;
+}
+
+.insurance-img {
+    width: 80px;
+}
+
+.user-img {
+    width: 1.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+/* Advanced Patient Search */
+
+.popup-form {
+    display: flex;
+    justify-content: center;
+}
+
+.dvSelect>select,
+#divControl>input,
+#divControl>select,
+.headofSellItems select {
+    width: 12rem;
+    margin: 16px;
+    border: 1px solid black;
+    border-radius: 7px;
+    text-align: initial;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.popup-form>select>option {
+    width: 15rem;
+    font-size: 12px;
+}
+
+.fa-times-circle {
+    font-size: 18px;
+    color: red;
+    margin-top: 14px;
+    margin-left: -5px;
+}
+
+#btnAddMore {
+    color: rgb(0, 162, 255);
+    font-size: 15px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 35px;
+}
+
+#divCategories {
+    margin: 10px 27px;
+    box-shadow: 0 0 13px -7px #444444;
+    background-color: white;
+    width: 55%;
+}
+
+#divCategories>input {
+    /* width: 4rem; */
+    margin: 5px;
+}
+
+#divCategories>label {
+    display: initial;
+}
+
+#divCategories>input,
+#divCategories>label {
+    cursor: pointer;
+}
+
+#divCategories>label:hover {
+    background-color: rgb(0, 162, 255);
+    color: white;
+}
+
+#divNoData {
+    color: red;
+    font-size: 14px;
+    margin-left: 36px;
+    display: none;
+}
+
+.maintograph{
+    position: absolute;
+    left: 17px;
+    max-width: 96vw;
+    display: flex;
+    flex-direction: column;
+    /* width: 1377px; */
+    margin-top: 85px;
+    width: 100%;
+    margin-left: 50px;
+    height: max-content;
+    /* border-left: 2px solid black; */
+}
+.topbar{
+display: flex;
+font-size: 21px;
+margin-left: 80px;
+}
+.topbar p a{
+margin-left: 50px;
+color: black;
+}
+.topbar p a:hover{
+    color: blue;
+    font-weight: 600;
+}
+
+.PA{
+background-color: #ECF8FF;
+display: flex;
+padding-bottom: 20px;
+}
+.PActivity{
+width: 65%;
+}
+hr{
+margin: 0;
+}
+.pam{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+justify-content: space-around;
+}
+.PAPD {
+    width: 150px;
+    height: 137px;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 2px grey;
+}
+.ActivityNum {
+    font-size: 36px;
+    width: 100%;
+    margin: auto 12px;
+    text-align: right;
+    margin-right: 10px;
+}
+.ActivityIcons {
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    left: 5px;
+    margin-bottom: 15px;
+}
+.ActivityIcons .iconify{
+border-radius: 50%;
+padding: 6px;
+}
+.pateints .ActivityIcons span:nth-child(2){
+background-color: #24c534;
+position: relative;
+right: 5px;
+padding-right: 27px;
+}
+.Attendance .ActivityIcons span:nth-child(2){
+background-color: #7d7f95;
+position: relative;
+right: 5px;
+padding-right: 27px;
+}
+.Pending .ActivityIcons span:nth-child(2){
+background-color: #e92f2f;
+position: relative;
+right: 5px;
+padding-right: 27px;
+}
+.Doctors .ActivityIcons span:nth-child(2){
+background-color: #2db0e8;
+position: relative;
+right: 5px;
+padding-right: 27px;
+}
+.Psummary{
+border-left: 2px solid grey;
+
+}
+.PA h6{
+padding: 30px 10px 10px 30px;
+}
+.opd{
+border: 2px solid #006275;
+border-radius: 5px;
+padding: 5px 50px 5px 5px;
+display: flex;
+margin-left: 40px;
+background-color: white;
+align-items: center;
+}
+.opd img{
+height: 20px;
+}
+
+.ipd{
+border: 2px solid #006275;
+border-radius: 5px;
+padding: 5px 50px 5px 5px;
+display: flex;
+margin-left: 40px;
+margin-top: 40px;
+background-color: white;
+align-items: center;
+}
+.vertical {
+border-left: 1px solid black;
+height: 40px;
+position:relative;
+margin-left: 20px;
+}
+.num{
+font-size: 25px;
+padding: 5px 5px 5px 30px;
+}
+
+.block-2{
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+.headOfblock2{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+}
+.tab1{
+    border-radius: 0 10px 10px 0;
+    border: 1px solid gray;
+    margin-top: 10px;
+    width: 50%;
+}
+.docList:hover,.qBoxList:hover{
+    background: #ECECEC;
+}
+.docList a,.qBoxList a{
+    text-decoration: none;
+}
+.docList a p,.qBoxList a p{
+    color: black;
+}
+
+#queueBox{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+.headOfQBox{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+}
+.row{
+    width: 100%;
+}
+.col-7{
+    border-left: 1px solid black;
+}
+
+table p{
+    line-height: auto;
+    padding: 6px 10px 1px 1px;
+}
+tr{
+    border-bottom: 1px solid grey;
+}
+.bi-person-circle{
+    font-size: 31px;
+}
+.tdbold{
+    font-weight: 600;
+    font-size: 15px;
+}
+.takeup{
+    background-color: skyblue;
+    border: 1px solid blue;
+    border-radius: 3px;
+    color: blue;
+
+}
+.upcomingApp{
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 5px;
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.headOfUpcoming{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+    }
+.upcomingtable{
+    font-size: 10px;
+}
+.tableForUp{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    border: 1px solid gray;
+}
+.hospitalManagement{
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 35%;
+    margin-left: 40px;
+}
+.hospitalManagement img{
+    padding: 10px 10px 10px 10px;
+}
+.hospitalManagement ul{
+    list-style: none;
+    
+    padding: 0;
+}
+.hospitalManagement ul li{
+   
+    display: flex;
+    align-items: center;
+    margin: 15px auto;
+    width: 90%;
+    border-radius: 3px;
+    height: 36px;
+    background-color: #FFBE5C;
+}
+.hospitalManagement ul li p{
+    font-size: 12px;
+    background-color: #0897FF;
+    height: 100%;
+    margin: 0;
+    color: white;
+    padding-left: 15px;
+    padding-top: 8px;
+    border-radius: 3px;
+}
+.hospitalManagement ul li span{
+    font-size: 14px;
+    margin: 0;
+    color: gray;
+    padding-top: 7px;
+    margin-left: auto;
+    margin-right: 5px;
+}
+#opdBar p{
+    width: 16%;
+}
+#pateintBar p{
+    width: 71%;
+}
+#labBar p{
+    width: 82%;
+}
+#treatBar p{
+    width: 67%;
+}
+#dischargeBar p{
+    width: 30%;
+}
+
+
+
+/* sales activity */
+.layer1 {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(156, 156, 156);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.vl {
+    border-left: 2px solid gray;
+    height: 450px;
+}
+
+.icon {
+    margin: 0 15px;
+}
+
+.icon:hover {
+    color: #ff9900;
+    cursor: pointer;
+}
+
+.chartCanvas{
+    width: 75vw;
+    height: 100%;
+}
+.selectGraphs {
+    display: flex;
+}
+
+#patient {
+    border: none;
+    outline: none;
+}
+
+.dot1 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+
+    margin-right: 15px;
+}
+
+.green {
+    background-color: #109618;
+}
+
+.red {
+    background-color: #ff9900;
+}
+
+.blue {
+    background-color: #3366cc;
+}
+
+.skyblue {
+    background-color: #37afd2;
+}
+
+.Bar {
+    display: flex;
+}
+
+/* section no 2 */
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.activities {
+    background-color: #ECF8FF;
+    width: 100%;
+    display: flex;
+}
+
+.activityBox {
+    padding: 20px;
+    width: 60%;
+    border-right: 3px solid gray;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.box {
+    width: 150px;
+    height: 137px;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 2px gray;
+}
+
+.box p {
+    margin-top: auto;
+    font-size: 12px;
+}
+
+.box div {
+    margin-top: auto;
+    text-align: center;
+}
+
+.box div h1 {
+    font-size: 36px;
+}
+
+.blueBox {
+    border: 1px solid #006275;
+    transition: all .5s;
+
+}
+
+.blueBox:hover {
+    border: 1px solid #006275;
+    box-shadow: 3px 3px 15px #006275;
+}
+
+.blueBox div h1 {
+    color: #006275;
+}
+
+.redBox {
+    border: 1px solid #EC1C24;
+    transition: all .5s;
+
+}
+
+.redBox:hover {
+    border: 1px solid #EC1C24;
+    box-shadow: 3px 3px 15px #EC1C24;
+}
+
+.redBox div h1 {
+    color: #EC1C24;
+}
+
+.greenBox {
+    border: 1px solid #376821;
+    transition: all .5s;
+
+}
+
+.greenBox:hover {
+    border: 1px solid #376821;
+    box-shadow: 3px 3px 15px #376821;
+}
+
+.greenBox div h1 {
+    color: #376821;
+}
+
+.yellowBox {
+    border: 1px solid #F5B24D;
+    transition: all .5s;
+}
+
+.yellowBox:hover {
+    border: 1px solid #F5B24D;
+    box-shadow: 3px 3px 15px #F5B24D;
+}
+
+.yellowBox div h1 {
+    color: #F5B24D;
+}
+
+/* summary box css */
+.summaryBox {
+    padding: 20px;
+    width: 30%;
+}
+
+.infoBox {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 2px 4px;
+    margin: 15px 0;
+    align-items: center;
+}
+
+.infoBox p {
+    border-right: 2px solid gray;
+    width: 85%;
+    margin: 0;
+}
+
+.details1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.productsInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.product_details,
+.sellingItems {
+    width: 45%;
+    min-width: 500px;
+    border: 1px solid rgb(191, 191, 191);
+    display: flex;
+    flex-direction: column;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head_of_proDetails p,
+.headofSellItems {
+    font-size: 20px;
+    border-bottom: 2px solid rgb(191, 191, 191);
+    padding: 4px 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    width: 60%;
+}
+
+.list li {
+    list-style: none;
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-between;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.greenDot {
+    background-color: #376821;
+}
+
+.redDot {
+    background-color: #EC1C24;
+}
+
+.purpleDot {
+    background-color: blueviolet;
+}
+
+.blueDot {
+    background-color: #006275;
+}
+
+.itemLists li {
+    list-style: none;
+    margin-top: 25px;
+    width: 150px;
+    text-align: center;
+}
+
+#myChart1 {
+    width: 400px;
+    max-width: 400px;
+    height: 170px;
+}
+
+/* code for section3 start here */
+.section3{
+    max-width: 100vw;
+    height: 312px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.orderBox{
+    width: 25%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.headOfOrderBox,.headOfSaleOrder{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 2px solid gray;
+}
+.orderQtyBox,.costBox{
+    height: 40%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+.num{
+    font-size: 24px;
+    color: #0997FF;
+}
+.headOfOrderBox select,.headOfSaleOrder select{
+    border: none;
+    outline: none;
+}
+.salesOrder{
+    width: 65%;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  td, th {
+    text-align: left;
+    padding: 8px;
+  }
+  th{
+    background-color: #ecf8ff;
+  }
+
+  /* section4 css start here */
+  .section4{
+    margin-top: 30px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .graphAndDetails{
+    display: flex;
+    margin-top: 10px;
+  }
+  .headOfGraphBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+    padding: 7px 0;
+  }
+  .headOfGraphBox p{
+    font-weight: bold;
+  }
+.graph4{
+    width: 75vw;
+}
+.miniSalesBox{
+    border-left: 5px solid #0897FF;
+    border-top:1px solid #0897FF;
+    border-right:1px solid #0897FF;
+    border-bottom:1px solid #0897FF;
+    padding: 8px 15px;
+    border-radius: 3px;
+    background-color: #ECF8FF;
+}
+.graph4Detail div{
+margin-top: 10px;
+}
+.section1 select,.section2 select,.section3 select,.section4 select{
+    outline: none;
+    border: none;
+}
+
+@media only screen and (max-width:1024px) {
+    .block-2{
+        flex-direction: column;
+    }
+    .tab1{
+        width: 100%;
+    }
+    .tableForUp{
+        width: 100%;
+    }
+    .hospitalManagement {
+        width: 80%;
+    }
+    .vLine{
+        width: 80%;
+    }
+    /* upcoming App */
+    .upcomingApp{
+        flex-direction: column;
+    }
+    .productsInfo {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .product_details,
+    .sellingItems {
+        width: 85%;
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    /* main whole div */
+    .maintograph {
+        position: absolute;
+        left: 0; 
+        max-width: 100vw; 
+        margin-top: 53px;
+        margin-left: 0;
+    }
+    #doctorList table,tr,td,td p{
+        font-size: 12px;
+    }
+    td p{
+        font-size: 8px;
+    }
+    table p{
+        padding: 7px 1px 0 0;
+    }
+    .tdbold{
+        font-size: 12px;
+    }
+    td,th{
+        padding: 0;
+    }
+    /* PA CSS SECTION */
+    .PA{
+        flex-direction: column;
+    }
+    .upcomingApp{
+        flex-direction: column;
+    }
+    .upcomingtable{
+        overflow: scroll;
+    }
+    .headOfUpcoming{
+        width: 100%;
+        font-size: 10px;
+    }
+    .hospitalManagement {
+        width: 90%;
+        margin: 15px auto;
+    }
+    .opd,.ipd,.upcomingApp,.topbar{
+        margin-left: 0;
+    }
+    .topbar{
+        margin: auto;
+    }
+    .tableForUp{
+        width: 100%;
+    }
+    /* section 1 chart box css */
+    .chartDiv {
+        flex-direction: column;
+    }
+    .chartCanvas{
+        width: 90vw;
+        margin: auto;
+    }
+    .vl {
+        height: 0;
+    }
+
+    /* section 2 css */
+    .activityBox {
+        width: 55%;
+    }
+
+    .summaryBox {
+        width: 45%;
+    }
+
+    .list p,
+    .itemLists p {
+        font-size: 12px;
+    }
+
+    .head_of_proDetails p,
+    .headofSellItems p,
+    .headofSellItems span {
+        font-size: 16px;
+    }
+
+    #myChart1 {
+        width: 300px;
+        max-width: 300px;
+        height: 170px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+
+    .list {
+        width: 60%;
+    }
+
+    .product_details,
+    .sellingItems {
+        min-width: 0;
+    }
+    /* section3 css media */
+    .section3{
+        flex-direction: column;
+        height: auto;
+    }
+    .orderBox{
+        width: 60%;
+        height: 250px;
+        margin: auto;
+    }
+    .salesOrder{
+        width: 95%;
+        margin:15px auto;
+        height: auto;
+        max-height: 312px;
+        overflow-y: scroll;
+    }
+    table{
+        font-size: 12px;
+        border-collapse: collapse;
+        overflow: scroll;
+    }
+    /* graph4 */
+    .graphAndDetails{
+        flex-direction: column-reverse;
+    }
+    .graph4Detail{
+        width: 150px;
+    }
+    .graph4{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .activities {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .activityBox {
+        width: auto;
+        padding: 0;
+    }
+    .headOfblock2 {
+        font-size: 10px;
+    }
+    .btn{
+        font-size: 10px !important;
+    }
+    .summaryBox {
+        margin-top: 20px;
+        width: auto;
+        padding: 0;
+    }
+
+    .activityBox h2,
+    .summaryBox h1 {
+        text-align: center;
+    }
+
+    .infoBox {
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    .head_of_proDetails p,
+    .headofSellItems p,
+    .headofSellItems span {
+        font-size: 14px;
+    }
+    table{
+        font-size: 9px;
+    }
+    .icon {
+        margin: 0px 4px;
+    }
+    #graph1DatePick{
+        font-size: 9px;
+    }
+}

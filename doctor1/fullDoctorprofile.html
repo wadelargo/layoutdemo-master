@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/doctor.css">
+    <link rel="stylesheet" href="./style/invite.css">
+    <link rel="stylesheet" href="./style/fulldoctor.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Hospital admin</title>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navForDeskTop">
+        <a class="navbar-brand" href="../practice-registration/second-stage/html/index.html">
+            <span class="iconify" data-icon="carbon:add" data-width="35" data-height="35"></span>
+            <p>Add Establishment</p>
+        </a>
+        <button class="buttonForSideNav" type="button" onclick="openNav()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+        <div class="navbar-second">
+            <ul class="ml-auto secondNavUl">
+                <a class="hospital-name" href="#">WellDone</a>
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <div class="searchbox">
+                            <input class="form-control inputForSearch" type="text" placeholder="Search for..." />
+                            <button type="button" class="advnc-search" id="advnc-search" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Advanced</button>
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="false"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true" role="dialog" data-backdrop="false">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="staticBackdropLabel">Advance Patient Search</h5>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close" onclick="HandleCancel()"></button>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" class="popup-form">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="dvSelect">
+                                                                <select id="ddlInfo">
+                                                                    <option value="patient_name">Patient Name</option>
+                                                                    <option value="has_contact_number">Has Contact
+                                                                        Number</option>
+                                                                    <option value="contact_number">Contact Number
+                                                                    </option>
+                                                                    <option value="age_is">Age is</option>
+                                                                    <option value="age_more_than">Age is More Than
+                                                                    </option>
+                                                                    <option value="age_less_than">Age is Less Than
+                                                                    </option>
+                                                                    <option value="has_date_of_birth">Has Date of Birth
+                                                                    </option>
+                                                                    <option value="date_of_birth">Date of Birth Is
+                                                                    </option>
+                                                                    <option value="date_of_birth_more_than">Date of
+                                                                        Birth is More Than</option>
+                                                                    <option value="date_of_birth_less_than">Date of
+                                                                        Birth is Less Than</option>
+                                                                    <option value="birthday_is_in">Birthday is in
+                                                                    </option>
+                                                                    <option value="has_patient_id">Has Patient ID
+                                                                    </option>
+                                                                    <option value="patient_id">Patient ID</option>
+                                                                    <option value="has_aadhaar_id">Has Aadhaar ID
+                                                                    </option>
+                                                                    <option value="aadhaar_id">Aadhaar ID</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="email">Email</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="has_gender">Has Gender</option>
+                                                                    <option value="gender">Gender is</option>
+                                                                    <option value="has_pincode">Has Pincode</option>
+                                                                    <option value="pincode">Pincode</option>
+                                                                    <option value="has_street_address">Has Street
+                                                                        Address</option>
+                                                                    <option value="street_address">Street Address
+                                                                    </option>
+                                                                    <option value="has_blood_group">Has Blood Group
+                                                                    </option>
+                                                                    <option value="blood_group">Blood Group</option>
+                                                                    <option value="was_referred_by_someone">Was Referred
+                                                                        By Someone</option>
+                                                                    <option value="referred_by_someone">Referred By
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div id="divControl">
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <!-- Code for Advanced search popup reload problem @anjudewangan -->
+                                            <button id="btnAddMore" type="button">Add another parameter</button>
+                                            <!-- Code for Advanced search popup reload problem @anjudewangan -->
+                                            <div id="divCategories">
+
+                                            </div>
+                                            <div id="divNoData" style="display: none;">No Data Found</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnSearch"
+                                                onclick="ShowNoDataMessage()">Search</button>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                                id="btnCancel" onclick="HandleCancel()">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="input-group-append">
+                                <button class="btn btn-primary searchbtn1" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="microPhoneChoose" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-microphone"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="addPateintButton" href="../Addpateints/addpatient.html">
+                        <button type="button" class="addpatient">Add Patient</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="calenderButton" href="../Calendar/calendar.html">
+                        <i class="fa fa-fw fa-calendar"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span class="d-lg-none">Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- message shortcut -->
+            <div class="messageAlertDetails" id="messageAlertDetails">
+                <div class="MADHeader">
+                    <h6 class="MADHeader-info">New Messages:</h6>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADBody">
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>David Miller</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>Jane Smith</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>John Doe</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADFooter">
+                    <a class="viewAllMsgs" href="#">View all messages</a>
+                </div>
+            </div>
+            <!-- admin setting box -->
+            <div class="adminSettingBox" id="adminSettingBox">
+                <div class="adminSettingHeader">
+                    <strong id="nameofAdmin">Rakesh Nandre</strong>
+                    <p id="statusofAdmin">Admin</p>
+                    <p id="emailofAdmin">xyz@gmail.com</p>
+                </div>
+                <hr style="margin: 15px 0;">
+                <ul id="settingOptions">
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><a href="../admin profile/admin.html" style="text-decoration: none; color: black;"><span
+                                class="iconify" style="color: gray;" data-icon="akar-icons:pencil" data-width="17"
+                                data-height="17"></span> Edit Profile</a></li>
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><span class="iconify" data-icon="ant-design:setting-outlined" style="color: gray;"
+                            data-width="17" data-height="17"></span> Account Setting</li>
+                    <li><span class="iconify" data-icon="ant-design:user-outlined" style="color: gray;" data-width="17"
+                            data-height="17"></span> Add User</li>
+                    <li><span class="iconify" data-icon="bx:log-out" style="color: gray;" data-width="17"
+                            data-height="17"></span> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-third">
+            <div class="dropdown">
+                <button id="dropbtnMyfunction" class="dropbtn">
+                    <img class="user-img" src="../images/2.png" />Rakesh Nandare
+                    <i class="fa fa-angle-down"></i>
+                </button>
+            </div>
+            <!-- alert details -->
+            <div class="alertDetails" id="alertDetails">
+                <div class="alertHeader">
+                    <p>New Alerts:</p>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="alertBody">
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                </div>
+                <div class="alertFooter">
+                    <a>View All Events</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <div class="main_container">
+        <div id="mySidenav" class="sidenav">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="../dashboard.html">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                    <a class="nav-link active-link" href="#doctor">
+                        <i class="fa fa-fw fa-user-md"></i>
+                        <span class="nav-link-text">Doctors</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables"
+                    onclick="showpateintTable()">
+                    <a class="nav-link" href="../pateints/index.html">
+                        <i class="fa fa-fw fa fa-wheelchair"></i>
+                        <span class="nav-link-text">Patient</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="../Calendar/calendar.html">
+                        <i class="fa fa-fw fa fa-calendar"></i>
+                        <span class="nav-link-text">Appointment</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <!-- Code for add Doctor Schedule @anjudewangan -->
+                    <a class="nav-link" href="../doctorschedule/doctorSchedule.html">
+                        <!-- Code for add Doctor Schedule @anjudewangan -->
+                        <i class="fa fa-fw fa fa-calendar-check-o"></i>
+                        <span class="nav-link-text">Doctor Schedule</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <!-- Code for add Department @anjudewangan -->
+                    <a class="nav-link" href="../department/department.html">
+                        <!-- Code for add Department @anjudewangan -->
+                        <i class="fa fa-fw fa-building-o"></i>
+                        <span class="nav-link-text">Departments</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <!-- Code for add Insurance @anjudewangan -->
+                    <a class="nav-link" href="../insurance/insurance.html">
+                        <!-- Code for add Insurance @anjudewangan -->
+                        <i class="fa fa-fw fa-umbrella" aria-hidden="true"></i>
+                        <span class="nav-link-text">Insurance Network</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa fa-user"></i>
+                        <span class="nav-link-text">Employee</span>
+                    </a>
+                    <!-- Code for link Employee Section @anjudewangan -->
+                    <ul class="collapse sidenav-second-level" id="collapseComponents">
+                        <li>
+                            <a href="../employee/employeeList.html">Employee List</a>
+                        </li>
+                        <li>
+                            <a href="../employee/leave.html">Leaves</a>
+                        </li>
+                        <li>
+                            <a href="../employee/holiday.html">Holidays</a>
+                        </li>
+                        <li>
+                            <a href="../employee/attendance.html">Attendance</a>
+                        </li>
+                    </ul>
+                    <!-- Code for link Employee Section @anjudewangan -->
+                </li>
+                <!-- Code for link item @anjudewangan -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="../item/item.html">
+                        <i class="fa fa-fw fa-sitemap" aria-hidden="true"></i>
+                        <span class="nav-link-text">Item</span>
+                    </a>
+                </li>
+                <!-- Code for link item @anjudewangan -->
+                <!-- Code for link Sales @anjudewangan & @mrunal-->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-cart-arrow-down" aria-hidden="true"></i>
+                        <span class="nav-link-text">Sales</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                        <li>
+                            <a href="../sales/customers/customers.html">Customers</a>
+                        </li>
+                        <li>
+                            <a href="../sales/estimates/estimates.html">Estimates</a>
+                        </li>
+                        <li>
+                            <a href="../sales/salesOrders/salesOrders.html">Sales Orders</a>
+                        </li>
+                        <li>
+                            <a href="../sales/packages-folder/packages.html">Packages</a>
+                        </li>
+                        <li>
+                            <a href="../sales/shipmets/shipments.html">Shipments</a>
+                        </li>
+                        <li>
+                            <a href="../sales/delivery-challans/deliveryChallans.html">Delivery Challans</a>
+                        </li>
+                        <li>
+                            <a href="../sales/invoices/invoices.html">Invoices</a>
+                        </li>
+                        <li>
+                            <a href="../sales/received-payments/receivedPayments.html">Received Payments</a>
+                        </li>
+                        <li>
+                            <a href="">Recurring Invoices</a>
+                        </li>
+                        <li>
+                            <a href="../sales/sales-return/salesReturn.html">Sales Return</a>
+                        </li>
+                        <li>
+                            <a href="../sales/credit-notes/creditNotes.html">Credit Notes</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Code for link Sales @anjudewangan &  @mrunal-->
+
+                <!-- Code for link Purchases @anjudewangan -->
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePurchases"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa fa-shopping-bag"></i>
+                        <span class="nav-link-text">Purchases</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapsePurchases">
+                        <li>
+                            <a href="../purchases/vendors/vendors.html">Vendors</a>
+                        </li>
+                        <li>
+                            <a href="../purchases/purchase-order/purchaseOrder.html">Purchase Orders</a>
+                        </li>
+                        <li>
+                            <a href="../purchases/purchase-receives/purchaseReceives.html">Purchase Receives</a>
+                        </li>
+                        <li>
+                            <a href="../purchases/bills/bills.html">Bills</a>
+                        </li>
+                        <li>
+                            <a href="../purchases/payments-made/paymentsMade.html">Payments Made</a>
+                        </li>
+                        <li>
+                            <a href="../purchases/vendor-credits/vendorCredits.html">Vendor Credits</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Code for link Purchases @anjudewangan -->
+
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa fa-book"></i>
+                        <span class="nav-link-text">Payroll</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                        <li>
+                            <a href="login.html">Pay slip</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa fa-commenting"></i>
+                        <span class="nav-link-text">Chat</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa fa-video-camera"></i>
+                        <span class="nav-link-text">Call</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseMulti">
+                        <li>
+                            <a href="#">Voice call</a>
+                        </li>
+                        <li>
+                            <a href="#">Video call</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEmail"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa fa-envelope"></i>
+                        <span class="nav-link-text">Email</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseEmail">
+                        <li>
+                            <a href="#">compose</a>
+                        </li>
+                        <li>
+                            <a href="#">Video call</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBlog"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fas fa-comment"></i>
+                        <span class="nav-link-text">Blog</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseBlog">
+                        <li>
+                            <a href="#">compose</a>
+                        </li>
+                        <li>
+                            <a href="#">Video call</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fas fa-object-group"></i>
+                        <span class="nav-link-text">Assets</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-bell-o"></i>
+                        <span class="nav-link-text">Activites</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                    <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport"
+                        data-parent="#exampleAccordion">
+                        <i class="fa fa-fw fa-flag"></i>
+                        <span class="nav-link-text">Report</span>
+                    </a>
+                    <ul class="sidenav-second-level collapse" id="collapseReport">
+                        <li>
+                            <a href="#">Expenses Report</a>
+                        </li>
+                        <li>
+                            <a href="#">Invoice Report</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                    <a class="nav-link" href="../Setting Folder/practice-profile.html">
+                        <i class="fa fa-fw fa-cog"></i>
+                        <span class="nav-link-text">Setting</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <main class="full_profile">
+            <div class="summary" id="summary">
+                <div class="summary_wrapper1">
+                    <div class="img">
+                        <img src="../images/ava3.jfif" alt="">
+                        <a href="">Edit</a>
+                    </div>
+                    <div class="name_details">
+                        <div class="deatail_1">
+                            <p>Dr. Subhash V. Gupta</p>
+                            <p>Allopathy</p>
+                            <span><i class="material-symbols-outlined">work</i>10 Y, 4M</span>
+                            <p>Dentist,Maxillofacial Dentist</p>
+                        </div>
+                        <div class="detail_2">
+                            <p> <span>M.S-</span> Orthopaedics</p>
+                            <p><span>MBBS,DNB-</span>Orthopedics and Orthopedic Surgery</p>
+                        </div>
+                        <div class="gender_blood_deatil">
+                            <p><i class="fa-solid fa-weight-scale"></i>25 kg</p>
+                            <P><i class="fa-solid fa-mars"></i>Male</P>
+                            <p><i class="fa-solid fa-hand-holding-droplet"></i> B+</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="birth_contact_detail">
+                    <div>
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <p>Birthday:</p>
+                        <p>3rd March 1990</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-mobile"></i>
+                        <p>Phone:</p>
+                        <p>770-889-6484</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Email:</p>
+                        <p>vandely perez@example.com</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-house"></i>
+                        <p>Address:</p>
+                        <p>714 Lane Road,Pune 77611 Maharastra,India</p>
+                    </div>
+                </div>
+                <div class="registration_detail">
+                    <div class="registration1">
+                        <p>Registration Authority</p>
+                        <p>Maharashtra State Medical Concil, Mumbai</p>
+                        <p>Register Medical Practioner (RMP)</p>
+                    </div>
+                    <div class="registration2">
+                        <span>
+                            <p>Registration No :</p>
+                            <p>123456</p>
+                        </span>
+                        <span>
+                            <p>Registratin Date :</p>
+                            <p>22/03/2002</p>
+                        </span>
+                        <span>
+                            <p>Valid Upto Date :</p>
+                            <p>21/03/2020</p>
+                        </span>
+                        <span>
+                            <p>Qualification :</p>
+                            <p>MBBS</p>
+                        </span>
+                    </div>
+                    <div class="registration3">
+                        <p>(According to the Registration Authority)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about" id="about">
+                <div class="about_head" id="about_head">
+                    <a href="">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </a>
+                    <p id="pabout">About</p>
+                    <p id="pmore">More</p>
+                </div>
+                <div class="biography">
+                    <p>Biography :</p>
+                    <p>Dr. R.K. Mishra is a renowned laparoscopic and robotic surgeon, trained at Ninewells hospital and
+                        Medical School,
+                        University of Dundee, UK. After General Surgery Residency from India Dr. R.K. Mishra has taken
+                        his Master in Minimal
+                        Access Surgery degree from University of Dundee, United Kingdom. After mastering Laparoscopic
+                        Surgery, Dr. Mishra has
+                        further refined his robotic surgery training at Harvard Medical School, Boston, USA. and also
+                        received Diploma in
+                        Laparoscopic Surgery from University of Strasbourg, France. After returning to India from U.K.
+                        in 2001 he worked at
+                        Indraprastha Apollo Hospital. New Delhi. In year 2003 he has started working at World
+                        Laparoscopy Hospital.
+
+                    </p>
+                    <p>Dr R.K. Mishra is the Chairman & Managing Director, World Laparoscopy Hospital, Gurgaon a super
+                        speciality institute,
+                        which offers cutting edge technology and state of art treatment facilities at an affordable
+                        cost. Under the guidance of
+                        Dr. Mishra WLH institute is governed under the principles of providing medical services to
+                        patients with care,
+                        compassion and commitment.</p>
+                </div>
+                <div class="culture_activity">
+                    <p>Culture Activity :</p>
+                    <p>Conducted multiple free Medical checking Camps and surgeries for poor and needy people; Organized
+                        public education
+                        speech for awareness about Cancer and its early detection and prevention; Health awareness
+                        programmed personally visited
+                        the hospital & operated very-very critical patients & also helped all injured and patients
+                        during the bomb blast.</p>
+                </div>
+                <div class="language">
+                    <p>Language Proficiency :</p>
+                    <p>Marathi,Hindi</p>
+                </div>
+                <div class="skill">
+                    <p>Skill :</p>
+                    <p>Dentist, Maxillofacial Dentist</p>
+                </div>
+            </div>
+            <div class="education" id="education">
+                <div class="education_head">
+                    <a href="">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </a>
+                    <p>Education Informations</p>
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="education_wrap">
+                    <div class="timeline">
+                        <div class="poin1"></div>
+                        <div class="poin2"></div>
+                    </div>
+                    <div class="container">
+                        <div class="container1">
+                            <div class="content">
+                                <p>All India Institute Of Medical Sciences
+                                    (New Delhi, India)</p>
+                                <p>MBBS</p>
+                                <p>2009 - 2012</p>
+                            </div>
+                        </div>
+                        <div class="container2">
+                            <div class="content">
+                                <p>International College of Medical Science (UG)</p>
+                                <p>MD - Obstetrics & Gynaecology</p>
+                                <p>2014 - 2018</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education" id="experience">
+                <div class="education_head">
+                    <a href="">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </a>
+                    <p>Experience</p>
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div class="education_wrap">
+                    <div class="timeline">
+                        <div class="poin1"></div>
+                        <div class="poin2"></div>
+                    </div>
+                    <div class="container experience">
+                        <div class="container1">
+                            <div class="content">
+                                <p>Half-time Hospital Practitioner</p>
+                                <p>Practice (Pune)</p>
+                                <p>Jan 2018-2019 (1 year)</p>
+                            </div>
+                        </div>
+                        <div class="container2">
+                            <div class="content">
+                                <p>Consultant Gynecologist</p>
+                                <p>May 2020 - Present (1 year)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education" id="hounor">
+                <div class="education_head">
+                    <a href="">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </a>
+                    <p>Honours and Achievements</p>
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="education_wrap">
+                    <div class="timeline">
+                        <div class="poin1"></div>
+                        <!-- <div class="poin2"></div> -->
+                    </div>
+                    <div class="container honours">
+                        <div class="container1">
+                            <div class="content">
+                                <p>Ex Senior Advisor (2018)</p>
+                                <p>Internal medicine</p>
+                                <p>Armed force medical services</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education" id="membership">
+                <div class="education_head">
+                    <a href="">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </a>
+                    <p>Membership</p>
+                    <span class="material-symbols-outlined">
+                        card_membership
+                    </span>
+                </div>
+                <div class="education_wrap">
+                    <div class="timeline">
+                        <div class="poin1"></div>
+                        <!-- <div class="poin2"></div> -->
+                    </div>
+                    <div class="container">
+                        <div class="container1 membership">
+                            <div class="content">
+                                <p>Member ( Pune) 2019</p>
+                                <p>Non-Professional Membership</p>
+                                <p>Armed force medical services</p>
+                                <p>State Medical Association Maharashtra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education" id="accomplishments">
+                <div class="education_head">
+                    <a href="">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </a>
+                    <p>Literary Artistic & Scientific Accomplishments</p>
+                    <i class="fa-solid fa-file"></i>
+                </div>
+                <div class="education_wrap">
+                    <div class="timeline">
+                        <div class="poin1"></div>
+                        <!-- <div class="poin2"></div> -->
+                    </div>
+                    <div class="container">
+                        <div class="container1 lirary">
+                            <div class="content">
+                                <p>Research paper</p>
+                                <p>Brest Cancer-2015</p>
+                                <p>Armed force medical services</p>
+                                <p>International Cancer Conference (Hungary)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="awards" id="awards">
+                <div class="awards_head">
+                    <p>Award</p>
+                </div>
+                <!-- Code for images popup @anjudewangan -->
+                <div class="image_holder">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="../images/image 298.png" alt="">
+                    </button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <ul class="modal-ul">
+                                        <li class="nav-item">
+                                            <button name="zoomIn" class="nav-link btnZoomIn" onclick="zoomInPicture1()">
+                                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="zoomOut" class="nav-link btnZoomOut"
+                                                onclick="zoomOutPicture1()">
+                                                <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateRight"
+                                                onclick="rotatePicture1()">
+                                                <i class="fa fa-repeat" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateLeft"
+                                                onclick="rotatePicture1()">
+                                                <i class="fa fa-undo" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link btnFullScreen" onclick="openFullscreen()">
+                                                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <img src="../images/image 298.png" alt="" id="picture1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        <img src="../images/image 299.png" alt="">
+                    </button>
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <ul class="modal-ul">
+                                        <li class="nav-item">
+                                            <button name="zoomIn" class="nav-link btnZoomIn" onclick="zoomInPicture2()">
+                                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="zoomOut" class="nav-link btnZoomOut"
+                                                onclick="zoomOutPicture2()">
+                                                <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateRight"
+                                                onclick="rotatePicture2()">
+                                                <i class="fa fa-repeat" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateLeft"
+                                                onclick="rotatePicture2()">
+                                                <i class="fa fa-undo" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link btnFullScreen" onclick="openFullscreen()">
+                                                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <img src="../images/image 299.png" alt="" id="picture2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                        <img src="../images/image 239.png" alt="">
+                    </button>
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModal3Label"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <ul class="modal-ul">
+                                        <li class="nav-item">
+                                            <button name="zoomIn" class="nav-link btnZoomIn" onclick="zoomInPicture3()">
+                                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="zoomOut" class="nav-link btnZoomOut"
+                                                onclick="zoomOutPicture3()">
+                                                <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateRight"
+                                                onclick="rotatePicture3()">
+                                                <i class="fa fa-repeat" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateLeft"
+                                                onclick="rotatePicture3()">
+                                                <i class="fa fa-undo" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link btnFullScreen" onclick="openFullscreen()">
+                                                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <img src="../images/image 239.png" alt="" id="picture3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                        <img src="../images/image 240.png" alt="">
+                    </button>
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModal4Label"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <ul class="modal-ul">
+                                        <li class="nav-item">
+                                            <button name="zoomIn" class="nav-link btnZoomIn" onclick="zoomInPicture4()">
+                                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="zoomOut" class="nav-link btnZoomOut"
+                                                onclick="zoomOutPicture4()">
+                                                <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateRight"
+                                                onclick="rotatePicture4()">
+                                                <i class="fa fa-repeat" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateLeft"
+                                                onclick="rotatePicture4()">
+                                                <i class="fa fa-undo" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link btnFullScreen" onclick="openFullscreen()">
+                                                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <img src="../images/image 240.png" alt="" id="picture4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                        <img src="../images/image 302.png" alt="">
+                    </button>
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModal5Label"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <ul class="modal-ul">
+                                        <li class="nav-item">
+                                            <button name="zoomIn" class="nav-link btnZoomIn" onclick="zoomInPicture5()">
+                                                <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="zoomOut" class="nav-link btnZoomOut"
+                                                onclick="zoomOutPicture5()">
+                                                <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateRight"
+                                                onclick="rotatePicture5()">
+                                                <i class="fa fa-repeat" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button name="rotate" class="nav-link btnRotateLeft"
+                                                onclick="rotatePicture5()">
+                                                <i class="fa fa-undo" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link btnFullScreen" onclick="openFullscreen()">
+                                                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <img src="../images/image 302.png" alt="" id="picture5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="special_achievements" id="special_achievements">
+                <div class="special_achievements1">
+                    <div class="achivements_head">
+                        <p>Special Achievements</p>
+                    </div>
+                    <div class="special_img_holder">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+                            <img src="../images/image 296.png" alt="">
+                        </button>
+                        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModal6Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <ul class="modal-ul">
+                                            <li class="nav-item">
+                                                <button name="zoomIn" class="nav-link btnZoomIn"
+                                                    onclick="zoomInPicture6()">
+                                                    <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button name="zoomOut" class="nav-link btnZoomOut"
+                                                    onclick="zoomOutPicture6()">
+                                                    <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button name="rotate" class="nav-link btnRotateRight"
+                                                    onclick="rotatePicture6()">
+                                                    <i class="fa fa-repeat" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button name="rotate" class="nav-link btnRotateLeft"
+                                                    onclick="rotatePicture6()">
+                                                    <i class="fa fa-undo" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button class="nav-link btnFullScreen" onclick="openFullscreen()">
+                                                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex justify-content-center align-items-center">
+                                        <img src="../images/image 296.png" alt="" id="picture6">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="special_achievements2">
+                    <div class="achivements_head">
+                        <p>Special Achievements</p>
+                    </div>
+                    <div class="special_img_holder">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+                            <img src="../images/image 297.png" alt="">
+                        </button>
+                        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModal7Label"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <ul class="modal-ul">
+                                            <li class="nav-item">
+                                                <button name="zoomIn" class="nav-link btnZoomIn"
+                                                    onclick="zoomInPicture7()">
+                                                    <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button name="zoomOut" class="nav-link btnZoomOut"
+                                                    onclick="zoomOutPicture7()">
+                                                    <i class="fa fa-search-minus" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button name="rotate" class="nav-link btnRotateRight"
+                                                    onclick="rotatePicture7()">
+                                                    <i class="fa fa-repeat" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button name="rotate" class="nav-link btnRotateLeft"
+                                                    onclick="rotatePicture7()">
+                                                    <i class="fa fa-undo" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button class="nav-link btnFullScreen" onclick="openFullscreen()">
+                                                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex justify-content-center align-items-center">
+                                        <img src="../images/image 297.png" alt="" id="picture7">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Code for images popup @anjudewangan -->
+        </main>
+    </div>
+    <div class="target_link" id="target_link">
+        <span>
+            <a href="#education" id="edu" target="_top">Education Informations</a>
+            <i class="fa-solid fa-caret-right"></i>
+        </span>
+        <span>
+            <a href="#experience" id="exp">Experience</a>
+            <i class="fa-solid fa-caret-right"></i>
+        </span>
+        <span>
+            <a href="#hounor" id="hnr">Honours and Achievements
+            </a>
+            <i class="fa-solid fa-caret-right"></i>
+        </span>
+        <span>
+            <a href="#membership" id="mem">Membership</a>
+            <i class="fa-solid fa-caret-right"></i>
+        </span>
+        <span>
+            <a href="#accomplishments" id="acc">Literary Artistic & Scientific Accomplishments</a>
+            <i class="fa-solid fa-caret-right"></i>
+        </span>
+        <span>
+            <a href="#about" id="more">More</a>
+            <i class="fa-solid fa-caret-right"></i>
+        </span>
+    </div>
+    <script src="./scripts/script.js"></script>
+
+</body>
+<script src="./scripts/doctor.js"></script>
+<script src="./scripts/script.js"></script>
+<script src="./scripts/fulldoctorprofile.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</html>

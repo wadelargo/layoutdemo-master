@@ -1,0 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.5/umd/popper.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script async defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" />
+    <link rel="stylesheet" href="./layout.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navForDeskTop">
+        <div class="navbar-first">
+            <a class="navbar-brand" href="../practice-registration/second-stage/html/index.html">
+                <span class="iconify" data-icon="carbon:add" data-width="35" data-height="35"></span>
+                <p>Add Establishment</p>
+            </a>
+            <button class="buttonForSideNav" type="button" onclick="openNav()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="navbar-second">
+            <ul class="ml-auto secondNavUl">
+                <a class="hospital-name" href="#">WellDone</a>
+                <li class="nav-item">
+                    <form class="form-inline">
+                        <div class="searchbox">
+                            <input class="form-control inputForSearch" type="text" placeholder="Search for..." />
+                            <button type="button" class="advnc-search" id="advnc-search" data-bs-toggle="modal"
+                                data-bs-target="#patientsPopup">Advanced</button>
+                            <div class="modal fade" id="patientsPopup" data-bs-backdrop="false" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="patientsPopupLabel" aria-hidden="true" role="dialog"
+                                data-backdrop="false">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="patientsPopupLabel">Advance Patient Search</h5>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close" onclick="HandleCancel()"></button>
+                                            <!-- Code for Advanced Patient Search @anjudewangan -->
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="" class="popup-form">
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="dvSelect">
+                                                                <select id="ddlInfo">
+                                                                    <option value="patient_name">Patient Name</option>
+                                                                    <option value="has_contact_number">Has Contact
+                                                                        Number</option>
+                                                                    <option value="contact_number">Contact Number
+                                                                    </option>
+                                                                    <option value="age_is">Age is</option>
+                                                                    <option value="age_more_than">Age is More Than
+                                                                    </option>
+                                                                    <option value="age_less_than">Age is Less Than
+                                                                    </option>
+                                                                    <option value="has_date_of_birth">Has Date of Birth
+                                                                    </option>
+                                                                    <option value="date_of_birth">Date of Birth Is
+                                                                    </option>
+                                                                    <option value="date_of_birth_more_than">Date of
+                                                                        Birth is More Than</option>
+                                                                    <option value="date_of_birth_less_than">Date of
+                                                                        Birth is Less Than</option>
+                                                                    <option value="birthday_is_in">Birthday is in
+                                                                    </option>
+                                                                    <option value="has_patient_id">Has Patient ID
+                                                                    </option>
+                                                                    <option value="patient_id">Patient ID</option>
+                                                                    <option value="has_aadhaar_id">Has Aadhaar ID
+                                                                    </option>
+                                                                    <option value="aadhaar_id">Aadhaar ID</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="email">Email</option>
+                                                                    <option value="has_email">Has Email</option>
+                                                                    <option value="has_gender">Has Gender</option>
+                                                                    <option value="gender">Gender is</option>
+                                                                    <option value="has_pincode">Has Pincode</option>
+                                                                    <option value="pincode">Pincode</option>
+                                                                    <option value="has_street_address">Has Street
+                                                                        Address</option>
+                                                                    <option value="street_address">Street Address
+                                                                    </option>
+                                                                    <option value="has_blood_group">Has Blood Group
+                                                                    </option>
+                                                                    <option value="blood_group">Blood Group</option>
+                                                                    <option value="was_referred_by_someone">Was Referred
+                                                                        By Someone</option>
+                                                                    <option value="referred_by_someone">Referred By
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div id="divControl">
+
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </form>
+                                            <button type="button" id="btnAddMore">Add another parameter</button>
+                                            <div id="divCategories">
+
+                                            </div>
+                                            <div id="divNoData" style="display: none;">No Data Found</div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" id="btnSearch"
+                                                onclick="ShowNoDataMessage()">Search</button>
+                                            <button type="button" class="btn btn-secondary btn-sec-popup"
+                                                data-bs-dismiss="modal" id="btnCancel"
+                                                onclick="HandleCancel()">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="input-group-append">
+                                <button class="btn btn-primary searchbtn1" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="microPhoneChoose" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-microphone"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="addPateintButton" href="../Addpateints/addpatient.html">
+                        <button type="button" class="addpatient">Add Patient</button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mr-lg-2" id="calenderButton" href="../Calendar/calendar.html">
+                        <i class="fa fa-fw fa-calendar"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-fw fa-bell"></i>
+                        <span class="d-lg-none">Alerts
+                            <span class="badge badge-pill badge-warning">6 New</span>
+                        </span>
+                        <span class="indicator text-warning d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#">
+                        <i class="fa fa-fw fa-envelope"></i>
+                        <span class="d-lg-none">Messages
+                            <span class="badge badge-pill badge-primary">12 New</span>
+                        </span>
+                        <span class="indicator text-primary d-none d-lg-block">
+                            <i class="fa fa-fw fa-circle"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- message shortcut -->
+            <div class="messageAlertDetails" id="messageAlertDetails">
+                <div class="MADHeader">
+                    <h6 class="MADHeader-info">New Messages:</h6>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADBody">
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>David Miller</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>Jane Smith</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <div class="MadBodyitems">
+                        <div class="MadBodyitemsPart1 d-flex justify-content-between">
+                            <strong>John Doe</strong>
+                            <span class="MADTime">11:21 AM</span>
+                        </div>
+                        <div class="MadBodyitemsPart2">
+                            <p>Hey there! This new version of SB Admin is pretty awesome! These messages clip off when
+                                they reach the end of the box so they don't overflow over to the sides!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="MADFooter">
+                    <a class="viewAllMsgs" href="#">View all messages</a>
+                </div>
+
+            </div>
+            <!-- admin setting box -->
+            <div class="adminSettingBox" id="adminSettingBox">
+                <div class="adminSettingHeader">
+                    <strong id="nameofAdmin">Rakesh Nandre</strong>
+                    <p id="statusofAdmin">Admin</p>
+                    <p id="emailofAdmin">xyz@gmail.com</p>
+                </div>
+                <hr style="margin: 15px 0;">
+                <ul id="settingOptions">
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><a href="../admin profile/admin.html" style="text-decoration: none; color: black;"><span
+                                class="iconify" style="color: gray;" data-icon="akar-icons:pencil" data-width="17"
+                                data-height="17"></span> Edit Profile</a></li>
+                    <!-- Code for edit profile in admin profile @anjudewangan -->
+                    <li><span class="iconify" data-icon="ant-design:setting-outlined" style="color: gray;"
+                            data-width="17" data-height="17"></span> Account Setting</li>
+                    <li><span class="iconify" data-icon="ant-design:user-outlined" style="color: gray;" data-width="17"
+                            data-height="17"></span> Add User</li>
+                    <li><span class="iconify" data-icon="bx:log-out" style="color: gray;" data-width="17"
+                            data-height="17"></span> Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-third">
+            <div class="dropdown">
+                <button id="dropbtnMyfunction" class="dropbtn">
+                    <img class="user-img" src="../images/2.png" />Rakesh Nandare
+                    <i class="fa fa-angle-down"></i>
+                </button>
+            </div>
+            <!-- alert details -->
+            <div class="alertDetails" id="alertDetails">
+                <div class="alertHeader">
+                    <p>New Alerts:</p>
+                </div>
+                <div class="dropdown-divider"></div>
+
+                <div class="alertBody">
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-danger">
+                                <strong>
+                                    <i class="fa fa-long-arrow-down fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                    <div class="alertBodyitems" href="#">
+                        <div class="alertBodyitemsPart1">
+                            <span class="text-success">
+                                <strong>
+                                    <i class="fa fa-long-arrow-up fa-fw"></i>Status
+                                    Update</strong>
+                            </span>
+                            <span class="statusTime">11:21 AM</span>
+                        </div>
+                        <div class="alertBodyitemsPart2">
+                            <div class="alertBodyitemsmessage small">
+                                This is an automated server response message. All systems are online.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="dropdown-divider"></div>
+
+                </div>
+                <div class="alertFooter">
+                    <a>View All Events</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                <a class="nav-link" href="../dashboard.html">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                <a class="nav-link" href="../doctor1/doctor.html">
+                    <i class="fa fa-fw fa-user-md"></i>
+                    <span class="nav-link-text">Doctors</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link active-link" href="../pateints/index.html">
+                    <i class="fa fa-fw fa fa-wheelchair"></i>
+                    <span class="nav-link-text">Patient</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../Calendar/calendar.html">
+                    <i class="fa fa-fw fa fa-calendar"></i>
+                    <span class="nav-link-text">Appointment</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Doctor Schedule @anjudewangan -->
+                <a class="nav-link" href="../doctorschedule/doctorSchedule.html">
+                    <!-- Code for add Doctor Schedule @anjudewangan -->
+                    <i class="fa fa-fw fa fa-calendar-check-o"></i>
+                    <span class="nav-link-text">Doctor Schedule</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Department @anjudewangan -->
+                <a class="nav-link" href="../department/department.html">
+                    <!-- Code for add Department @anjudewangan -->
+                    <i class="fa fa-fw fa-building-o"></i>
+                    <span class="nav-link-text">Departments</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <!-- Code for add Insurance @anjudewangan -->
+                <a class="nav-link" href="../insurance/insurance.html">
+                    <!-- Code for add Insurance @anjudewangan -->
+                    <i class="fa fa-fw fa-umbrella" aria-hidden="true"></i>
+                    <span class="nav-link-text">Insurance Network</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-user"></i>
+                    <span class="nav-link-text">Employee</span>
+                </a>
+                <!-- Code for link Employee Section @anjudewangan -->
+                <ul class="collapse sidenav-second-level" id="collapseComponents">
+                    <li>
+                        <a href="../employee/employeeList.html">Employee List</a>
+                    </li>
+                    <li>
+                        <a href="../employee/leave.html">Leaves</a>
+                    </li>
+                    <li>
+                        <a href="../employee/holiday.html">Holidays</a>
+                    </li>
+                    <li>
+                        <a href="../employee/attendance.html">Attendance</a>
+                    </li>
+                </ul>
+                <!-- Code for link Employee Section @anjudewangan -->
+            </li>
+            <!-- Code for link item @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="../item/item.html">
+                    <i class="fa fa-fw fa-sitemap" aria-hidden="true"></i>
+                    <span class="nav-link-text">Item</span>
+                </a>
+            </li>
+            <!-- Code for link item @anjudewangan -->
+            <!-- Code for link Sales @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-cart-arrow-down" aria-hidden="true"></i>
+                    <span class="nav-link-text">Sales</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="../sales/customers/customers.html">Customers</a>
+                    </li>
+                    <li>
+                        <a href="../sales/estimates/estimates.html">Estimates</a>
+                    </li>
+                    <li>
+                        <a href="../sales/salesOrders/salesOrders.html">Sales Orders</a>
+                    </li>
+                    <li>
+                        <a href="../sales/packages-folder/packages.html">Packages</a>
+                    </li>
+                    <li>
+                        <a href="../sales/shipmets/shipments.html">Shipments</a>
+                    </li>
+                    <li>
+                        <a href="../sales/delivery-challans/deliveryChallans.html">Delivery Challans</a>
+                    </li>
+                    <li>
+                        <a href="../sales/invoices/invoices.html">Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../sales/received-payments/receivedPayments.html">Received Payments</a>
+                    </li>
+                    <li>
+                        <a href="">Recurring Invoices</a>
+                    </li>
+                    <li>
+                        <a href="../sales/sales-return/salesReturn.html">Sales Return</a>
+                    </li>
+                    <li>
+                        <a href="../sales/credit-notes/creditNotes.html">Credit Notes</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Sales @anjudewangan  -->
+
+            <!-- Code for link Purchases @anjudewangan -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapsePurchases"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-shopping-bag"></i>
+                    <span class="nav-link-text">Purchases</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapsePurchases">
+                    <li>
+                        <a href="../purchases/vendors/vendors.html">Vendors</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/purchase-order/purchaseOrder.html">Purchase Orders</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/purchase-receives/purchaseReceives.html">Purchase Receives</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/bills/bills.html">Bills</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/payments-made/paymentsMade.html">Payments Made</a>
+                    </li>
+                    <li>
+                        <a href="../purchases/vendor-credits/vendorCredits.html">Vendor Credits</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- Code for link Purchases @anjudewangan -->
+
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-book"></i>
+                    <span class="nav-link-text">Payroll</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+                    <li>
+                        <a href="login.html">Pay slip</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa fa-commenting"></i>
+                    <span class="nav-link-text">Chat</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-video-camera"></i>
+                    <span class="nav-link-text">Call</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseMulti">
+                    <li>
+                        <a href="#">Voice call</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseEmail"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa fa-envelope"></i>
+                    <span class="nav-link-text">Email</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseEmail">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseBlog"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fas fa-comment"></i>
+                    <span class="nav-link-text">Blog</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseBlog">
+                    <li>
+                        <a href="#">compose</a>
+                    </li>
+                    <li>
+                        <a href="#">Video call</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fas fa-object-group"></i>
+                    <span class="nav-link-text">Assets</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="#">
+                    <i class="fa fa-fw fa-bell-o"></i>
+                    <span class="nav-link-text">Activites</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseReport"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-flag"></i>
+                    <span class="nav-link-text">Report</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="collapseReport">
+                    <li>
+                        <a href="#">Expenses Report</a>
+                    </li>
+                    <li>
+                        <a href="#">Invoice Report</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                <a class="nav-link" href="../Setting Folder/practice-profile.html">
+                    <i class="fa fa-fw fa-cog"></i>
+                    <span class="nav-link-text">Setting</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main_container">
+        <nav class="navbar navbar-expand-lg navbar-fourth" id="navbar-fourth">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <ul>
+              <li style="color: aliceblue;" class="nav-item">
+                <div class="nav-link" style="font-size: 25px;">Pateint(s)
+                  <select name="" id="visitoptions" style="font-size: 10px; background-color: #343A40;color: aliceblue;">
+                    <option value="physical Visit">Physical Visit</option>
+                    <option value="Video Call">Video Call</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <div style="color: aliceblue;" class="e-queque">
+                  <div style="border: 1px solid white; display: flex; align-content: center; width: fit-content; height: fit-content; border-radius: 5px 5px 5px 5px;"><p style="background-color: aqua; color: #000; padding: 5px 15px 5px 5px;">e-Queue</p><p style="padding: 5px 15px 5px 5px;">Slot</p></div>
+                </div>
+              </li>
+            </ul> -->
+                <ul class="navbar-nav mr-auto flex-column">
+                    <li class="nav-item">
+                        <div class="nav-link">
+                            <a class="user-img-second-link" href="#">
+                                <img src="../images/2.png" class="user-img-second" id="dvUserImage" />
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="nav-link">
+                            <a class="barcode-img-link" href="#">
+                                <img id="barcodeimage" src="../images/barcode.png" class="barcode-img" />
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto flex-column">
+                    <li class="nav-item">
+                        <div class="RakeshName">
+                            Rakesh Nandare
+                            <button class="btn btn-primary">Edit</button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="">
+                            25Y 2M Old
+                            <span class="spanGender"><i class="fa fa-mars" aria-hidden="true"></i></span>
+                            <span>Male</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="">
+                            <span class="spanWeight"><i class="fa fa-line-chart" aria-hidden="true"></i></span> 25 kg
+                            <span class="spanBloodGroup"><i class="fa fa-tint" aria-hidden="true"></i></span>
+                            <span>B+</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="" style="color: red;" id="dvReturning">Returning</div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto flex-column">
+                    <li class="nav-item">
+                        <div class="">
+                            Language -
+                            <span class="spanLanguage">Gujrati, Hindi</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="">Insurance</div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="">
+                            <a class="insurance-link" href="#">
+                                <img src="../images/insurance.jpg" class="insurance-img" />
+                                <span class="spanInsurance">Individual Health Insurance Policy</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto flex-column">
+                    <li class="nav-item">
+                        <div class="">
+                            Mo -
+                            <span class="spanMobile"> 1234567890</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="">
+                            Email -
+                            <span class="spanEmail"> xyz@gmail.com</span>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="">
+                            Address -
+                            <span class="spanAddress">Mumbai, Maharashtra</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="leftright" id="leftright">
+            <div class="pateintTable" id="pateintdropdown" style="display: block;">
+                <ul class="pateintul">
+                    <li class="nav-item visitselect">
+                        <div class="nav-link" style="font-size: 25px; color: #050505;">Pateint(s)
+                            <select name="" id="visitoptions"
+                                style="font-size: 10px; background-color: white;color: rgb(28, 105, 172);">
+                                <option value="physical Visit">Physical Visit</option>
+                                <option value="Video Call">Video Call</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="e-queque">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>E-Queue
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> Slot
+                                </label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                        data-interval="false">
+                        <ol class="carousel-indicators pateintTableTitle">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">TODAY</li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1">Recent</li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2" style="text-indent: 6px;">All
+                            </li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="pateintnamelist">
+                                    <div class="PateintName1">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">1</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Rakesh Nandar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">1</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Rakesh Nandar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">06:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                end of pateint name list div
+                            </div>
+                            <div class="carousel-item">
+                                <div class="pateintnamelist">
+                                    <div class="PateintName1">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">1</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Rakesh Nandar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">1</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Rakesh Nandar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">06:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end of pateint name list div -->
+                            </div>
+                            <div class="carousel-item">
+                                <div class="pateintnamelist">
+                                    <div class="PateintName1">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">1</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Rakesh Nandar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">1</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Rakesh Nandar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">2</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">3</p>
+                                            <p class="pateinttime">06:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                        </div>
+                                    </div>
+                                    <div class="PateintName2">
+                                        <div class="lefthalfpateint">
+                                            <p class="pateintnumber">4</p>
+                                            <p class="pateinttime">09:45 AM</p>
+                                        </div>
+                                        <div class="righthalfpateint">
+                                            <p class="pateintName">Jay Kumar</p>
+                                            <p class="visitreason">visit reason Specified</p>
+                                            <p class="Returning">Returning</p>
+                                            <p class="InsuranceHolder">Insurance Holder</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end of pateint name list div -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of pateint name list div -->
+            </div>
+            <!--end of pateinttable div -->
+            <div class="vl" id="vl"></div>
+            <div id="Appointment" class="Appointment">
+                <div class="appointmentwith">
+                    <div class="appointmentwithtime">
+                        <p>10:45 AM</p>
+                        <p>29 December 21
+                        </p>
+                    </div>
+                    <div class="appointmentwithdr">Appointment with Dr. Yash Chopra</div>
+                    <div><img src="https://img.icons8.com/glyph-neue/64/000000/alarm-clock.png" />20 days remaining
+                        Reveiw
+                        on - dd/mm/yyyy
+                    </div>
+                    <div class="openbuttondiv"><button class="openbtn">OPEN</button></div>
+                </div>
+                <div>
+                    <p id="CreateCaseStudy" onclick="openAppointment()"><img
+                            src="https://img.icons8.com/ios/40/3498DB/add--v1.png" /> Create New Case Study</p>
+                </div>
+                <div style="display: flex;">
+                    <div id="VisitReportButton" onclick="VisitReport()">
+                        <p>Pateint Visit Report</p>
+                    </div>
+                    <div onclick="openPayments()" id="VeiwsAndPaymentsbutton">
+                        <p>Veiws & Payments</p>
+                    </div>
+                    <div id="ReadyCaseFormatButton" onclick="OpenReadyCase()">
+                        <p><img src="https://img.icons8.com/ios/25/000000/reminders.png" />Ready Case Format</p>
+                    </div>
+                </div>
+                <div id="AppointmentDetails">
+                    <p class="PateintAppointmentDetails">Pateint Appointment Details</p>
+                    <hr>
+                    <p class="Appno">Appointment no. 123456789</p>
+                    <p class="apdatetime">Appointment date and time</p>
+                    <input class="appointmentinput" type="date"><input class="appointmentinput" type="time">
+                    <p class="apdatetime">Doctor</p>
+                    <select name="" id="" class="selectdoctor">
+                        <option value="Dr.Rakesh Nanadar">Rakesh Nandare</option>
+                        <option value="Dr.Aware ">Aware</option>
+                        <option value="DR. shirshe nursing home an facilities">DR. shirshe nursing home an facilities
+                        </option>
+                    </select>
+                    <hr>
+                    <select name="Add Record" id="AddRecordButton" class="AddRecordButton">
+                        <option value="Add Record">Add Record</option>
+                        <option value="Vital Signs">Vital Signs</option>
+                        <option value="Clinical Notes">Clinical Notes</option>
+                        <option value="Prescription">Prescription</option>
+                        <option value="Files">Files</option>
+                        <option value="Lab Advice">Lab Advice</option>
+                        <option value="Treatment Plan">Treatment Plan</option>
+                        <option value="Complete Procedure">Complete Procedure</option>
+                        <option value="Report">Report</option>
+                    </select>
+
+                </div>
+                <div id="VeiwsAndPaymentsContent">
+                    <table class="VeiwsAndPaymentsTable">
+                        <tr style="background-color: #B0CAD5;">
+                            <th>Invoice</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                            <th>date of issue</th>
+                            <th>Due Date</th>
+                            <th>Veiw</th>
+                        </tr>
+                        <tr>
+                            <td>086010000271</td>
+                            <td>Active</td>
+                            <td>300.00</td>
+                            <td>31 Mar 2021</td>
+                            <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png" /></td>
+                            <td><button class="makepaymentsbtn">Make Payment</button></td>
+                        </tr>
+                        <tr>
+                            <td class="tdsettings"><button class="btn btn-primary"><img
+                                        src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/16/000000/external-setting-essentials-pack-tanah-basah-glyph-tanah-basah.png" />setting</button>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td class="tdsettings"><button class="btn btn-primary">Make Payment</button></td>
+                            <td class="tdsettings"><button class="btn btn-primary" onclick="veiwHistory()">Veiw
+                                    History</button></td>
+                        </tr>
+                    </table>
+                    <div class="veiwHistory" id="veiwHistoryTable">
+                        <div class="Billingandhistory">
+                            <p onclick="Billingp()" id="Billingp">Billing</p>
+                            <p id="paymenthistoryp" onclick="paymenthistory()">Payments History</p>
+                        </div>
+                        <table id="Billingt">
+                            <tr style="background-color: #B0CAD5;">
+                                <th>Invoice</th>
+                                <th>Bill Amount</th>
+                                <th>Date of Issue</th>
+                                <th>Due Date</th>
+                                <th>Veiw</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>086010000271</td>
+                                <td>300.00</td>
+                                <td>31 Mar 2020</td>
+                                <td>31 Mar 2022</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                                <td><button type="button" class="Unpaidbtn">Unpaid</button></td>
+                            </tr>
+                            <tr>
+                                <td>086010000271</td>
+                                <td>300.00</td>
+                                <td>31 Mar 2022</td>
+                                <td>31 Mar 2022</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                                <td><button class="Paid" type="button">Paid</button></td>
+                            </tr>
+                            <tr>
+                                <td>086010000271</td>
+                                <td>300.00</td>
+                                <td>31 Mar 2022</td>
+                                <td>31 Mar 2022</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                                <td><button type="button" class="Paid">Paid</button></td>
+                            </tr>
+                            <tr>
+                                <td>086010000271</td>
+                                <td>300.00</td>
+                                <td>31 Mar 2022</td>
+                                <td>31 Mar 2022</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                                <td><button type="button" class="Paid">Paid</button></td>
+                            </tr>
+                            <tr>
+                                <td>86010000271</td>
+                                <td>300.00</td>
+                                <td>31 Mar 2022</td>
+                                <td>31 Mar 2022</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                                <td><button type="button" class="Paid">Paid</button></td>
+                            </tr>
+                            <tr>
+                                <td>086010000271</td>
+                                <td>300.00</td>
+                                <td>31 Mar 2022</td>
+                                <td>31 Mar 2022</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                                <td><button type="button" class="Paid">Paid</button></td>
+                            </tr>
+                            <tr>
+                                <td>086010000271</td>
+                                <td>300.00</td>
+                                <td>31 Mar 2022</td>
+                                <td>31 Mar 2022</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                                <td><button type="button" class="Paid">Paid</button></td>
+                            </tr>
+                        </table>
+                        <table id="paymenthistoryt">
+                            <tr style="background-color: #B0CAD5;">
+                                <td>Bank id</td>
+                                <td>Bank Ref no/UTR No</td>
+                                <td>Receipt No.</td>
+                                <td>Payment Mode</td>
+                                <td>Amount</td>
+                                <td>Date of Transaction</td>
+                                <td>Receipt</td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height:0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height: 0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height: 0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height:0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height:0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height:0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height: 0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>AXG</td>
+                                <td>
+                                    <p>50000136920</p>
+                                    <p style="line-height: 0;">4-03158</p>
+                                </td>
+                                <td>WAXG0939905887</td>
+                                <td>Net Banking</td>
+                                <td>300</td>
+                                <td>28 Feb 22</td>
+                                <td><img src="https://img.icons8.com/cute-clipart/32/000000/internet-explorer.png"
+                                        alt="" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="ReadyCaseFormatContent">
+                    <table class="ReadyCaseFormatTable"
+                        style="background-color: rgb(253, 255, 254);width: 100%; border: 2px solid rgb(24, 131, 173);margin-top: 10px;border-radius: 5px;border-collapse: collapse;">
+                        <tr>
+                            <td style="padding-top: 40px;padding-bottom: 10px;"><button class="btn btn-warning">Create
+                                    New</button></td>
+                            <td></td>
+                            <td></td>
+                            <td style="padding-top: 40px;padding-bottom: 10px;"><button class="btn btn-primary"><img
+                                        src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/16/000000/external-setting-essentials-pack-tanah-basah-glyph-tanah-basah.png" />Settings</button>
+                            </td>
+                        </tr>
+                        <tr style="font-weight: 600;">
+                            <td>Case Name</td>
+                            <td>Clinical Notes</td>
+                            <td>Constituents</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Malaria</td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Daignosis-Maleria</p>
+                                <p>Complaints-high Fever</p>
+                                <p>Observation-skin rashes</p>
+                            </td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Prescription: Calpol-650, Razo-20</p>
+                                <p>Lab Orders: HbA1c</p>
+                                <p>Follow up After: 30 days</p>
+                            </td>
+                            <td><button class="btn btn-warning">Extract</button></td>
+                        </tr>
+                        <tr>
+                            <td>Malaria</td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Daignosis-Malaria</p>
+                                <p>Complaints-high Fever</p>
+                                <p>Observation-skin rashes</p>
+                            </td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Prescription: Calpol-650,Razo-20</p>
+                                <p>Lab Orders: HbA1c</p>
+                                <p>Follow up After: 30days</p>
+                            </td>
+                            <td><button class="btn btn-warning">Extract</button></td>
+                        </tr>
+                        <tr>
+                            <td>Malaria</td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Daignosis-Malaria</p>
+                                <p>Complaints-high Fever</p>
+                                <p>Observation-skin rashes</p>
+                            </td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Prescription: Calpol-650,Razo-20</p>
+                                <p>Lab Orders: HbA1c</p>
+                                <p>Follow up After: 30days</p>
+                            </td>
+                            <td><button class="btn btn-warning">Extract</button></td>
+                        </tr>
+                        <tr>
+                            <td>Malaria</td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Daignosis-Malaria</p>
+                                <p>Complaints-high Fever</p>
+                                <p>Observation-skin rashes</p>
+                            </td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Prescription: Calpol-650,Razo-20</p>
+                                <p>Lab Orders: HbA1c</p>
+                                <p>Follow up After: 30days</p>
+                            </td>
+                            <td><button class="btn btn-warning">Extract</button></td>
+                        </tr>
+                        <tr>
+                            <td>Malaria</td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Daignosis-Malaria</p>
+                                <p>Complaints-high Fever</p>
+                                <p>Observation-skin rashes</p>
+                            </td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Prescription: Calpol-650,Razo-20</p>
+                                <p>Lab Orders: HbA1c</p>
+                                <p>Follow up After: 30days</p>
+                            </td>
+                            <td><button class="btn btn-warning">Extract</button></td>
+                        </tr>
+                        <tr>
+                            <td>Malaria</td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Daignosis-Malaria</p>
+                                <p>Complaints-high Fever</p>
+                                <p>Observation-skin rashes</p>
+                            </td>
+                            <td style="line-height: 0.5rem;">
+                                <p>Prescription: Calpol-650,Razo-20</p>
+                                <p>Lab Orders: HbA1c</p>
+                                <p>Follow Up After: 30days</p>
+                            </td>
+                            <td><button class="btn btn-warning">Extract</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="iframes" id="iframes" style=" width:669px; display: none;">
+                    <iframe class="iframe" id="iframe1" src="iframe1.html" frameborder="0" height="445" width="669"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe2" src="iframe2.html" frameborder="0" width="669" height="900"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe3" src="iframe3.html" frameborder="0" width="669" height="500"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe4" src="iframe4.html" frameborder="0" width="669" height="500"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe5" src="iframe5.html" width="669" height="200" frameborder="0"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe6" src="iframe6.html" width="669" height="250" frameborder="0"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe7" src="iframe7.html" width="669" height="250" frameborder="0"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe8" src="iframe8.html" width="669" height="400" frameborder="0"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe9" src="iframe9.html" width="669" height="200" frameborder="0"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe10" src="iframe10.html" width="669" height="500" frameborder="0"
+                        allowfullscreen></iframe>
+                    <iframe class="iframe" id="iframe11" src="iframe11.html" width="669" height="700" frameborder="0"
+                        allowfullscreen></iframe>
+                    <!-- <script>
+                        var div = document.getElementById("iframe4");
+                        div.onload = function() {
+                            div.style.height = div.contentWindow.document.body.scrollHeight + 'px';
+                        }
+                    </script> -->
+                </div>
+                <!-- <iframe src="iframe3.html" style="border:3px solid black;width: 100%;height: 100%;"></iframe> -->
+            </div>
+            <div class="commeddiv" id="commeddiv">
+                <!-- start of communication and medical history -->
+                <div class="Communicationdiv">
+                    <h5>Communication of Practice</h5>
+                    <div class="communicationpng"><img src="../images/communication.png" alt=""></div>
+                    <p>No active dailogue yet</p>
+                    <p class="setschedule">Schedule Communications</p>
+                </div>
+                <div style="display: flex;">
+                    <div style="width: 32px;margin-top: 20px;">
+                        <img src="https://img.icons8.com/windows/32/000000/retro-alarm-clock.png" />
+                        <img src="https://img.icons8.com/ios/32/000000/print--v1.png" />
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/share--v1.png" />
+                    </div>
+                    <div class="MedicalHistorydiv">
+                        <span>
+                            <h6>Medical History</h6>
+                            <p class="Addsign" onclick="makelist()">+Add</p>
+                        </span>
+                        <input type="text" id="inputforhistory">
+                        <ul id="MedicalHistory" class="addeditems"></ul>
+                        <span>
+                            <h6>Other Specified Disease </h6>
+                            <p class="Addsign" onclick="makelist1()">+Add</p>
+                        </span>
+                        <input type="text" id="inputfordiseases">
+                        <ul id="otherdisease" class="addeditems"></ul>
+                        <span>
+                            <h6>Allergic information</h6>
+                        </span>
+                        <span>
+                            <h6>Drug Allergy</h6>
+                            <p class="Addsign" onclick="makelist2()">+Add</p>
+                        </span>
+                        <input type="text" id="inputfordrug">
+                        <ul id="drugallergy" class="addeditems"></ul>
+                        <span>
+                            <h6>Food Allergy</h6>
+                            <p class="Addsign" onclick="makelist3()">+Add</p>
+                        </span>
+                        <input type="text" id="inputforfood">
+                        <ul id="foodallergy" class="addeditems"></ul>
+                        <span>
+                            <h6>Insect Allergy</h6>
+                            <p class="Addsign" onclick="makelist4()">+Add</p>
+                        </span>
+                        <input type="text" id="inputforinsect">
+                        <ul id="insectallergy" class="addeditems"></ul>
+                        <span>
+                            <h6>Latex Allergy</h6>
+                            <p class="Addsign" onclick="makelist5()">+Add</p>
+                        </span>
+                        <input type="text" id="inputforlatex">
+                        <ul id="latexallergy" class="addeditems"></ul>
+                        <span>
+                            <h6>Mold Allergy</h6>
+                            <p class="Addsign" onclick="makelist6()">+Add</p>
+                        </span>
+                        <input type="text" id="inputformold">
+                        <ul id="moldallergy" class="addeditems"></ul>
+                        <span>
+                            <h6>Pet Allergy</h6>
+                            <p class="Addsign" onclick="makelist7()">+Add</p>
+                        </span>
+                        <input type="text" id="inputforpet">
+                        <ul id="petallergy" class="addeditems"></ul>
+                        <span>
+                            <h6>Pollen Allergy</h6>
+                            <p class="Addsign" onclick="makelist8()">+Add</p>
+                        </span>
+                        <input type="text" id="inputforpollen">
+                        <ul id="pollenallergy" class="addeditems"></ul>
+                        <hr class="hrline">
+                        <img class="bulb" src="https://img.icons8.com/fluency/48/000000/light.png" />
+                        <div class="hints"><img class="addsymbol"
+                                src="https://img.icons8.com/small/16/000000/add.png" />
+                            <p> No Personal Medical History</p>
+                        </div>
+                        <div class="hints"><img class="addsymbol"
+                                src="https://img.icons8.com/small/16/000000/add.png" />
+                            <p> Heart disease</p>
+                        </div>
+                        <div class="hints"><img class="addsymbol" src="https://img.icons8.com/small/16/000000/add.png">
+                            <p> Asthma</p>
+                        </div>
+                        <div class="hints"><img class="addsymbol" src="https://img.icons8.com/small/16/000000/add.png">
+                            <p> Diabetes</p>
+                        </div>
+                        <!-- <img src="https://img.icons8.com/small/16/000000/minus.png"/> -->
+                    </div>
+                </div>
+            </div>
+            <!--end of communication and medical history-->
+        </div>
+    </div>
+
+    <!-- end of leftright div -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="layout.js"></script>
+</body>
+
+</html>

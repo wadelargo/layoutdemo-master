@@ -1,0 +1,164 @@
+.callerListName {
+    font-size: 12px;
+}
+.callerListNumber,.callDate  {
+    font-size: 10px;
+}
+.callActivities {
+    font-size: 9px;
+}
+.nameMessenger {
+    font-size: 13px;
+}
+.showMsgDateMob {
+    font-size: 9px;
+}
+.msgBox {
+    max-width: 80%;
+}
+#nameOfPatient {
+    font-size: 16px;
+}
+.followupSetBox {
+    width: 88%;
+    height: 34px;
+}
+.followup-logo {
+    width: 20px;
+    height: 20px;
+}
+.followup-logo p, .followupNameid p {
+    font-size: 10px;
+}
+.followupNameid p:nth-child(2) {
+    font-size: 8px;
+}
+#followUp, #drName, #drAddress {
+    font-size: 8px;
+}
+.fubtn {
+    width: 45px;
+    height: 20.71px;
+}
+.rmTime p {
+    font-size: 9px;
+}
+.rAlogo{
+    font-size: 12px;
+}
+.setReminder {
+    height: 27px;
+}
+#selectRemind, #noteAdds {
+    font-size: 8px;
+}
+.sendingMsgBoxMob form a {
+    width: 20%;
+}
+.inputFileMob {
+    width: 80%;
+}
+#submitBtnMob i {
+    font-size: 16px;
+}
+.inputFileMob {
+    padding: 3px 5px;
+}
+.MobSettingBox {
+    left: 60%;
+}
+.attachOptionsMob {
+    right: 27%;
+    bottom: 40px;
+}
+
+#openAttachImageBox ,#openAttachFileBox{
+    margin:0;
+    font-size: 10px;
+    left: 9%;
+    width: 50%;
+    height: 40px;
+}
+.cloudDateNumber{
+    font-size: 12px;
+} 
+#cloudBox {
+    width: 58%;
+    left: 3%;
+}
+.cloudImages img {
+    width: 22%;
+}
+#cancleCloudSave,#doneCloudSave {
+    font-size: 13px;
+    padding: 1px 2px;
+}
+.yesNobuttons {
+    font-size: 7px;
+}
+.popDiv h4 {
+    font-size: 9px;
+}
+.callOptionBox p {
+    font-size: 7px;
+}
+#popDiv {
+    width: 64vw;
+    left: 20%;
+}
+.callingBox {
+    left: 15%;
+    width: 80%;
+}
+#callSettingBox {
+    left: 35%;
+    width: 50%;
+}
+#MobSettingBox {
+    top: 75%;
+}
+#tagsOptionForMob {
+    width: 70vw;
+    left: 20%;
+   
+}
+#nameOfPatientInMob{
+    font-size: 18px;
+}
+#tagEditionBox {
+    width: 80%;
+    left: 10%;
+}
+
+#video, #canvas {
+    width: 230px;
+    height: 174px;
+    margin: 10px 0;
+}
+#cameraBox {
+    height: 77vh;
+}
+#reminderBox{
+    top: 40%;
+    left: 20%;
+    width: 70%; 
+}
+.chooseDate{
+    
+    left: 33%;
+}
+.DateChooseBox {
+   
+    width: auto;
+
+}
+#ui-datepicker-div {
+    left: 20%;
+    width: 200px;
+}
+.DateChooseBox {
+    left: 20%;
+}
+#cameraBox {
+    left: 30px;
+}

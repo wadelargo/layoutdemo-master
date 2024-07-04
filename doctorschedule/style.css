@@ -1,0 +1,688 @@
+/* Code for nav and sidenav of Doctor Schedule  @anjudewangan  */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  padding: 0;
+  height: 61px;
+  width: 100%;
+  z-index: 7;
+  border-bottom: 3px solid black;
+}
+.navbar-brand{
+  display: flex;
+  font-size: 15px;
+  align-items: center;
+  height: 100%;
+  font-weight: 700;
+}
+.navbar-brand:hover{
+  background-color: #FFDEDE;
+}
+.navbar-brand p{
+  margin: 0 15px 0 0;
+}
+.buttonForSideNav {
+  outline: none;
+  height: 40px;
+  border: 1px solid #a4a4a4;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 9px;
+}
+
+.buttonForSideNav:hover {
+  background-color: #a4a4a4;
+}
+
+.navbar-first {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.hospital-name {
+  flex-wrap: nowrap;
+  color: black;
+  margin-top: 7px;
+  font-size: 15px;
+}
+
+.hospital-name:hover {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+.navbar-second {
+  width: 84%;
+}
+
+.secondNavUl {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+.navbar-second .nav-item {
+  list-style: none;
+}
+
+.addPateintButton {
+  font-size: 12px;
+  margin: 0;
+}
+
+.nav-item.dropdown>.nav-link .indicator {
+  position: absolute;
+  bottom: 16px;
+  left: 17px;
+  font-size: 10px;
+}
+
+#alertsDropdown,
+#messagesDropdown {
+  padding: 0;
+}
+
+.input-group-append {
+  margin-left: -48px;
+}
+
+.advnc-search {
+  background: none;
+  border: none;
+  color: #435aaa;
+  font-size: 14px;
+  position: relative;
+  right: 70px;
+  width: 61px;
+  margin-left: -17px;
+}
+
+.searchbox {
+  display: flex;
+}
+
+.inputForSearch {
+  width: 50px;
+}
+
+.addpatient {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: orange;
+  border-width: 1px;
+  border-style: solid;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 5px;
+}
+
+.navbar-third {
+  width: 15%;
+}
+
+.navbar-fourth {
+  width: 96%;
+  /* position: absolute; */
+  right: 0;
+  margin-top: 78px;
+  border-bottom: 2px solid black;
+  color: black;
+  background-color: white;
+  z-index: 1;
+}
+
+.RakeshName {
+  color: #000;
+  font-weight: 500;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: rgb(154, 157, 160);
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+  height: 91%;
+  /* 100% Full-height */
+  width: 63px;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 13;
+  /* Stay on top */
+  top: 60px;
+  /* Stay at the top */
+  left: 0;
+  background-color: #FFFCE2;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+}
+
+
+/* The navigation menu links */
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#exampleAccordion .nav-item a {
+  color: rgb(14, 14, 14);
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navbar-sidenav>.nav-item>.nav-link:hover {
+  background-color: rgb(236, 236, 11);
+}
+
+.navbar-sidenav>.nav-item>.active-link {
+  background-color: rgb(236, 236, 11);
+}
+
+#exampleAccordion .nav-link-text {
+  font-size: 11.5px;
+  margin-left: 36px;
+}
+
+#exampleAccordion .nav-link i {
+  margin-left: 20px;
+  font-size: 21px;
+}
+
+.sidenav-second-level li a {
+  font-size: 10px;
+}
+
+.alertDetails {
+  position: absolute;
+  top: 100%;
+  background-color: #ffffff;
+  left: 70%;
+  height: auto;
+  width: 30vw;
+  border: 0.01rem solid black;
+  box-shadow: 11px 11px 30px -9px black;
+  border-radius: 5px;
+  z-index: 10;
+  padding: 16px;
+}
+
+.alertBodyitems {
+  background-color: transparent;
+  padding: 5px;
+  z-index: 10;
+}
+
+.alertBodyitems:hover {
+  background-color: #cce7ff;
+  z-index: 10;
+}
+
+.alertBodyitemsPart1 {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.messageAlertDetails {
+  background-color: #ffffff;
+  position: absolute;
+  top: 100%;
+  left: 70%;
+  height: auto;
+  width: 30vw;
+  border: 0.01rem solid black;
+  box-shadow: 11px 11px 30px -9px black;
+  border-radius: 5px;
+  z-index: 10;
+  padding: 16px;
+}
+
+.MadBodyitemsPart2 p {
+  font-size: 10px;
+  z-index: 10;
+}
+
+.MADBody {
+  height: 25vh;
+  min-height: 25vh;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+.adminSettingBox {
+  background-color: #ffffff;
+  position: absolute;
+  top: 100%;
+  left: 84%;
+  height: auto;
+  width: 16%;
+  border: 0.01rem solid black;
+  box-shadow: 11px 11px 30px -9px black;
+  border-radius: 5px;
+  z-index: 4;
+  padding: 16px;
+}
+
+.adminSettingBox p {
+  margin: 0;
+  padding: 0;
+}
+
+#settingOptions {
+  padding: 0;
+}
+
+#settingOptions li {
+  list-style: none;
+  font-size: 12px;
+  margin: 5px 0;
+  border-bottom: 1px solid rgb(190, 190, 190);
+}
+
+#settingOptions li:hover {
+  background-color: #cce7ff;
+  cursor: pointer;
+}
+
+.nav-link {
+  color: #818181;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .navbar-first {
+    width: 100px;
+  }
+
+  .navbar-second {
+    width: 69%;
+  }
+
+  .navbar-brand,
+  .buttonForSideNav {
+    font-size: 12px;
+  }
+
+  .nav-link {
+    padding: 0;
+    margin: 0;
+  }
+
+  .d-lg-none {
+    display: none;
+  }
+
+  #addPateintButton {
+    width: 71px;
+  }
+
+  .addpatient {
+    font-size: 10px;
+  }
+
+  .hospital-name {
+    font-size: 10px;
+  }
+
+  .inputForSearch {
+    width: 93px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .searchbtn1 {
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  #dropbtnMyfunction {
+    font-size: 10px;
+  }
+
+  .nav-link-text {
+    font-size: 14px;
+    margin-left: 25px;
+  }
+
+  .alertBodyitems {
+    font-size: 0.8rem;
+  }
+
+  .MadBodyitems {
+    font-size: 0.8rem;
+  }
+
+  .adminSettingBox {
+    left: 79%;
+    width: 21%;
+  }
+
+  .adminSettingHeader {
+    font-size: 13px;
+  }
+
+  .sidenav {
+    height: 91%;
+    width: 64px;
+    top: 55px;
+  }
+
+  .navForDeskTop {
+    display: flex;
+  }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  .navbar-second,
+  .navbar-third {
+    display: none;
+  }
+
+  .sidenav {
+    top: 31px;
+  }
+
+  .navbar-first {
+    width: 100%;
+  }
+
+  .navbar-sidenav>.nav-item>.nav-link {
+    font-size: 15px;
+  }
+
+  #mySidenav {
+    width: 0px;
+    border: none;
+    background-color: #efefef;
+  }
+
+  .nav-link-text {
+    font-size: 14px;
+  }
+}
+
+/* USER IMAGE SIZE CSS */
+
+#dvUserImage {
+  width: 60px;
+}
+
+#barcodeimage {
+  width: 100px;
+}
+
+.insurance-img {
+  width: 80px;
+}
+
+.user-img {
+  width: 1.7rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+/* Advanced Patient Search */
+
+.popup-form {
+  display: flex;
+  justify-content: center;
+}
+
+.dvSelect>select,
+#divControl>input,
+#divControl>select {
+  width: 12rem;
+  margin: 16px;
+  border: 1px solid black;
+  border-radius: 7px;
+  text-align: initial;
+  font-size: 15px;
+  padding: 5px;
+}
+
+.popup-form>select>option {
+  width: 15rem;
+  font-size: 12px;
+}
+
+.fa-times-circle {
+  font-size: 18px;
+  color: red;
+  margin-top: 14px;
+  margin-left: -5px;
+}
+
+#btnAddMore {
+  color: rgb(0, 162, 255);
+  font-size: 15px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 35px;
+}
+
+#divCategories {
+  margin: 10px 27px;
+  box-shadow: 0 0 13px -7px #444444;
+  background-color: white;
+  width: 55%;
+}
+
+#divCategories>input {
+  /* width: 4rem; */
+  margin: 5px;
+}
+
+#divCategories>label {
+  display: initial;
+}
+
+#divCategories>input,
+#divCategories>label {
+  cursor: pointer;
+}
+
+#divCategories>label:hover {
+  background-color: rgb(0, 162, 255);
+  color: white;
+}
+
+#divNoData {
+  color: red;
+  font-size: 14px;
+  margin-left: 36px;
+  display: none;
+}
+
+/* Code for nav and sidenav of Doctor Schedule  @anjudewangan  */
+
+
+/* Code for Doctor Schedule  @anjudewangan  */
+
+.insurance_settings {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 802px;
+}
+
+.insurance_settings p {
+  font-size: 25px;
+}
+
+.insurance_settings a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-decoration: none;
+  color: #000000;
+  background-color: #FFEA97;
+  height: 32px;
+  width: 119px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.insurance_settings .fa-gear {
+  color: #626262;
+}
+
+.doc_schedule {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  flex-direction: column;
+  left: 70px;
+  top: 85px;
+
+}
+.search_schedule{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 534px;
+}
+
+.schedule_table {
+  position: relative;
+  top: 35px;
+}
+
+.doc_schedule select {
+  width: 323px;
+  height: 35px;
+}
+
+.doc_schedule input {
+  width: 212px;
+  height: 35px;
+  /* position: relative; */
+  left: 576px;
+  text-indent: 10px;
+}
+
+.sch_table th,
+.sch_table td {
+  border: 1px dashed #000000;
+}
+
+.sch_table th {
+  height: 42px;
+  font-weight: 100;
+}
+
+.sch_table a {
+  background-color: transparent;
+  width: 220px;
+  height: 30px;
+  font-size: 13px;
+}
+
+.sch_table span {
+  display: flex;
+  background-color: #E3E3E3;
+  border-radius: 15px;
+  align-items: center;
+  font-weight: 400;
+}
+
+.sch_table .material-symbols-outlined {
+  color: #000000;
+}
+
+.sch_table .name {
+  color: #032D4B;
+}
+
+.mon {
+  color: #A40000;
+}
+
+.wed {
+  color: #DE6A29;
+}
+
+.sat {
+  color: #09189C;
+}
+
+.sat_ipd {
+  color: #198000;
+}
+
+.abr {
+  display: flex;
+  gap: 23px;
+  position: relative;
+  left: 10px;
+}
+
+.abr p:nth-child(1) {
+  color: #A40000;
+}
+
+.abr p:nth-child(2) {
+  color: #DE6A29;
+}
+
+.abr p:nth-child(3) {
+  color: #09189C;
+}
+
+.abr p:nth-child(4) {
+  color: #198000;
+}
+
+
+/* Code for Doctor Schedule  @anjudewangan  */

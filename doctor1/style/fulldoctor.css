@@ -1,0 +1,801 @@
+.full_profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: flex-start;
+    width: 1449px;
+    gap: 35px;
+    overflow-y: scroll;
+    margin-top: 100px;
+}
+.summary_wrapper1{
+    display: flex;
+    gap: 34px;
+    align-items: center;
+    position: relative;
+}
+.summary {
+    display: flex;
+    gap: 34px;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    width: 1295px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.summary img{
+    width: 160px;
+    height: 160px;
+}
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.name_details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 310px;
+}
+.name_details p{
+    margin: 0;
+}
+.deatail_1 p:nth-child(1){
+    font-size: 22px;
+}
+.deatail_1{
+    font-size: 16px;
+}
+.deatail_1 span{
+    background-color: hsl(29, 100%, 78%);
+    display: flex;
+    width: max-content;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    position: relative;
+    bottom: 20px;
+    left: 210px;
+}
+.deatail_1 p:nth-child(2){
+    font-size: 16px;
+}
+.deatail_1 .material-symbols-outlined{
+    font-size: 15px;
+}
+.deatail_1 p:nth-child(3){
+    font-size: 14px;
+}
+.detail_2 span{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+}
+.detail_2 p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 14px;
+    display: flex;
+    gap: 18px;
+}
+.detail_2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.gender_blood_deatil{
+    display: flex;
+    gap: 22px;
+}
+.gender_blood_deatil .fa-weight-scale{
+    color: #80858E;
+}
+
+.gender_blood_deatil .fa-mars{
+    color: #5A3FFF;
+}
+.gender_blood_deatil .fa-hand-holding-droplet {
+    color: #FF0000;
+}
+.gender_blood_deatil p{
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+.birth_contact_detail{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 412px;
+    border-right: 3px dashed #737373;
+    border-left: 3px dashed #737373;
+}
+.birth_contact_detail p{
+    margin: 0;
+}
+.birth_contact_detail > div{
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 292px;
+}
+.birth_contact_detail>div :nth-child(3){
+   position: relative;
+   left: 19px;
+}
+.registration_detail{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 14px;
+}
+.registration_detail p{
+    margin: 0;
+}
+.registration1 p:nth-child(3){
+font-size: 12px;
+}
+.registration2{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.registration2 span{
+    display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   gap: 40px;
+}
+.registration3{
+    font-size: 10px;
+    font-weight: 100;
+    position: relative;
+    left: 100px;
+    top: 3px;
+}
+.about,.education,.awards{
+    width: 1295px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.about_head p{
+    position: relative;
+    left: 16px;
+}
+.about_head{
+    border-bottom: 1px solid #AEAEAE;
+}
+.biography{
+    position: relative;
+    /* left: 43px; */
+    font-size: 15px;
+    border-bottom: 1px solid #AEAEAE;
+}
+.biography p:nth-child(1){
+    position: relative;
+    left: 19px;
+    font-size: 18px;
+}
+.biography p:nth-child(2){
+    position: relative;
+    left: 43px;
+    width: 1240px;
+}
+.biography p:nth-child(3){
+    position: relative;
+    left: 43px;
+    width: 1240px;
+}
+.culture_activity,.language,.skill{
+    border-bottom: 1px solid #AEAEAE;
+}
+.culture_activity p:nth-child(1) {
+    position: relative;
+    left: 24px;
+    font-size: 18px;
+}
+.culture_activity p:nth-child(2){
+    width: 1210px;
+    position: relative;
+    left: 41px;
+    font-size: 15px;
+}
+
+.language p:nth-child(1){
+    position: relative;
+    left: 24px;
+    font-size: 18px;
+}
+.language p:nth-child(2){
+    position: relative;
+    left: 43px;
+    font-size: 14px;
+}
+.skill p:nth-child(1){
+    position: relative;
+    left: 24px;
+}
+.skill p:nth-child(2){
+    position: relative;
+    left: 43px;
+}
+.timeline{
+    position: relative;
+    background-color: #6C6C6C;
+    width:2px;
+    left: 83px;
+    height: 150px;
+    top: 5px;
+}
+.education{
+    display: flex;
+    flex-direction: column;
+    height: 256px;
+}
+.education_head{
+    border-bottom: 1px solid #AEAEAE;
+}
+.education_head p{
+    position: relative;
+    left: 25px;
+    font-size: 18px;
+}
+.education_wrap{
+    display: flex;
+    height: 200px;
+    align-items: center;
+}
+.container{
+    position: relative;
+    left: 112px;
+}
+.poin1,.poin2{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: relative;
+    right: 3px;
+    bottom: 1px;
+    background-color: #6C6C6C;
+    z-index: 1;
+}
+.poin2{
+    position: relative;
+    top: 74px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+.container1 p{
+    margin: 0;
+}
+.container2 p{
+    margin: 0;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.experience{
+    position: relative;
+    bottom: 10px;
+}
+.honours{
+    position: relative;
+    bottom: 37px;
+}
+.membership{
+    position: relative;
+    bottom: 24px;
+}
+.lirary{
+    position: relative;
+    bottom: 24px;
+}
+.awards_head{
+    border-bottom: 1px solid #AEAEAE;
+}
+.awards_head p{
+    position: relative;
+    left: 24px;
+    font-size: 18px;
+}
+.image_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+    height: 339px;
+}
+.image_holder img{
+    height: 250px;
+}
+.special_achievements{
+    display: flex;
+    gap: 56px;
+}
+.special_achievements1,.special_achievements2{
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 620px;
+}
+.achivements_head{
+    border-bottom: 1px solid #AEAEAE;
+}
+.achivements_head p{
+    position: relative;
+    left: 24px;
+    font-size: 18px;
+}
+.special_img_holder{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 349px;
+}
+.special_img_holder img{
+    height: 250px;
+}
+/* Code for sidenav active link @anjudewangan */
+.navbar-sidenav>.nav-item>.active-link {
+    background-color: rgb(236, 236, 11);
+}
+
+/* Code for sidenav active link @anjudewangan */
+
+
+/* ---------- */
+
+.target_link {
+    display: none;
+}
+
+.education_head .fa-graduation-cap {
+    display: none;
+}
+
+.education_head .fa-chalkboard-user {
+    display: none;
+}
+
+.education_head a {
+    display: none;
+}
+
+.education_head .fa-trophy {
+    display: none;
+}
+
+#membership .education_head .material-symbols-outlined {
+    display: none;
+}
+
+.education_head .fa-file {
+    display: none;
+}
+
+#pmore {
+    display: none;
+}
+
+.about_head a {
+    display: none;
+}
+
+/* mobile view  */
+@media screen and (max-width:428px) {
+    .nav {
+        display: none;
+    }
+
+    .full_profile {
+        width: 428px;
+        height: 100%;
+        background-color: #FBFBFB;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        position: relative;
+        top: 40px;
+    }
+
+    .about,
+    .education,
+    .awards,
+    .special_achievements {
+        display: none;
+    }
+
+    .summary {
+        display: flex;
+        flex-direction: column;
+        width: 428px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .summary_wrapper1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .img a {
+        display: none;
+    }
+
+    .birth_contact_detail {
+        border: none;
+    }
+
+    .deatail_1 p:nth-child(2) {
+        display: none;
+    }
+
+    .deatail_1 span:nth-child(3) {
+        display: none;
+    }
+
+    .deatail_1 {
+        position: relative;
+        bottom: 30px;
+        left: 50px;
+    }
+
+    .detail_2 {
+        display: none;
+    }
+
+    .gender_blood_deatil {
+        display: none;
+    }
+
+    .birth_contact_detail {
+        display: flex;
+        gap: 28px;
+    }
+
+    .birth_contact_detail div p:nth-child(2) {
+        display: none;
+    }
+
+    .birth_contact_detail {
+        position: relative;
+        left: 10px;
+        display: flex;
+        align-items: flex-start;
+        bottom: 30px;
+    }
+
+    .birth_contact_detail div {
+        position: relative;
+        left: 40px;
+        display: flex;
+        gap: 60px;
+    }
+
+    .registration1,
+    .registration3 {
+        display: none;
+    }
+
+    .registration2 {
+        background: #FFFFFF;
+        border: 3px solid #DADADA;
+        border-radius: 3px;
+        width: 428px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .registration2 span {
+        border-bottom: 1px solid #DADADA;
+        width: 428px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+    }
+
+    .registration2 span p:nth-child(1) {
+        position: relative;
+        left: 30px;
+        font-size: 16px;
+        color: #6C6C6C;
+    }
+
+    .target_link {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        position: relative;
+    }
+
+    .target_link span {
+        display: flex;
+        align-items: center;
+        width: 370px;
+        height: 35px;
+        background-color: #4BC0A4;
+        border-radius: 5px;
+        color: #FFFFFF;
+    }
+
+    .target_link a {
+        color: #FFFFFF;
+        font-size: 18px;
+        width: 370px;
+        height: max-content;
+    }
+
+    .target_link i {
+        position: relative;
+        right: 10px;
+        font-size: 18px;
+    }
+
+    #education,
+    #experience,
+    #hounor,
+    #membership,
+    #accomplishments,
+    #awards,
+    #special_achievements {
+        width: 428px;
+        /* height: 349px; */
+        font-size: 16px;
+        background-color: #FFFFFF;
+        position: relative;
+        top: 200px;
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        border: 3px solid #DADADA;
+    }
+
+    .education_head {
+        border: none;
+        position: relative;
+        bottom: 180px;
+    }
+
+    .education_head p {
+        position: relative;
+        left: 10px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .education_wrap {
+        position: relative;
+        right: 75px;
+    }
+
+    .education_wrap .container {
+        position: relative;
+        left: 100px;
+    }
+
+    .education_wrap {
+        position: relative;
+        left: -30px;
+        width: 280px;
+        bottom: 30px;
+    }
+
+    .education_head a {
+        display: block;
+        font-size: 24px;
+        position: relative;
+        left: 10px;
+    }
+
+    .education_head .fa-graduation-cap {
+        display: block;
+        position: relative;
+        top: 40px;
+        right: 160px;
+        font-size: 40px;
+        color: #555555;
+    }
+
+    .education_head {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #experience .education_head p {
+        left: 70px;
+    }
+
+    .education_head .fa-chalkboard-user {
+        display: block;
+        position: relative;
+        top: 40px;
+        right: 50px;
+        font-size: 40px;
+        color: #555555;
+    }
+
+    .education_head .fa-trophy {
+        display: block;
+        position: relative;
+        top: 40px;
+        right: 170px;
+        font-size: 40px;
+        color: #555555;
+    }
+
+    #membership .education_head .material-symbols-outlined {
+        position: relative;
+        top: 40px;
+        font-size: 40px;
+        right: 40px;
+        display: block;
+    }
+
+    #membership .education_head p {
+        position: relative;
+        left: 80px;
+    }
+
+    .education_head .fa-file {
+        display: block;
+        position: relative;
+        top: 50px;
+        right: 210px;
+        font-size: 40px;
+        color: #555555;
+    }
+
+    .about {
+        width: 428px;
+        background-color: #FFFFFF;
+        font-size: 16px;
+        position: relative;
+        top: 50px;
+        border: 1px solid #DADADA;
+    }
+
+    .about>div {
+        width: 428px;
+        position: relative;
+        bottom: 70px;
+    }
+
+    .biography p:nth-child(1) {
+        width: 200px;
+    }
+
+    .biography p:nth-child(2) {
+        position: relative;
+        left: 10px;
+        font-size: 16px;
+        width: 400px;
+        color: #4B4B4B;
+    }
+
+    .biography p:nth-child(3) {
+        position: relative;
+        left: 10px;
+        font-size: 16px;
+        width: 400px;
+        color: #4B4B4B;
+    }
+
+    .culture_activity p:nth-child(2) {
+        position: relative;
+        left: 10px;
+        font-size: 16px;
+        width: 400px;
+    }
+
+    .about_head {
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+        bottom: 60px;
+    }
+
+    .about_head a {
+        font-size: 22px;
+        position: relative;
+        left: 10px;
+        display: block;
+    }
+
+    #pabout {
+        display: none;
+    }
+
+    #pmore {
+        display: block;
+        position: relative;
+        left: 100px;
+        font-size: 22px;
+    }
+
+    .language p {
+        width: 200px;
+    }
+
+    .skill p {
+        width: 200px;
+    }
+
+    .culture_activity p:nth-child(1) {
+        width: 200px;
+    }
+
+}
+
+/* Code for images popup @anjudewangan */
+.modal-header .modal-ul .nav-item .nav-link{
+    color: black !important;
+    font-size: 1.5rem;
+    background-color: white;
+    border: 0.02rem solid black;
+    width: 45px;
+    height: 35px;
+    padding: 0px;
+    margin-top: 9px;
+    font-size: 1.2rem;
+}
+.modal-ul {
+    display: contents;
+}
+.modal-header .modal-ul .nav-item{
+    margin-left: 3rem;
+    list-style-type: none;
+}
+.modal-header .modal-ul .nav-item:focus,
+.modal-header .modal-ul .nav-item:hover {
+    color: black;
+}
+
+.btnZoomIn,
+.btnRotateRight {
+    border-bottom-left-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
+}
+
+.btnZoomOut,
+.btnRotateLeft {
+    margin-left: -49px !important;
+    border-bottom-right-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+}
+
+.modal-header .modal-ul .nav-item .btnFullScreen {
+    font-size: 1.2rem;
+    margin-left: 15px;
+    margin-top: 8px;
+    border: none !important;
+}
+
+/* Code for images popup @anjudewangan */

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHqO46BDIhQnJpizDLv35o0FUkdAB-vnk"></script>
+    <script src="../js/script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <p>Logo</p>
+        </div>
+        <div class="title">
+            <p>Profile of Register Medical Practioner (RMP)</p>
+        </div>
+        <div class="settings">
+            <i class="fa-solid fa-bell"></i>
+            <label for="">
+                Settings
+            </label>
+        </div>
+    </div>
+    <div class="progress_bar">
+        <div class="accnt verf">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Account Verification</p>
+        </div>
+        <div class="accnt rmp">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Register Medical Practionar (RMP) Details</p>
+        </div>
+        <div class="accnt practice">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Practice Details</p>
+        </div>
+        <div class="accnt dashboard">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Dashboard</p>
+        </div>
+    </div>
+    <div class="main1">
+        <div class="detail_container dvContainer">
+            <div class="inner1">
+                <div class="inner_head dvHeading">
+                    <p>Establishment Location
+                        <br><span class="inner_para_one">Where are you located?</span>
+                        <br><span class="inner_para_two">Drag and zoom the map and position the marker on the exact spot
+                            where your business is located.</span>
+                    </p>
+                </div>
+                <div class="inner_wrap">
+                    <div class="responsive-map" id="map"></div>
+                    <div class="inner_input">
+                        <div class="addtag">
+                            <input type="text" name="" id="address-line" class="required" placeholder="Add Address Line">
+                            <i class="fa-solid fa-circle-check" id="btn-address-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button target="_blank" onclick="openIndex()"><span class="material-icons-outlined">
+                        arrow_back
+                    </span>BACK</button>
+                <button type="submit" target="_blank" onclick="openRegister6()">NEXT</button>
+            </div>
+            <div class="note">
+                <P><span>Note:</span>You can change these details later in Settings, if needed.</P>
+            </div>
+        </div>
+        <div class="main_img">
+            <img src="../images/image 278.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
